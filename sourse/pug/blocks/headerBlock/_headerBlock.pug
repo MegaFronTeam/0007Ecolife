@@ -1,0 +1,13 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		.container
+			+topLine()
+			+e.text
+				+e.main-text Поможем избежать&nbsp;98% проблем с&nbsp;инженерными сетями #[strong и&nbsp;сэкономить до&nbsp;40&nbsp;000&nbsp;р.&nbsp;в&nbsp;год] благодаря сервисному обслуживанию
+				+e.descr 
+					+img('img/header-descr-img.png')
+					p #[strong Мы&nbsp;подберем индивидуальные условия договора.] Защитите себя от&nbsp;поломок и&nbsp;платите только за&nbsp;то, что вам нужно
+				+btn('подобрать условия договора').main-btn
+			img(src='img/header-block-img.png' class="headerBlock__main-img")
+	// end headerBlock 

@@ -1,0 +1,94 @@
+// start .sServices
+.sServices {
+	position: relative;
+	z-index: 10;
+		--sPT: #{rem(100)};
+		// --sPB: ;
+		--sTPB: #{rem(50)};
+	.container {
+		position: relative;
+		z-index: 10;
+	}
+	.bg-img {
+		position: absolute;
+		transform: rotate(-120.59deg);		
+		height: 160px;
+    left: -307px;
+    top: 165px;
+		z-index: -1;
+	}
+	&__logo-wrap {
+		margin: 0 auto;
+		margin-bottom: 14px;
+		width: 66px;
+		height: 64px;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.section-title {
+		max-width: 830px;
+		margin: 0 auto rem(39);
+	}
+
+	.row {
+		--bs-gutter-y: #{rem(30)};
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sServices
+
+.service-item {
+	display: block;
+	padding: 10px;
+	height: 100%;
+	background-color:$white;
+	border: 1px solid #E9E9F2;
+	border-radius: 21px;
+	&__img-wrap {
+		margin-bottom: rem(30);
+		border-radius: 15px;
+		overflow: hidden;
+		@include block(550,150);
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+	}
+	h3 {
+		margin-bottom: rem(13);
+		padding-left: rem(30);
+		max-width: 80%;
+		font-weight: 500;
+		color: #141414;
+	}
+	ul {
+		padding: 0;
+		margin-left: 50px;
+		list-style-image: url('../img/svg/list-marker.svg');
+		color: #141414;
+		font-size: 15px;
+		@include media-breakpoint-up(sm) {
+			columns: auto 2;
+			column-gap: 40px;
+		}
+		@include media-breakpoint-up(md) {
+			font-size: 16px;
+		}
+	}
+	li {
+		margin-bottom: 5px;
+	}
+	// li:before {
+  //   content: url('../img/svg/list-marker.svg');
+  //  }
+}
