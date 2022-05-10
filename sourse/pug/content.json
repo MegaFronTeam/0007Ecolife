@@ -1,12 +1,11 @@
 {
 	"nav":[
-		{ "name":"Меню", "url":"#","class":"menu","span":"span"},
-		{	"name":"Обслуживание септиков", "url":"#", "class":"active"},
-		{"name":"Обслуживание станций очистки", "url":"#"},
-		{"name":"Обслуживание водоснабжения", "url":"#"} ,
+		{	"name":"Обслуживание септиков", "url":"#", "class":"swiper-slide active"},
+		{"name":"Обслуживание станций очистки", "url":"#","class":"swiper-slide"},
+		{"name":"Обслуживание водоснабжения", "url":"#","class":"swiper-slide"} ,
 		{
 			"name":"Комплектующие", 
-			"url":"#"
+			"url":"#","class":"swiper-slide"
 			}
 	],
 	"social":[

@@ -111,6 +111,9 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/modal/_modal.scss';
 @import '../pug/blocks/headerBlock/_headerBlock.scss';
 @import '../pug/blocks/sServices/_sServices.scss';
+@import '../pug/blocks/sSepticService/_sSepticService.scss';
+@import '../pug/blocks/sEmergency/_sEmergency.scss';
+@import '../pug/blocks/sWaterSystem/_sWaterSystem.scss';
 
 @import '../pug/blocks/header/_header.scss';
 @import '../pug/blocks/footer/_footer.scss';

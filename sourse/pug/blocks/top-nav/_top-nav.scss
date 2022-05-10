@@ -1,11 +1,30 @@
 .top-nav {
-	// background: svg-load('../svg/check.svg',  stroke=$primary); 
-	// 
-	@include media-breakpoint-up(lg) {
-		background-color: #131313;
-		// border: 1px solid #000;
-		
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	@include mt;
+	z-index: 1000;
+	.container {
+		@include media-breakpoint-down(sm) {
+			padding: 0;
+		}
 	}
+	.row {
+		flex-wrap: nowrap;
+	}
+	.swiper {
+		overflow: hidden;
+	}
+	.swiper-slide {
+		width: auto;
+		&:not(:last-child) {
+			margin-right: 9px;
+		}
+	}
+
+	background-color: #131313;
+	
 
 	@include media-breakpoint-up(lg) {
 		// background-color: red;
@@ -46,5 +65,71 @@
 
 	@include media-breakpoint-down(xs) {}
 }
+.menu-btn {
+	display: inline-flex;
+	position: relative;
+	width: auto;
+	align-items: center;
+	background-color: $blue;
+	cursor: pointer;
+	padding-left: 16px;
+	padding-right: rem(19);
+	margin-left: 12px;
+	color: $white;
+	font-weight: 500;
+	font-size: 12px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	&:hover {
+		ul {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	span {
+		position: relative;
+		display: inline-block;
+		margin-right: 20px;
+		width: 24px;
+		height: 3px;
+		background-color: $white;
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			display: inline-block;
+			width: 24px;
+			height: 3px;
+			background-color: $white;
+			left: 0;
+		}
+		&::before {
+			top: 6px;
+		}
+		&::after {
+			bottom: 6px;
+		}
+	}
+}
 
-
+.submenu {
+	visibility: hidden;
+	width: 200%;
+	position: absolute;
+	padding: 10px;
+	left: 0;
+	top: 100%;
+	background-color: $white;
+	z-index: 100;
+	opacity: 0;
+	@include mt;
+	li {
+		margin-bottom: 10px;
+	}
+	a {
+		padding: 10px;
+		color: #111213;
+		&:hover {
+			color: $blue;
+		}
+	}
+}

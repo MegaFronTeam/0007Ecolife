@@ -1,0 +1,90 @@
+// start .sEmergency
+.sEmergency {
+		--sPT: 0;
+		--sPB: 0;
+		// --sTPB: ;
+    margin-top: -55px;
+		@include media-breakpoint-down(sm) {
+			margin-top: 0;
+		}
+	.container {
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			bottom:-150px;
+			left: -150px;
+			width: rem(480);
+			height:  rem(360);
+			background-image: url('../img/emergency-bg.png');
+			background-repeat: no-repeat;
+			z-index: -1;
+		}
+	}
+	&__wrap {
+		background: linear-gradient(272.59deg, #272F39 -89.74%, #575B71 115.33%);
+		border: 10px solid #FFFFFF;
+		box-shadow: 0px 4px 50px rgba(163, 169, 183, 0.15);
+		border-radius: 41px;
+	}
+	&__inner {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: rem(81) rem(24) rem(40);
+		background: linear-gradient(272.59deg, #51566A -89.74%, #3F4554 115.33%);
+		border-radius: 31px;
+		color: $white;
+		position: relative;
+		overflow: hidden;
+		@include media-breakpoint-up(xl) {
+			padding: rem(55) rem(60) rem(52) rem(121);
+			flex-direction: row;
+		}
+		@include media-breakpoint-up(sm) {
+			padding: rem(50);
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: rem(178);
+			height:  rem(108);
+			background-image: url('../img/emergency-wrap-bg.png');
+			background-repeat: no-repeat;
+		}
+	}
+	&__text {
+		margin-bottom: rem(30);
+		font-weight: 300;
+		font-size: rem(24);
+		line-height: 120%;
+		text-align: center;
+		@include media-breakpoint-up(xl) {
+			margin-bottom: 0;
+			max-width: 610px;
+			margin-right: 60px;
+			text-align: left;
+		}
+		@include media-breakpoint-up(md) {
+			font-size: rem(34);
+		}
+		strong {
+			font-weight: 500;
+		}
+	}
+	.main-btn {
+		padding: rem(26) rem(25);
+		@include media-breakpoint-up(sm) {
+			padding:  rem(39) rem(29);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sEmergency

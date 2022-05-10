@@ -52,6 +52,9 @@
 	background-color:$white;
 	border: 1px solid #E9E9F2;
 	border-radius: 21px;
+	&:hover {
+		border: 1px solid #484D5F;
+	}
 	&__img-wrap {
 		margin-bottom: rem(30);
 		border-radius: 15px;
@@ -79,7 +82,7 @@
 		font-size: 15px;
 		@include media-breakpoint-up(sm) {
 			columns: auto 2;
-			column-gap: 40px;
+			column-gap: 30px;
 		}
 		@include media-breakpoint-up(md) {
 			font-size: 16px;

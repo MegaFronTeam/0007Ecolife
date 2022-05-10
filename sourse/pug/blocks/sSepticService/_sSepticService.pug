@@ -1,0 +1,32 @@
+mixin sSepticService(data)
+	// start sSepticService
+	+b.SECTION.sSepticService.section#sSepticService&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Обслуживаем все #[strong популярные модели септиков]
+			+e.swiper--js.swiper(data-mobile="false")
+				.swiper-wrapper
+					mixin septic(img, price, title, covered)
+						.swiper-slide
+							+b.septic-item&attributes(attributes)
+								+e.top
+									if covered
+										+e.img-wrap--covered
+											+img(`img/septic-${img}.png`)
+										+e.price= price
+									else
+										+e.img-wrap
+											+img(`img/septic-${img}.png`)
+										+e.price= price
+								+e.bottom
+									h3 Обслуживание септиков&nbsp;
+										strong= title
+									+btn('Заказать').main-btn
+					+septic('1','4500 р', 'Топас')
+					+septic('2','4500 р', 'Астра')
+					+septic('3','от 3500 р', 'Вортекс')
+					+septic('4','4500 р', 'Биодека','covered').--blue
+					+septic('5','от 3500 р', 'Волгарь','covered').--blue
+					+septic('6','от 3500 р', 'БиоДевайс Эко','covered').--blue
+				+arrow()
+	// end sSepticService

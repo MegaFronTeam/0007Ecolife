@@ -119,6 +119,7 @@ h2 {
 	font-weight: 700;
 	font-size: 16px;
 	letter-spacing: 0.08em;
+	text-align: center;
 	text-transform: uppercase;
 	color: #FFFFFF;
 	text-shadow: 0px 1px 0px #CB4E3A;
@@ -319,10 +320,13 @@ ul {
 .swiper-button-hand {
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	border-radius: 50%;
-	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
-	color: var(--swiperColorDef);
+	background-color: $blue;
+	// border: 2px solid var(--swiperBorderColorDef);
+	color: $white;
 	@include bgs;
 	z-index: 300;
 	outline: none !important;
@@ -342,17 +346,26 @@ ul {
 
 	.icon {
 		font-size: rem(12);
+		fill: none;
+		stroke: $white;
 	}
 
 	&::after {
 		display: none;
 	} 
 	&-next {
+		transform: rotate(180deg);
 		right: var(--swiperArrowPosition);
 	}
 
 	&-prev {
 		left: var(--swiperArrowPosition);
+	}
+}
+.swiper-button-disabled {
+	background-color: #C7C7C7 !important;
+	.icon {
+		stroke: #4B4B4B;
 	}
 }
 

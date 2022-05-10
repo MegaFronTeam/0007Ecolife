@@ -1,0 +1,156 @@
+// start .sSepticService
+.sSepticService {
+		--sPT: 8px;
+		// --sPB: ;
+		// --sTPB: #{rem(40)};
+	.container {
+		position: relative;
+		&::before, &::after {
+			position: absolute;
+			content: '';
+			background-repeat: no-repeat;
+			background-size: auto;
+			// z-index: 5;
+		}
+		&::before {
+			top: 0;
+			right: -87px;
+			width: 274px;
+			height: 164px;
+			background-image: url('../img/septic-bg-1.png');
+		}
+		&::after {
+			bottom: -95px;
+			right: -157px;
+			width: 440px;
+			height: 500px;
+			background-image: url('../img/septic-bg-2.png');
+		}
+	}
+	.section-title {
+		position: relative;
+		z-index: 10;
+		margin: 0 auto rem(40);
+		max-width: 800px;
+	}
+	.swiper {
+		padding-top: 60px;
+		margin-top: -60px;
+		padding-bottom: 60px;
+		margin-bottom: -60px;
+		width: 100%;
+		overflow: hidden;
+	}	
+	.swiper-wrapper {
+		flex-wrap: nowrap;
+		@include media-breakpoint-up(md) {
+			flex-wrap: wrap;
+		}
+	}
+	.swiper-slide {
+		width: 100%;
+		margin: 0;
+		box-shadow: 0px 4px 60px rgba(163, 169, 183, 0.15);
+		@include media-breakpoint-up(md) {
+			width: 48%;
+			margin-right: 4%;
+			margin-bottom: 4%;
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			height: auto;
+			width: 32%;
+			margin-right: 2%;
+			margin-bottom: 2%;
+			&:nth-child(2n) {
+				margin-right: 2%;
+			}
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+	}
+	.swiper-button-hand {
+		bottom: -90px;
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSepticService
+
+.septic-item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background-color:$white;
+	padding: 10px;
+	border-radius: 12px;
+	z-index: 10;
+	&__top {
+		position: relative;
+		margin-bottom: 35px;
+		height: 280px;
+		background: #F8F8F8;
+	}
+	&__img-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		border-radius: 12px;
+		overflow: hidden;
+		img {
+			height: 100%;
+			mix-blend-mode: multiply;
+		}
+	}
+	&__img-wrap--covered {
+		@include block(350, 280);
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+	}
+	&__price {
+		position: absolute;
+		left: 20px;
+		bottom: 20px;
+		padding: 2px 15px;
+		background-color: #E54E40;
+		color: $white;
+		font-weight: 500;
+		border-radius: 5px;
+	}
+	&__bottom {
+		margin-top: auto;
+		text-align: center;
+	}
+	h3 {
+		max-width: 290px;
+		text-align: center;
+		margin: 0 auto rem(30);
+		font-size: rem(26);
+	}
+	.main-btn {
+		margin-bottom: rem(37);
+		padding: rem(26) rem(56);
+	}
+	&--blue {
+		.septic-item__price {
+			background-color: #2079F5;
+		}
+	}
+}

@@ -4,7 +4,7 @@
 	padding: 0;
 	background-image: url('../img/header-block-bg.png');
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: cover;
 	overflow: hidden;
 	margin-bottom: 1px;
 	// height: rem(800);
@@ -12,7 +12,9 @@
 	// background-image: url(../img);
 	// background-color: #000000;
 	.container {
+		padding-top: 50px;
 		position: relative;
+		height: 100%;
 	}
 	&__text {
 		position: relative;
@@ -95,7 +97,7 @@
 		@include media-breakpoint-down(sm) {
 			left: -200px;
 			max-height: 48%;
-			bottom: -60px;
+			bottom: -100px;
 		}
 	}
 	.main-btn {
