@@ -1,0 +1,21 @@
+mixin sRepairCost(data)
+	// start sRepairCost
+	+b.SECTION.sRepairCost.section#sRepairCost&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				+img('img/repair-img.png')
+				h2 #[strong Наш 13-летний опыт работы показывает],<br> что в&nbsp;среднем ремонт систем и&nbsp;покупка запчастей обходятся жильцам #[strong в&nbsp;25000-40000 рублей в&nbsp;год]
+			.row
+				mixin repairItem(img, title,...list)
+					+b.repair-item.col-md-6.col-xl-3
+						+e.img-wrap
+							+img(`img/repair-item-${img}.png`)
+						+e.title!= title
+						ul
+							each item in list
+								li!= item
+				+repairItem('1','Поломка компрессора',`Новый компрессор <strong> от 10 000 до 16 000 рублей.</strong>`, `Ремонт + запчасти <strong> от 6 000 до 10 000 рублей.</strong>`)
+				+repairItem('2','Затопление станции из-за поломки насоса',`Новый компрессор <strong> от 10 000 до 16 000 рублей.</strong>`, `Ремонт + запчасти <strong> от 6 000 до 10 000 рублей.</strong>`)
+				+repairItem('3','Поломка электро- магнитного клапана',`Новый компрессор <strong> от 10 000 до 16 000 рублей.</strong>`, `Ремонт + запчасти <strong> от 6 000 до 10 000 рублей.</strong>`)
+				+repairItem('4','Поломка станции из-за неправильной консервации',`Новый компрессор <strong> от 10 000 до 16 000 рублей.</strong>`, `Ремонт + запчасти <strong> от 6 000 до 10 000 рублей.</strong>`)
+	// end sRepairCost

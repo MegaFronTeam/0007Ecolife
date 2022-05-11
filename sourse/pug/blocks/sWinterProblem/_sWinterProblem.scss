@@ -1,0 +1,79 @@
+// start .sWinterProblem
+.sWinterProblem {
+	background-image: url('../img/winter-bg.png');
+	background-repeat: no-repeat;
+	padding-top: 50px;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(102)};
+	}
+		// --sPB: ;
+		// --sTPB: ;
+	
+	&__left {
+		height: 100%;
+		img {
+			max-width: 120%;
+			margin: 0 auto;
+			@include media-breakpoint-up(lg) {
+				max-width: none;
+				position: relative;
+				left: -290px;
+				top: -80px;
+			}
+			@include media-breakpoint-up(xl) {
+				left: -220px;
+			}
+		}
+	}
+	&__right {
+		@include media-breakpoint-down(lg) {
+			order: -1;
+		}
+	}
+	&__title {
+		margin-bottom: 37px;
+		color: #141414;
+		font-size: rem(30);
+		font-weight: 300;
+		line-height: 120%;
+		@include media-breakpoint-up(md) {
+			font-size: rem(50);
+		}
+		strong {
+			padding-left: 23px;
+			position: relative;
+			font-weight: 500;
+		}
+	}
+	p, ul {
+		color: #565E69;
+		font-size: 16px;
+		@include media-breakpoint-up(md) {
+			font-size: rem(18);
+		}
+	}
+	ul {
+		list-style-image: url('../img/svg/winter-list-marker.svg');
+		padding: 0;
+		margin-left: 30px;
+		margin-bottom: rem(28);
+	}
+	li {
+		margin-bottom: rem(18);
+	}
+	&__resume {
+		font-weight: 500;
+		color: #141414;
+		font-size: rem(20);
+		@include media-breakpoint-up(md) {
+			font-size: rem(24);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sWinterProblem
