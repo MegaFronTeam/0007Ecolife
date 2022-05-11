@@ -1,7 +1,44 @@
 .footer {
 		
 	margin-top: auto;
-
+	&__row {
+		align-items: center;
+	}
+	&__col-num {
+		text-align: right;
+	}
+	&__logo {
+		display: block;
+    height: 52px;
+    // margin-right: 2.375rem;
+    width: 132px;
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+	&__tel {
+		font-weight: 700;
+		color: $gray-900;
+		min-width: max-content;
+	}
+	&__btn {
+		background-color: rgba($color: $yellow, $alpha: 0.9);
+		border-radius: 1000px;
+		font-size: rem(12);
+		font-weight: 700;
+		padding: rem(12) rem(21);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+	p {
+		color: $gray-700;
+		font-size: rem(15);
+		line-height: 1.50em;
+		margin-bottom: 0;
+		opacity: 0.67;
+		min-width: rem(390);
+	}
 // 
 @include media-breakpoint-up(xl) {}
 

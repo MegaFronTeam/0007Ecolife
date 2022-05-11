@@ -1,9 +1,13 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
+			+e.row.row
 				.col-auto
+					+e.logo(href="#")
+						+img('img/logo.png')
+				.col
+					p Сервисное обслуживание инженерных систем для загородных домов в Санкт-Петербурге и ЛО
+				+e.col-num.col
+					+e.tel(href="telto:+78124381236").h4 +7 812 438-12-36
+				.col-auto
+					+e.btn(href="#").btn перезвоните мне
