@@ -114,6 +114,9 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sSepticService/_sSepticService.scss';
 @import '../pug/blocks/sEmergency/_sEmergency.scss';
 @import '../pug/blocks/sWaterSystem/_sWaterSystem.scss';
+@import '../pug/blocks/sRepairCost/_sRepairCost.scss';
+@import '../pug/blocks/sSummerProblem/_sSummerProblem.scss';
+@import '../pug/blocks/sWinterProblem/_sWinterProblem.scss';
 
 @import '../pug/blocks/header/_header.scss';
 @import '../pug/blocks/footer/_footer.scss';
