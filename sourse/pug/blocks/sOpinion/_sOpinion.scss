@@ -1,0 +1,104 @@
+// start .sOpinion
+.sOpinion {
+	padding-top: 26px;
+	.container {
+		position: relative;
+		&::before {
+			content: '';
+			background-image: url('../img/opinion-bg-img.png');
+			background-repeat: no-repeat;
+			position: absolute;
+			background-size: contain;
+			bottom: 50%;
+			left: 80%;
+			width: 186px;
+			height: 155px;
+			z-index: 2;
+			@include media-breakpoint-up(lg) {
+				bottom: 10%;
+				left: 0;
+			}
+		}
+	}
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	&__item {
+		padding-left: 67px;
+		z-index: 10;
+		&--small {
+			@include media-breakpoint-up(md) {
+				margin-right: rem(52);
+			}
+			.sOpinion__question {
+				max-width: 330px;
+			}
+			.sOpinion__answer {
+				max-width: 430px;
+			}
+		}
+		&--large {
+			padding-top: 79px;
+			.sOpinion__question {
+				max-width: 500px;
+			}
+			.sOpinion__answer {
+				max-width: 500px;
+			}
+		}
+	}
+	&__question {
+		position: relative;
+		margin-bottom: rem(20);
+		padding: rem(17) rem(27);
+		background: #2079F5;
+		border-radius: 31px 41px 41px 7px;
+		color: $white;
+		font-size: rem(18);
+		line-height: 120%;
+		@include media-breakpoint-up(md) {
+			font-size: rem(26);
+		}
+		&::before {
+			content: '';
+			background-image: url('../img/question-icon.png');
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			bottom: 0;
+			left: -67px;
+			width: 45px;
+			height: 45px;
+		}
+	}
+	&__answer {
+		position: relative;
+		padding: rem(30) rem(30) rem(48);
+		line-height: 150%;
+		font-size: 15px;
+		border: 1px solid #E9E9F2;
+		border-radius: 7px 41px 41px 41px;
+		@include media-breakpoint-up(md) {
+			font-size: 16px;
+		}
+		&::before {
+			content: '';
+			background-image: url('../img/logo-small.png');
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			top: 0;
+			left: -67px;
+			width: 50px;
+			height: 48px;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sOpinion

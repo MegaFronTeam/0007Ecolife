@@ -49,8 +49,8 @@
 			height: 86px;
 		}
 		p {
-			@include media-breakpoint-down(sm) {
-				min-width: 100%;
+			@include media-breakpoint-up(md) {
+				font-size: rem(18);
 			}
 		}
 		strong {
@@ -66,8 +66,8 @@
 	}
 	&__right {
 		img {
-			right: -65%;
-			top: 65%;
+			right: -56px;
+   		top: 61%;
 			height: 70%;
 			position: absolute;
 			z-index: 1;
@@ -76,7 +76,7 @@
 				top: 50%;
 			}
 			@include media-breakpoint-up(md) {
-				height: auto;
+				height: 100%;
 				right: -30%;
 				top: 30%;
 			}
@@ -85,7 +85,11 @@
 				top: -115px;
 			}
 			@include media-breakpoint-up(xl) {
+				height:auto;
 				right: -165px;
+			}
+			@media (max-width:400px) {
+				right: -50%;
 			}
 		}
 	}
