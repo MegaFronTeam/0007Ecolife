@@ -10,6 +10,10 @@
 	.section-title {
 		h2 {
 			margin-bottom: 0;
+			background: linear-gradient(272.65deg, #141414 12.74%, #545454 90.01%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
 		}
 		span {
 			font-weight: 500;

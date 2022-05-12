@@ -5,6 +5,10 @@
 		--sTPB:#{rem(50)};
 	h2 {
 		font-size: rem(26);
+		background: linear-gradient(272.65deg, #141414 12.74%, #545454 90.01%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
 		@include media-breakpoint-up(sm) {
 			font-size: rem(50);
 		}
