@@ -2,10 +2,10 @@ mixin footer()
 	+b.FOOTER.footer
 		.container
 			+e.row.row
-				.col-auto
+				+e.col-logo.col-auto
 					+e.logo(href="#")
 						+img('img/logo.png')
-				.col
+				+e.col-text.col
 					p Сервисное обслуживание инженерных систем для загородных домов в Санкт-Петербурге и ЛО
 				+e.col-num.col
 					+e.tel(href="telto:+78124381236").h4 +7 812 438-12-36

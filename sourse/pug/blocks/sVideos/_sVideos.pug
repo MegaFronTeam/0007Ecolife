@@ -1,0 +1,21 @@
+mixin sVideos(data)
+	// start sVideos
+	+b.SECTION.sVideos.section#sVideos&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 О качестве обслуживания #[strong лучше всего расскажут наши клиенты]
+			+e.swiper--js.swiper(data-mobile="false")
+				+e.row.row.swiper-wrapper
+					mixin videoSlide(i)
+						+e.col.col-md-6.swiper-slide
+							+e.slide(href="https://www.youtube.com/watch?v=L_LUpnjgPso&t=7s" data-fancybox=`sCard-gallery-${i}`)
+								+e.video-wrap
+								+e.icon-wrap
+									+icon('play-fill')
+					+videoSlide(1)
+					+videoSlide(2)
+					+videoSlide(3)
+					+videoSlide(4)
+				+b.arrow-wrap
+					+arrow()
+	// end sVideos

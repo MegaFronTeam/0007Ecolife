@@ -1,0 +1,61 @@
+mixin sRates(data)
+	// start sRates
+	+b.SECTION.sRates.section#sRates&attributes(attributes).bg-wrap
+		+img('img/sRates-bg.png').picture-bg
+		img(src='img/sRates-img-5.png').level-img
+		.container
+			+b.section-title.text-center
+				h2 Мы разработали выгодные тарифы #[strong на любые случаи]
+			+e.row.row
+				img(src='img/sRates-img-4.png')
+				+e.col-order-last.col-lg-8
+					+e.wrap
+						+e.item
+							+e.text-wrap
+								h3 Аварийный выезд
+									+img('img/sRates-img-1.png').img-alert
+								ul
+									li Будем‌ ‌на‌ ‌объекте‌ ‌в‌ ‌течение‌ 2х ‌часов‌
+									li На‌ ‌связи‌ 24/7
+									li Ремонтные‌ ‌работы‌ ‌по‌ ‌прайс-листу‌
+									li Аварийная‌ ‌диагностика‌ ‌бесплатно‌
+							+e.card-wrap 
+								+e.text Стоимость аварийного выезда
+								+e.price 
+									p.num 5000
+									p.currency руб
+						+e.item
+							+e.text-wrap
+								h3 Аварийный выезд
+									+img('img/sRates-img-2.png').img-work
+								ul
+									li Откачка ила
+									li Плановая диагностика всех систем
+									li Для поддержания работоспособности системы необходимо минимум 2 выезда в год.
+							+e.card-wrap 
+								+e.text Стоимость аварийного выезда
+								+e.price 
+									p.num 5000
+									p.currency руб
+						+e.btn(href="#").btn.main-btn скачать полный прайс-лист
+				+e.col-order-first.col-lg-4
+					+e.wrap
+						img(src='img/circle.png').discount
+						+e.item--2
+							+e.text-wrap
+								h3 Абонентское<br>обслуживание
+									+img('img/sRates-img-3.png').img-calendar
+								ul
+									li Ежеквартальное (или 2 раза в год) плановое обслуживание систем
+									li Плановая диагностика всех систем
+									li Скидка 10% на запчасти
+									li Откачка ила 
+									li Один аварийный выезд бесплатно
+							+e.card-wrap--2
+								+e.text Стоимость за два выезда
+								+e.price 
+									p от
+									p.num 7000
+									p.currency руб
+						+e.btn--2(href="#").btn.main-btn подобрать условия договора
+	// end sRates

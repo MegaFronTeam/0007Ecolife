@@ -270,10 +270,10 @@ const JSCCommon = {
 							});
 						}
 						else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
+							// $(this.parentElement).removeClass('active');
+							// $(this.parentElement).find('.dd-content-js').slideUp(function () {
+							// 	$(this).removeClass('active');
+							// });
 						}
 					});
 
@@ -373,6 +373,59 @@ function eventHandler() {
 	mobileSlider();
 	window.addEventListener('resize', () => {
 		mobileSlider();
+	})
+
+
+	const sVideosSlider = document.querySelector('.sVideos__swiper--js');
+	let sVideosSwiper;
+	function mobileSlider2() {
+		if (window.innerWidth <= 768 && sVideosSlider.dataset.mobile == 'false') {
+			sVideosSwiper = new Swiper(sVideosSlider, {
+				slidesPerView: 'auto',
+				spaceBetween: 10,
+				navigation: {
+					nextEl: '.sVideos .swiper-button-hand-next',
+					prevEl: '.sVideos .swiper-button-hand-prev',
+				},
+			});
+			sVideosSlider.dataset.mobile = 'true';
+		}
+		if (window.innerWidth > 768) {
+			sVideosSlider.dataset.mobile = 'false';
+			if (sVideosSlider.classList.contains('swiper-initialized')) {
+				sVideosSwiper.destroy();
+			}
+		}
+	}
+	mobileSlider2();
+	window.addEventListener('resize', () => {
+		mobileSlider2();
+	})
+
+	const sBeforeAfterSlider = document.querySelector('.sBeforeAfter__swiper--js');
+	let sBeforeAfterSwiper;
+	function mobileSlider3() {
+		if (window.innerWidth <= 768 && sBeforeAfterSlider.dataset.mobile == 'false') {
+			sBeforeAfterSwiper = new Swiper(sBeforeAfterSlider, {
+				slidesPerView: 'auto',
+				spaceBetween: 10,
+				navigation: {
+					nextEl: '.sBeforeAfter .swiper-button-hand-next',
+					prevEl: '.sBeforeAfter .swiper-button-hand-prev',
+				},
+			});
+			sBeforeAfterSlider.dataset.mobile = 'true';
+		}
+		if (window.innerWidth > 768) {
+			sBeforeAfterSlider.dataset.mobile = 'false';
+			if (sBeforeAfterSlider.classList.contains('swiper-initialized')) {
+				sBeforeAfterSwiper.destroy();
+			}
+		}
+	}
+	mobileSlider3();
+	window.addEventListener('resize', () => {
+		mobileSlider3();
 	})
 
 	const menuSlider = new Swiper(".top-nav-swiper--js", {
