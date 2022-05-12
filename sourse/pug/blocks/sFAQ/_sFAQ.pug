@@ -1,0 +1,13 @@
+mixin sFAQ(data)
+	// start sFAQ
+	+b.SECTION.sFAQ.section#sFAQ&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 #[span Часто] задаваемые вопросы
+			+ddGroup()
+				+e.row.row
+					- for(i=1; i <= 4; i++)
+						.col-lg-10 
+							+ddGroupItem(`${i} по частоте вопрос`, 'active')
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis felis turpis nam pellentesque fermentum sagittis a, magnis condimentum. Cursus tempus amet, rutrum adipiscing posuere velit pellentesque. Consequat, mauris diam vestibulum eget dolor posuere facilisi. Faucibus turpis vestibulum proin nunc. Arcu id fermentum massa, mi nunc. Viverra eget pharetra aliquet adipiscing quam rutrum in.
+	// end sFAQ

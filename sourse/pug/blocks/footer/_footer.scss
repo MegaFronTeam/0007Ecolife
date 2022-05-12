@@ -1,17 +1,37 @@
 .footer {
-		
+	padding-top: rem(50);
+	padding-bottom: rem(50);
 	margin-top: auto;
 	&__row {
 		align-items: center;
+		--bs-gutter-y: #{rem(20)};
+		@include media-breakpoint-down(md) {
+			justify-content: center;
+		}
+	}
+	&__col-logo {
+		// width: rem(132);
+		display: block;
 	}
 	&__col-num {
-		text-align: right;
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			text-align: right;
+		}
+	}
+	&__col-text {
+		@include media-breakpoint-down(md) {
+			flex: 1 0 auto;
+		}
 	}
 	&__logo {
 		display: block;
-    height: 52px;
     // margin-right: 2.375rem;
-    width: 132px;
+		max-width: 200px;
+		@include media-breakpoint-up(lg) {
+			height: 52px;
+			width: 132px;
+		}
 		img {
 			height: 100%;
 			width: 100%;
@@ -21,8 +41,11 @@
 		font-weight: 700;
 		color: $gray-900;
 		min-width: max-content;
+		display: block;
+		margin-bottom: 0;
 	}
 	&__btn {
+		@include mt;
 		background-color: rgba($color: $yellow, $alpha: 0.9);
 		border-radius: 1000px;
 		font-size: rem(12);
@@ -30,6 +53,9 @@
 		padding: rem(12) rem(21);
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
+		&:hover {
+			background-color: rgba($color: $yellow, $alpha: 1);
+		}
 	}
 	p {
 		color: $gray-700;
@@ -37,7 +63,15 @@
 		line-height: 1.50em;
 		margin-bottom: 0;
 		opacity: 0.67;
-		min-width: rem(390);
+		@include media-breakpoint-up(lg) {
+			min-width: rem(390);
+		}
+		@include media-breakpoint-up(md) {
+			min-width: rem(300);
+		}
+		@include media-breakpoint-down(md) {
+			text-align: center;
+		}
 	}
 // 
 @include media-breakpoint-up(xl) {}

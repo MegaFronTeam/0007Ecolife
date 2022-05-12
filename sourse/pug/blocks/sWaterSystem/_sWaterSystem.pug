@@ -18,3 +18,24 @@ mixin sWaterSystem(data)
 				+sWaterSystemItem('6','Износ мембран компрессора','Если вовремя его не&nbsp;предотвратить придется ремонтировать или даже покупать новый компрессор.')
 
 	// end sWaterSystem
+
+mixin sWaterSystem2(data)
+	// start sWaterSystem
+	+b.SECTION.sWaterSystem--2.section#sWaterSystem&attributes(attributes).bg-wrap
+		+img('/img/sWater-bg.png', 'bg').picture-bg
+		.container
+			+b.section-title.text-center
+				h2 #[strong Почему 986 человек доверили нам ]обслуживание инженерных сетей в 2021 году
+			+e.row.row
+				mixin sWaterSystemItem(img,title,descr)
+					+b.water-system-item.col-sm-6.col-lg-4.text-sm-center
+						+img(`img/water-${img}.png`)
+						+e.text-wrap
+							+e.title!= title
+							+e.descr!= descr
+				+sWaterSystemItem(7, 'Работаем с 2007 года', 'Нас знают и рекомендуют друзьям.<br>Наших инженеров не удивить<br>сложностью задачи')
+				+sWaterSystemItem(8, 'Аварийный выезд<br>в день обращения', 'Среднее время приезда аварийного специалиста 2-3 часа')
+				+sWaterSystemItem(9, 'Прямой поставщик оборудования', 'Это гарантия самой низкой цены. И мы точно знаем, что вам подойдет')
+				+sWaterSystemItem(10, 'Комплексно обслуживаем любые виды систем', 'У нас в штате специалисты по обслуживанию канализации, водоснабжения и отопления')
+				+sWaterSystemItem(11, 'Мы сами занимаемся монтажом инженерных сетей', 'Установили 6000 канализаций и других систем, знаем каждую станцию досконально изнутри')
+				+sWaterSystemItem(12, 'Сразу привезем все комплектующие', 'У нас собственный склад запасных частей по самым низким ценам')

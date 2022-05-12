@@ -1,0 +1,27 @@
+mixin sBeforeAfter(data)
+	// start sBeforeAfter
+	+b.SECTION.sBeforeAfter.section#sBeforeAfter&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Фото выполненных нами работ #[strong в формате до/после]
+			+e.swiper--js.swiper(data-mobile="false")
+				+e.row.row.swiper-wrapper
+					mixin videoSlide(t, i1, i2)
+						+e.col.col-md-6.swiper-slide
+							+e.title!= t
+							+e.slide
+								+e.icon-wrap
+									+icon('double-next')
+								+e.img-wrap
+									+img(`img/sBeforeAfter-img-${i1}.jpg`)
+									p До
+								+e.img-wrap
+									+img(`img/sBeforeAfter-img-${i2}.jpg`)
+									p После
+					+videoSlide('Астра 5, Вагагово', '1', '2')
+					+videoSlide('Топас 5, Верхние Осельки', '3', '4')
+					+videoSlide('Астра 4, снт Юбилейное', '5', '6')
+					+videoSlide('Топас 4, Отрадное', '7', '8')
+				+b.arrow-wrap
+					+arrow()
+	// end sBeforeAfter

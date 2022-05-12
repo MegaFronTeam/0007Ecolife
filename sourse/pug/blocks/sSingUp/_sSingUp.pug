@@ -1,0 +1,23 @@
+mixin sSingUp(data)
+	// start sSingUp
+	+b.sSingUp.section#sSingUp&attributes(attributes).bg-wrap
+		+img('img/sSingUp-bg.jpg', 'bg').picture-bg
+		img(src='img/sSingUp-img-1.png' alt='').img-man
+		img(src='img/sSingUp-img-2.png' alt='').img-bush
+		img(src='img/sSingUp-img-4.png' alt='').img-bush-3
+		img(src='img/sSingUp-img-3.png' alt='').img-bush-2
+		.container
+			+e.row.row
+				.col-lg-7
+					+e.title #[strong Запишитесь на срочный выезд мастера] для ремонта септика или станции очистки
+					ul
+						li Выезд в день обращения
+						li Диагностика неисправностей бесплатно
+						li Сертифицированный специалист
+					+e.text--indent Предварительную причину поломки инженер определит по&nbsp;телефону и&nbsp;возьмет с&nbsp;собой необходимые запчасти и&nbsp;инструменты.
+					+e.btn.main-btn(href="#") срочно вызвать мастера
+					+e.subtitle Необходимо провести<br>плановые работы?
+					+e.text Например откачать&nbsp;ил, почистить фильтры, аэролифты или сделать консервацию/расконсервацию канализации. Вы&nbsp;можете проверить в&nbsp;работе наших сервисных инженеров, заказав разовое обслуживание.
+				+e.col-btn.col-lg-5
+					.main-btn(href="#") Заказать разовое обслуживание
+	// end sSingUp

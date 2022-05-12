@@ -1,0 +1,119 @@
+// start .sSingUp
+.sSingUp {
+	--sPT: #{rem(60)};
+	--sPB: #{rem(42)};
+	// --sTPB: ;
+	overflow: hidden;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(100)};
+		--sPB: #{rem(64)};
+	}
+	&__row {
+		@include media-breakpoint-down(lg) {
+			min-height: rem(1188);
+		}
+	}
+	&__col-btn {
+		align-self: flex-end;
+		@include media-breakpoint-up(lg) {
+			text-align: right;
+		}
+	}
+	&__title {
+		@include rfs(46px);
+		line-height: 1.20em;
+		color: $white;
+		margin-bottom: rem(20);
+	}
+	ul {
+		color: $white;
+		list-style-type: none;
+		margin-bottom: rem(30);
+		li {
+			padding-left: rem(20);
+			position: relative;
+			font-size: rem(18);
+			font-weight: 500;
+			&:not(:last-child) {
+				margin-bottom: rem(5);
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 10px;
+				height: 10px;
+				background-color: #FFAD61;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				border-radius: 50%;
+			}
+		}
+	}
+	&__text {
+		font-size: rem(18);
+		line-height: 1.50em;
+		color: $white;
+		max-width: rem(552);
+		&--indent {
+			margin-bottom: rem(30);
+		}
+	}
+	&__btn {
+		padding: rem(25) rem(28.5);
+		margin-bottom: rem(36);
+	}
+	&__subtitle {
+		@include rfs(38px);
+		line-height: 1.20em;
+		margin-bottom: rem(20);
+		color: $white;
+		font-weight: 500;
+	}
+	.img-man, .img-bush, .img-bush-2, .img-bush-3 {
+		position: absolute;
+		z-index: -1;
+	}
+	.img-man {
+		bottom: 0;
+		right: 16.8%;
+		@include media-breakpoint-down(lg) {
+			right: unset;
+			left: 50%;
+			transform: translateX(-50%);
+			width: rem(338);
+		}
+	}
+	.img-bush {
+		right: 0;
+		bottom: 0;
+		@include media-breakpoint-down(lg) {
+			width: 381px;
+    	right: -199px;
+		}
+	}
+	.img-bush-2 {
+		left: 0;
+		bottom: 0;
+		@include media-breakpoint-down(lg) {
+			left: -46px;
+			width: 291px;
+		}
+	}
+	.img-bush-3 {
+		left: 0;
+		bottom: 170px;
+		@include media-breakpoint-down(lg) {
+			width: 229px;
+			bottom: -34px;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSingUp

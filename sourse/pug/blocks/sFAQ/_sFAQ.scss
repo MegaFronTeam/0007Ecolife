@@ -1,0 +1,89 @@
+// start .sFAQ
+.sFAQ {
+	--sPT: #{rem(37.5)};
+	--sPB: #{rem(60)};
+	// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(75)};
+		--sPB: #{rem(100)};
+	}
+	.section-title {
+		h2 {
+			margin-bottom: 0;
+		}
+		span {
+			font-weight: 500;
+		}
+	}
+	.dd-group {
+		&__row {
+			justify-content: center;
+			--bs-gutter-y: #{rem(20)};
+		}
+		&__item {
+			@include mt;
+			padding: rem(20) rem(26) rem(20) rem(26);
+			border: 1px solid #E9E9F2;
+			border-radius: 15px;
+			background-color: $white;
+			@include media-breakpoint-up(lg) {
+				padding: rem(24) rem(24) rem(27) rem(36);
+			}
+			&.active {
+				border-color: #F4F4F9;
+				background-color: #F4F4F9;
+				.dd-group__head {
+					&::after {
+						background-color: #fff;
+					}
+				}
+			}
+		}
+		&__head {
+			cursor: pointer;
+			font-size: rem(24);
+			font-weight: 500;
+			position: relative;
+			padding-right: rem(46);
+			&::after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 36px;
+				height: 36px;
+				border-radius: 50%;
+				background-color: #F5F5F9;
+				flex: 0 0 auto;
+				background-image: url('../img/svg/chevron-down.svg');
+				background-repeat: no-repeat;
+				background-position: 50%;
+				background-size: 37%;
+				@include media-breakpoint-down(lg) {
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+		}
+		&__content {
+			// display: none;
+			margin-top: rem(31);
+			p {
+				margin-bottom: 0;
+				line-height: 1.50em;
+				color: $black;
+				max-width: rem(764);
+				@include media-breakpoint-up(lg) {
+					font-size: rem(18);
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sFAQ
