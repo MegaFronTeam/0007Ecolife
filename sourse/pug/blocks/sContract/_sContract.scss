@@ -1,0 +1,99 @@
+// start .sContract
+.sContract {
+		--sPT: 0;
+		margin-top: -80px;
+		@include media-breakpoint-up(xl) {
+			margin-top: -173px;
+		}
+		// --sPB: ;
+		// --sTPB: ;
+	&__inner {
+		position: relative;
+		padding: rem(40);
+		background: linear-gradient(272.59deg, #272F39 -89.74%, #575B71 115.33%);
+		border: 10px solid $white;
+		box-shadow: 0px 4px 55px rgba(163, 169, 183, 0.15);
+		border-radius: 41px;
+		@include media-breakpoint-up(sm) {
+			padding: rem(60) rem(60) rem(51);
+		}
+	}
+	&__title {
+		margin-bottom: rem(30);
+		max-width: 636px;
+		color:$white;
+		line-height: 120%;
+		font-weight: 300;
+		font-size: rem(24);
+		@include media-breakpoint-up(md) {
+			font-size: rem(34);
+		}
+		strong {
+			font-weight: 500;
+		}
+	}
+	&__text {
+		display: flex;
+		align-items: center;
+		position: relative;
+		margin-bottom: rem(20);
+		font-size: 15px;
+		color:$white;
+		z-index: 5;
+		@include media-breakpoint-down(md) {
+			flex-direction: column;
+		}
+		img {
+			margin-right: 15px;
+			width: 106px;
+			height: 86px;
+		}
+		p {
+			@include media-breakpoint-down(sm) {
+				min-width: 100%;
+			}
+		}
+		strong {
+			display: block;
+		}
+	}
+	.main-btn {
+		position: relative;
+		z-index: 5;
+		@include media-breakpoint-down(sm) {
+		padding: 10px 15px;
+		}
+	}
+	&__right {
+		img {
+			right: -65%;
+			top: 65%;
+			height: 70%;
+			position: absolute;
+			z-index: 1;
+			@include media-breakpoint-up(sm) {
+				right: -30%;
+				top: 50%;
+			}
+			@include media-breakpoint-up(md) {
+				height: auto;
+				right: -30%;
+				top: 30%;
+			}
+			@include media-breakpoint-up(lg) {
+				right: -230px;
+				top: -115px;
+			}
+			@include media-breakpoint-up(xl) {
+				right: -165px;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sContract
