@@ -1,0 +1,60 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sServices/_sServices.pug
+include ../blocks/sSepticService/_sSepticService.pug
+include ../blocks/sEmergency/_sEmergency.pug
+include ../blocks/sWaterSystem/_sWaterSystem.pug
+include ../blocks/sRepairCost/_sRepairCost.pug
+include ../blocks/sSummerProblem/_sSummerProblem.pug
+include ../blocks/sWinterProblem/_sWinterProblem.pug
+include ../blocks/sSingUp/_sSingUp.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sVideos/_sVideos.pug
+include ../blocks/sBeforeAfter/_sBeforeAfter.pug
+include ../blocks/sRates/_sRates.pug
+include ../blocks/sContract/_sContract.pug
+include ../blocks/sOpinion/_sOpinion.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= index.head.title
+	title= 'Ecolife обслуживание септиков'
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+	+top-nav()
+	+headerBlock('с водоснабжением в загородном доме').headerBlock--water
+	+sServicesWater()
+	+sEmergency()
+	+sWaterSystem()
+	+sRepairCost()
+	+sSummerProblem()
+	+sWinterProblem()
+	+sContract()
+	+sOpinion()
+	+sRates
+	+sBeforeAfter
+	+sVideos
+	+sWaterSystem2
+	+sFAQ
+	+sSingUp
+	+footer()
+      
+    
+
