@@ -6,15 +6,23 @@
 	padding: 0;
 	max-width: 100%;
 }
+.fancybox__backdrop {
+	background-color: rgba($color: #262626, $alpha: .7);
+}
 .modal-win {
 	// display: block;
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
-	width: rem(1500);
+	width: rem(570);
+	overflow: hidden;
 	// min-height: 100%; 
 	padding: 40px;
-
+	border-radius: 35px;
+	z-index: 2;
+	@include media-breakpoint-down(md) {
+		padding: 20px;
+	}
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -24,6 +32,66 @@
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
+	}
+	.soc {
+		margin-top: rem(16);
+		gap: rem(39);
+		flex-wrap: wrap;
+		.icon {
+			font-size: rem(20);
+			color: $white;
+		}
+		&__item {
+			&:hover {
+				p {
+					color: #17181B;
+				}
+			}
+		}
+		&__icon-item {
+			width: 42px;
+			height: 42px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: rem(5);
+			&--whatsapp {
+				background-color: #00D64C;
+			}
+			&--telegram {
+				background-color: #66C0FF;
+			}
+			&--viber {
+				background-color: #7D69E9;
+			}
+		}
+		p {
+			@include mt;
+			color: #878C98;
+		}
+	}
+	&--done {
+		width: rem(460);
+		.modal-win__text-wrap {
+			max-width: rem(309);
+			img {
+				margin-bottom: rem(25);
+			}
+		}
+		.modal-win__title {
+			font-size: rem(36);
+			color: #000;
+			line-height: 1.20em;
+			font-weight: 500;
+			margin-bottom: rem(12);
+		}
+		p {
+			font-size: rem(17);
+			line-height: 1.50em;
+			color: #878C98;
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -89,6 +157,21 @@ a {
 	}
 }
 
+.is-close {
+	top: 20px !important;
+  right: 20px !important;
+	color: #878C98 !important;
+	border: 1px solid #878C98;
+	width: 26px;
+	height: 26px;
+	svg {
+		fill: currentColor;
+		width: 13px;
+		height: 13px;
+		filter: none;
+	}
+}
+
 .polite {
 	.link {
 		color: $primary;
@@ -101,7 +184,73 @@ a {
 	}
 }
 
-
+.form-wrap {
+	max-width: rem(377);
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	&__title {
+		font-size: rem(36);
+		margin-bottom: rem(10);
+		line-height: 1.20em;
+		color: #000;
+	}
+	p {
+		font-size: rem(17);
+		color: #878C98;
+		margin-bottom: 0;
+	}
+	small {
+		a {
+			color: #6884DD;
+			text-decoration: underline;
+		}
+	}
+	&__text-wrap {
+		margin-bottom: rem(40);
+		&--soc {
+			margin-bottom: rem(22);
+		}
+	}
+	&__input-wrap {
+		width: 100%;
+		max-width: rem(370);
+		margin-bottom: rem(17);
+		position: relative;
+		&:after {
+			content: url('../img/svg/phone.svg');
+			position: absolute;
+			display: block;
+			width: 18px;
+			height: 18px;
+			right: 32px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	&__input {
+		background: #F4F5F7;
+		box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.05);
+		border-radius: 100px;
+		border: none;
+		padding: rem(33) rem(36);
+		&::placeholder {
+			color: #878C98;
+		}
+	}
+	&__btn {
+		width: 100%;
+		margin-bottom: rem(42);
+	}
+}
+.modal-img-1 {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
 // 
 @include media-breakpoint-up(xl) {}
 
