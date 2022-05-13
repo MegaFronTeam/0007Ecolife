@@ -448,6 +448,11 @@ function eventHandler() {
 	});
 	// modal window
 
+	$('.menu-btn').on('click', function() {
+		$('.inside-menu').toggleClass('active');
+		$('body').toggleClass('fixed');
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

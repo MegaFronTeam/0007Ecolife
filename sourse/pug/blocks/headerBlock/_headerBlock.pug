@@ -1,4 +1,38 @@
 mixin headerBlock(location,img)
+mixin insideMenu()
+	+b.inside-menu
+		+e.logo(href="#")
+			+img('img/logo.png')
+		ul
+			li
+				a(href="#") О компании
+			li
+				a(href="#") Услуги
+			li
+				a(href="#") Акции
+			li
+				a(href="#") Блог
+			li
+				a(href="#") Лицензии и сертификаты
+			li
+				a(href="#") Отзывы
+			li
+				a(href="#") Цены
+			li
+				a(href="#") Гарантия
+			li
+				a(href="#") Наше оборудование и техника
+			li
+				a(href="#") Новости
+			li
+				a(href="#") Вакансии
+			li
+				a(href="#") Контакты
+		+e.wrap
+			a(href="telto:+78124381236").tel +7 812 438-12-36
+			a(href="#").main-btn заказать звонок
+
+mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
@@ -11,6 +45,9 @@ mixin headerBlock(location,img)
 				+btn('подобрать условия договора').main-btn
 			if img
 				img(src='img/header-block-img.png' class="headerBlock__main-img")
+			img(src='img/header-block-img.png' class="headerBlock__main-img")
+		+insideMenu()
+	// end headerBlock 
 
 mixin headerBlock2()
 	// start headerBlock
@@ -21,4 +58,5 @@ mixin headerBlock2()
 				+e.main-text #[strong Срочный ремонт] септиков и&nbsp;обслуживание станций очистки. #[strong Аварийный выезд] инженера<br>в&nbsp;день обращения.
 				+btn('подобрать условия договора').main-btn
 			img(src='img/header-block-img.png' class="headerBlock__main-img")
+		+insideMenu()
 	// end headerBlock 
