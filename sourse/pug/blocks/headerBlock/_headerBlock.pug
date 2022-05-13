@@ -1,4 +1,3 @@
-mixin headerBlock(location,img)
 mixin insideMenu()
 	+b.inside-menu
 		+e.logo(href="#")
@@ -32,7 +31,7 @@ mixin insideMenu()
 			a(href="telto:+78124381236").tel +7 812 438-12-36
 			a(href="#").main-btn заказать звонок
 
-mixin headerBlock()
+mixin headerBlock(location,img)
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
@@ -45,7 +44,6 @@ mixin headerBlock()
 				+btn('подобрать условия договора').main-btn
 			if img
 				img(src='img/header-block-img.png' class="headerBlock__main-img")
-			img(src='img/header-block-img.png' class="headerBlock__main-img")
 		+insideMenu()
 	// end headerBlock 
 
