@@ -35,3 +35,18 @@ mixin sServices2()
 			.row
 				+service('1', 'Сервисное обслуживание септиков','Ассенизаторские услуги','Откачка иловой массы','Аварийный выезд','Ремонт септиков')
 				+service('3', 'Обслуживание станций биологической&nbsp;очистки','Плановое обслуживание','Диагностика неисправностей','Ремонт септиков','Консервация на&nbsp;зиму','Аварийный выезд','Пуско-наладка')
+
+mixin sServicesWater(data)
+	+b.SECTION.sServices.section#sServices&attributes(attributes)
+		.container.water-container
+			img(src="img/service-bg.png" class='bg-img')
+			+e.logo-wrap
+				+img('img/logo-small.png')
+			+b.section-title.text-center
+				h2 Какие вопросы #[strong мы помогаем решать] жильцам загородных домов
+			mixin waterService(...items)
+				+e.water
+					//- ul
+					each item in items
+						+e.water-item.LI!= item
+			+waterService('Диагностика систем водоснабжения', 'Замена насосов', 'Регулировка давления','Предотвращение замерзания','Устранение засоров','Консервация водоснабжения при подготовке к&nbsp;зиме','Расконсервация системы после зимы')

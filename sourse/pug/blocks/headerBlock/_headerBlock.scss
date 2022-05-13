@@ -7,6 +7,17 @@
 	background-size: cover;
 	overflow: hidden;
 	margin-bottom: 1px;
+	&--water {
+		background-image: url('../img/water-headerblock-bg.jpg');
+		.headerBlock__main-text {
+			max-width: 630px;
+		}
+		.headerBlock__descr p {
+			@include media-breakpoint-down(md) {
+				max-width: 70%;
+			}
+		}
+	}
 	// height: rem(800);
 	// min-height: calc(var(--vh, 1vh) * 100);
 	// background-image: url(../img);
@@ -167,6 +178,9 @@
 
 	@include media-breakpoint-down(xs) {}
 
+}
+.headerBlock--water .main-btn {
+	margin-bottom: rem(94);
 }
 
 // end.headerBlock

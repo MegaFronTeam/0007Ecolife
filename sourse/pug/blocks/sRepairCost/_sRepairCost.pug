@@ -1,4 +1,12 @@
-mixin sRepairCost(usual)
+mixin repairItem(img, title,...list)
+	+b.repair-item.col-md-6.col-xl-3&attributes(attributes)
+		+e.img-wrap
+			+img(`img/repair-item-${img}.png`)
+		+e.title!= title
+		ul
+			each item in list
+				li!= item
+mixin sRepairCost(usual,water)
 	// start sRepairCost
 	+b.SECTION.sRepairCost.section#sRepairCost&attributes(attributes)
 		.container
@@ -6,19 +14,18 @@ mixin sRepairCost(usual)
 				+img('img/repair-img.png')
 				h2 #[strong Наш 13-летний опыт работы показывает],<br> что в&nbsp;среднем ремонт систем и&nbsp;покупка запчастей обходятся жильцам #[strong в&nbsp;25000-40000 рублей в&nbsp;год]
 			.row
-				mixin repairItem(img, title,...list)
-					+b.repair-item.col-md-6.col-xl-3&attributes(attributes)
-						+e.img-wrap
-							+img(`img/repair-item-${img}.png`)
-						+e.title!= title
-						ul
-							each item in list
-								li!= item
-				+repairItem('1','Поломка компрессора',`Новый компрессор <strong> от 10 000 до 16 000 рублей.</strong>`, `Ремонт + запчасти <strong> от 6 000 до 10 000 рублей.</strong>`)
-				+repairItem('2','Затопление станции из-за поломки насоса',`Новый компрессор <strong> от 10 000 до 16 000 рублей.</strong>`, `Ремонт + запчасти <strong> от 6 000 до 10 000 рублей.</strong>`)
-				+repairItem('3','Поломка электро- магнитного клапана',`Новый компрессор <strong> от 10 000 до 16 000 рублей.</strong>`, `Ремонт + запчасти <strong> от 6 000 до 10 000 рублей.</strong>`)
-				if usual
-					+repairItem('4','Поломка станции из-за неправильной консервации',`Неправильная консервация может привести к затоплению, разгерметизации или всплытию станции`, `Ремонт + запчасти <strong> от 6 000 до 10 000 рублей.</strong>`).repair-item--indent
+				if !water
+					+repairItem('1','Поломка компрессора',`Новый компрессор <strong> от 10 000 до 16 000 рублей.</strong>`, `Ремонт + запчасти <strong> от 6 000 до 10 000 рублей.</strong>`)
+					+repairItem('2','Затопление станции из-за поломки насоса',`Новый компрессор <strong> от 10 000 до 16 000 рублей.</strong>`, `Ремонт + запчасти <strong> от 6 000 до 10 000 рублей.</strong>`)
+					+repairItem('3','Поломка электро- магнитного клапана',`Новый компрессор <strong> от 10 000 до 16 000 рублей.</strong>`, `Ремонт + запчасти <strong> от 6 000 до 10 000 рублей.</strong>`)
+					if usual
+						+repairItem('4','Поломка станции из-за неправильной консервации',`Неправильная консервация может привести к затоплению, разгерметизации или всплытию станции`, `Ремонт + запчасти <strong> от 6 000 до 10 000 рублей.</strong>`).repair-item--indent
+					else
+						+repairItem('4','Поломка станции из-за неправильной консервации',`Новый компрессор <strong> от 10 000 до 16 000 рублей.</strong>`, `Ремонт + запчасти <strong> от 6 000 до 10 000 рублей.</strong>`)
 				else
-					+repairItem('4','Поломка станции из-за неправильной консервации',`Новый компрессор <strong> от 10 000 до 16 000 рублей.</strong>`, `Ремонт + запчасти <strong> от 6 000 до 10 000 рублей.</strong>`)
+					+repairItem('5','Поломка насоса',`Новый компрессор <strong> от 12 000 до 100 000 рублей.</strong>`, `Демонтаж/монтаж <strong> от 8000 до 20 000 рублей.</strong>`,'Стоимость зависит от глубины источника водоснабжения и мощности насоса.').repair-item--note
+					+repairItem('6','Потеря давления в&nbsp;системе',`Выезд инженера на определения неисправности <strong> от 4500 до 12 000 рублей.</strong>`, `Работы + запчасти <strong> от 1500 до 20 000 рублей.</strong>`)
+					+repairItem('7','Заморозка системы водоснабжения',`Работы по отогреванию <strong> от 12000 до 20 000 рублей.</strong>`, `Материалы <strong> от 5000 до 30 000 рублей.</strong>`)
+					+repairItem('8','Протечки в соединениях',`Выезд инженера <strong> от 4500 рублей.</strong>`, `Работы  необходимые материалы <strong> от 3000 рублей.</strong>`)
+
 	// end sRepairCost

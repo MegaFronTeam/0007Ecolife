@@ -13,5 +13,18 @@ mixin sContract(data)
 					+e.right.col-lg-4
 						+img('img/contract-img.png')
 
-
+mixin sContract2(data)
+	// start sContract
+	+b.SECTION.sContract.sContract--water.section#sContract&attributes(attributes)
+		.container
+			+e.inner
+				.row
+					+e.left.col-lg-8
+						+e.title Защитите себя от непредвиденных  #[strong ситуаций заблаговременно]
+						+e.text
+							+img('img/header-descr-img.png')
+							p Заключите договор на&nbsp;сервисное обслуживание.
+						+btn('Подобрать условия договора').main-btn
+					+e.right.col-lg-4
+						+img('img/contract-img.png')
 	// end sContract

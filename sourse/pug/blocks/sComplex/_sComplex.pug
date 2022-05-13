@@ -1,0 +1,23 @@
+mixin sComplex(data)
+	// start sComplex
+	+b.SECTION.sComplex.section#sComplex&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Что включает в&nbsp;себя #[strong комплексное обслуживание водоснабжения]
+			+e.row.row
+				mixin complexItem(img,title,span)
+					.col-md-6.col-lg-4.col-xl-3
+						+e.complex-item
+							+e.img-wrap
+								+img(`img/complex-item-${img}.jpg`)
+							+e.title!= title
+							+e.span!= span
+				+complexItem('1','Диагностика и&nbsp;регулировка давления насоса')
+				+complexItem('2','Диагностика и&nbsp;настройка автоматики')
+				+complexItem('3','Осмотр гидравлики на&nbsp;предмет герметичности','Герметизация при необходимости')
+				+complexItem('4','Контроль и&nbsp;настройка работы системы водоочистки')
+				+complexItem('5','Контроль и&nbsp;настройка напора воды')
+				+complexItem('6','Проверка технических узлов и&nbsp;агрегатов на&nbsp;предмет износа','Замена на&nbsp;месте при необходимости')
+				+complexItem('7','Диагностика оборудования, отвечающего за&nbsp;горячее и&nbsp;холодное водоснабжение')
+
+	// end sComplex

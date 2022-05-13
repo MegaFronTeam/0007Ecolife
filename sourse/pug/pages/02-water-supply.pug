@@ -20,6 +20,7 @@ include ../blocks/sBeforeAfter/_sBeforeAfter.pug
 include ../blocks/sRates/_sRates.pug
 include ../blocks/sContract/_sContract.pug
 include ../blocks/sOpinion/_sOpinion.pug
+include ../blocks/sComplex/_sComplex.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -32,7 +33,7 @@ block variables
 
 block title
 	- let  title= index.head.title
-	title= 'Ecolife обслуживание септиков'
+	title= 'Ecolife водоснабжение'
 block pagecontent
 	//- +mob-mnu()
 	
@@ -43,18 +44,17 @@ block pagecontent
 	+sServicesWater()
 	+sEmergency()
 	+sWaterSystem()
-	+sRepairCost()
-	+sSummerProblem()
-	+sWinterProblem()
-	+sContract()
-	+sOpinion()
-	+sRates
-	+sBeforeAfter
+	+sRepairCost('','water')
+	+sWinterProblem2()
+	+sContract2()
+	+sOpinion('true')
+	+sRates2()
+	+sComplex()
 	+sVideos
 	+sWaterSystem2
 	+sFAQ
 	+sSingUp
 	+footer()
       
-    
+
 

@@ -35,6 +35,61 @@
 	.row {
 		--bs-gutter-y: #{rem(30)};
 	}
+	&__water {
+		ul {
+			position: relative;
+			padding-top: rem(13);
+			max-width: 613px;
+			margin: 0 auto;
+			list-style-type: none;
+			font-size: rem(18);
+			&::before {
+				content: '';
+				background-image: url('../img/opinion-bg-img.png');
+				background-repeat: no-repeat;
+				background-size: contain;
+				width: 97px;
+				height: 81px;
+				position: absolute;
+				right: -37%;
+				top: 0;
+				transform: rotate(107deg);
+				z-index: -1;
+			}
+			&::after {
+				content: '';
+				background-image: url('../img/septic-bg-2.png');
+				background-repeat: no-repeat;
+				background-size: contain;
+				width: 600px;
+				height: 600px;
+				position: absolute;
+				right: -100%;
+				bottom: -90%;
+				z-index: -1; 
+			}
+			@include media-breakpoint-up(md) {
+				font-size: rem(24);
+			}
+		}
+		li {
+			position: relative;
+			padding-left: 70px;
+			margin-bottom: rem(13);
+			&::before {
+				content: '';
+				background-image: url('../img/water-service-marker.png');
+				background-repeat: no-repeat;
+				background-size: contain;
+				width: 64px;
+				height: 64px;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -97,4 +152,13 @@
 	// li:before {
   //   content: url('../img/svg/list-marker.svg');
   //  }
+}
+.water-container {
+	.bg-img {
+		@include media-breakpoint-down(md) {
+			top: 0;
+			left: -239px;
+			height: 100px
+		}
+	}
 }

@@ -101,4 +101,13 @@
 			}
 		}
 	}
+	&--note {
+		li {
+			&:last-child {
+				list-style-image: url('../img/info.png');
+				margin-bottom: rem(8);
+				// color: #141414;
+			}
+		}
+	}
 }

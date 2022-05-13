@@ -39,8 +39,11 @@
 		@include media-breakpoint-up(md) {
 			font-size: rem(50);
 		}
+		img{
+			margin-right: 23px;
+		}
 		strong {
-			padding-left: 23px;
+			// padding-left: 23px;
 			position: relative;
 			font-weight: 500;
 		}

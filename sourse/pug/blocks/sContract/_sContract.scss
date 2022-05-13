@@ -101,3 +101,6 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sContract
+.sContract.sContract--water {
+	margin-top: -40px;
+}
