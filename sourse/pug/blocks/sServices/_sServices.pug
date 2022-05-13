@@ -1,3 +1,13 @@
+mixin service(img, title,...items)
+	.col-12.col-lg-6
+		+b.service-item(href="#")
+			+e.img-wrap
+				+img(`img/service-${img}.jpg`)
+			h3!= title 
+			ul
+				each item in items
+					li!= item
+
 mixin sServices(data)
 	// start sServices
 	+b.SECTION.sServices.section#sServices&attributes(attributes)
@@ -8,17 +18,20 @@ mixin sServices(data)
 			+b.section-title.text-center
 				h2 Какие вопросы #[strong мы помогаем решать] жильцам загородных домов
 			.row
-				mixin service(img, title,...items)
-					.col-12.col-lg-6
-						+b.service-item(href="#")
-							+e.img-wrap
-								+img(`img/service-${img}.jpg`)
-							h3!= title 
-							ul
-								each item in items
-									li!= item
 				+service('1', 'Сервисное обслуживание септиков','Ассенизаторские услуги','Откачка иловой массы','Аварийный выезд','Ремонт септиков')
 				+service('2', 'Обслуживание систем водоснабжения','Замена насосов','Предотвращение замерзания','Устранение засоров','Консервация')
 				+service('3', 'Обслуживание станций биологической&nbsp;очистки','Плановое обслуживание','Диагностика неисправностей','Ремонт септиков','Консервация на&nbsp;зиму','Аварийный выезд','Пуско-наладка')
 				+service('4', 'Продажа комплектующих для инженерных систем','Компрессоры','Насосы для септиков (дренажные для принудительного отвода)','Бактерии','Ремкомплекты компрессоров','Запчасти Топас','Запчасти Астра','Запчасти БиоДека','Скваженные насосы','Колодезные насосы','Гидробаки')
 	// end sServices
+
+mixin sServices2()
+	+b.SECTION.sServices.section#sServices&attributes(attributes)
+		.container
+			img(src="img/service-bg.png" class='bg-img')
+			+e.logo-wrap
+				+img('img/logo-small.png')
+			+b.section-title.text-center
+				h2 Какие вопросы #[strong мы помогаем решать] жильцам загородных домов
+			.row
+				+service('1', 'Сервисное обслуживание септиков','Ассенизаторские услуги','Откачка иловой массы','Аварийный выезд','Ремонт септиков')
+				+service('3', 'Обслуживание станций биологической&nbsp;очистки','Плановое обслуживание','Диагностика неисправностей','Ремонт септиков','Консервация на&nbsp;зиму','Аварийный выезд','Пуско-наладка')

@@ -123,7 +123,14 @@
 	h2 {
 		margin-bottom: 1px;
 	}
-
+	&--2 {
+		.headerBlock__main-text {
+			margin-bottom: rem(35);
+		}
+		.main-btn {
+			margin-bottom: rem(283.825);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}

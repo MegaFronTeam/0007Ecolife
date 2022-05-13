@@ -38,6 +38,9 @@
 			font-size: rem(50);
 		}
 	}
+	&--sewers {
+		--sPB: #{rem(26)};
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -88,5 +91,14 @@
 		display: block;
 		font-weight: 500;
 		color: #343A43;
+	}
+	&--indent {
+		li {
+			&:not(:last-child) {
+				list-style-image: url('../img/svg/repair-list-marker-2.svg');
+				margin-bottom: rem(8);
+				color: #141414;
+			}
+		}
 	}
 }

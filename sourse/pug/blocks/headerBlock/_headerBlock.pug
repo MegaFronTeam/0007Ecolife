@@ -11,3 +11,14 @@ mixin headerBlock()
 				+btn('подобрать условия договора').main-btn
 			img(src='img/header-block-img.png' class="headerBlock__main-img")
 	// end headerBlock 
+
+mixin headerBlock2()
+	// start headerBlock
+	+b.headerBlock--2.section#headerBlock&attributes(attributes)
+		.container
+			+topLine()
+			+e.text
+				+e.main-text #[strong Срочный ремонт] септиков и&nbsp;обслуживание станций очистки. #[strong Аварийный выезд] инженера<br>в&nbsp;день обращения.
+				+btn('подобрать условия договора').main-btn
+			img(src='img/header-block-img.png' class="headerBlock__main-img")
+	// end headerBlock 

@@ -1,0 +1,28 @@
+mixin sWarehouse(data)
+	// start sWarehouse
+	+b.SECTION.sWarehouse.section#sWarehouse&attributes(attributes)
+		.container
+			.row
+				+e.col.col-lg-8
+					h2 У&nbsp;нас также свой склад<br>запчастей, которые вы&nbsp;можете<br>купить #[strong по цене производителя]
+					+e.list-wrap
+						ul
+							li Компрессоры
+							li Насосы для септиков (дренажные для принудительного отвода)
+							li Бактерии
+							li Ремкомплекты компрессоров
+							li Запчасти Топас
+						+e.img-wrap.d-block.d-lg-none
+							+img('img/sWarehouse-img-1.jpg', 'bg')
+						ul
+							li Запчасти Астра
+							li Запчасти БиоДека
+							li Скваженные насосы
+							li Колодезные Насосы
+							li Гидробаки
+					a(href="#").main-btn Получить полный прайс-лист
+					+img('img/sWarehouse-img-2.jpg').d-none.d-lg-block.img-screw
+				.col-lg-4.d-none.d-lg-block
+					+e.img-wrap
+						+img('img/sWarehouse-img-1.jpg')
+	// end sWarehouse
