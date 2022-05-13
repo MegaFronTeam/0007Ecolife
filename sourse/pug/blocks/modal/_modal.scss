@@ -37,6 +37,9 @@
 		margin-top: rem(16);
 		gap: rem(39);
 		flex-wrap: wrap;
+		@include media-breakpoint-down(sm) {
+			gap: rem(15);
+		}
 		.icon {
 			font-size: rem(20);
 			color: $white;
@@ -196,6 +199,9 @@ a {
 		margin-bottom: rem(10);
 		line-height: 1.20em;
 		color: #000;
+		@include media-breakpoint-down(sm) {
+			font-size: rem(26);
+		}
 	}
 	p {
 		font-size: rem(17);
@@ -210,6 +216,9 @@ a {
 	}
 	&__text-wrap {
 		margin-bottom: rem(40);
+		@include media-breakpoint-down(sm) {
+			margin-bottom: rem(20);
+		}
 		&--soc {
 			margin-bottom: rem(22);
 		}
@@ -239,10 +248,16 @@ a {
 		&::placeholder {
 			color: #878C98;
 		}
+		@include media-breakpoint-down(sm) {
+			padding: rem(15) rem(15);
+		}
 	}
 	&__btn {
 		width: 100%;
 		margin-bottom: rem(42);
+		@include media-breakpoint-down(sm) {
+			padding: rem(5) rem(13);
+		}
 	}
 }
 .modal-img-1 {
