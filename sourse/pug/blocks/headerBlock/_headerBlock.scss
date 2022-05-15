@@ -38,7 +38,7 @@
 			max-width: none;
 		}
 		@include media-breakpoint-down(sm) {
-			max-width:300px;
+			max-width:320px;
 		}
 		@media (max-width: 400px) {
 			margin: 0 auto;
@@ -56,6 +56,8 @@
 		@include media-breakpoint-down(lg) {
 			font-size: rem(30);
 			margin-bottom: rem(20);
+			padding-left: rem(16);
+			line-height: 113%;
 		}
 	}
 	&__descr {
@@ -64,6 +66,7 @@
 		align-items:flex-end;
 		font-size: rem(20);
 		@include media-breakpoint-down(md) {
+			padding-left: 13px;
 			flex-direction: column;
 			align-items:flex-start;
 		}
@@ -79,15 +82,17 @@
 				height: 65px;
 				right: 0;
 				top: 0;
+				margin-bottom: 15px;
 			}
 		}
 		p {
 			max-width: 395px;
 			@include media-breakpoint-down(md) {
-				max-width: 50%;
+				max-width: 56%;
 			}
 			@include media-breakpoint-down(sm) {
 				font-size: 16px;
+				line-height: 164%;
 			}
 		}
 	}
@@ -125,6 +130,7 @@
 			align-items: center;
 			align-content: center;
 			justify-content: center;
+			margin-bottom: rem(57);
 		}
 	}
 	h1 {

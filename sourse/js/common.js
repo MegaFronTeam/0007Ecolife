@@ -441,6 +441,7 @@ function eventHandler() {
 		autoplay: {
 			delay: 5000,
 		},
+		freeMode: true,
 	});
 
 	const swiper4 = new Swiper('.sBanners__slider--js', {

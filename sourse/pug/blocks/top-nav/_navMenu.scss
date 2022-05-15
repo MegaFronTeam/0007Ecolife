@@ -21,8 +21,16 @@
 			font-weight: 500;
 			font-size: 12px;
 			letter-spacing: 0.1em;
+			@include media-breakpoint-down(sm) {
+				padding: rem(18)  rem(26);
+			}
 		}
 		&.active {
+			a {
+				color: $white;
+			}
+		}
+		.swiper-slide:hover {
 			a {
 				color: $white;
 			}

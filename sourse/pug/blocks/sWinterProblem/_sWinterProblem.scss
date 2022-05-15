@@ -8,7 +8,11 @@
 	}
 		// --sPB: ;
 		// --sTPB: ;
-	
+	.container {
+		@include media-breakpoint-down(sm) {
+			padding-left: 30px;
+		}
+	}
 	&__left {
 		height: 100%;
 		img {
@@ -33,11 +37,11 @@
 	&__title {
 		margin-bottom: 37px;
 		color: #141414;
-		font-size: rem(30);
+		font-size: rem(28);
 		font-weight: 300;
-		line-height: 120%;
+		line-height: 113%;
 		@include media-breakpoint-up(md) {
-			font-size: rem(50);
+			font-size: rem(49);
 		}
 		img{
 			margin-right: 23px;
@@ -70,6 +74,17 @@
 		font-size: rem(20);
 		@include media-breakpoint-up(md) {
 			font-size: rem(24);
+		}
+	}
+	&__water-container {
+		.sWinterProblem__title {
+			margin-bottom: 13px;
+		}
+		ul {
+			margin-bottom: 15px;
+		}
+		li {
+			margin-bottom: 2px;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

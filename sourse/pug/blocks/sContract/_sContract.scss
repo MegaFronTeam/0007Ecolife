@@ -1,15 +1,18 @@
 // start .sContract
 .sContract {
 		--sPT: 0;
-		margin-top: -80px;
+		margin-top: -55px;
 		@include media-breakpoint-up(xl) {
 			margin-top: -173px;
+		}
+		@include media-breakpoint-up(sm) {
+			margin-top: -80px;
 		}
 		// --sPB: ;
 		// --sTPB: ;
 	&__inner {
 		position: relative;
-		padding: rem(40);
+		padding: rem(30);
 		background: linear-gradient(272.59deg, #272F39 -89.74%, #575B71 115.33%);
 		border: 10px solid $white;
 		box-shadow: 0px 4px 55px rgba(163, 169, 183, 0.15);
@@ -61,13 +64,13 @@
 		position: relative;
 		z-index: 5;
 		@include media-breakpoint-down(sm) {
-		padding: 10px 15px;
+		padding: 25px 15px;
 		}
 	}
 	&__right {
 		img {
-			right: -56px;
-   		top: 61%;
+			right: -36%;
+   		top: 44%;
 			height: 70%;
 			position: absolute;
 			z-index: 1;

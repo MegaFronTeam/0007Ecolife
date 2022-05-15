@@ -113,7 +113,7 @@ h2 {
 .main-btn {
 	display: inline-block;
 	padding: rem(39) rem(44);
-	background: linear-gradient(180deg, #E54E40 0%, #FC7B51 100%);
+	background-image: linear-gradient(to right, #E54E40 0%, #FC7B51 100%);
 	box-shadow: 0px 4px 0px #AF493D, inset 0px 10px 24px #FFAB95;
 	border-radius: 1000px;
 	font-weight: 700;
@@ -123,6 +123,11 @@ h2 {
 	text-transform: uppercase;
 	color: #FFFFFF;
 	text-shadow: 0px 1px 0px #CB4E3A;
+	background-size: 300% 100%;
+	&:hover {
+		background-position: 100% 0;
+		color: $white;
+	}
 }
 // .main-wrapper__inner{
 // 	// overflow-x: hidden;

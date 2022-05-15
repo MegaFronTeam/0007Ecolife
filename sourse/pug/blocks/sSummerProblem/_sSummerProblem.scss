@@ -51,6 +51,7 @@
 	.container {
 		position: relative;
 		@include media-breakpoint-down(sm) {
+			padding-left: 30px;
 			&::after {
 				position: absolute;
 				content: '';
@@ -79,11 +80,31 @@
 		@extend .h2;
 		margin-bottom:rem(20);
 		@include media-breakpoint-down(md) {
-			max-width: 293px;
+			max-width: 315px;
+			padding-left: 20px;
 			font-size: rem(30);
 		}
 		img {
 			margin: 0 10px;
+		}
+		strong {
+			@include media-breakpoint-down(sm) {
+				display: block;
+				position: relative;
+				padding-left: 50px;
+				&::before {
+					content: '';
+					background-image: url('../img/sun-img.png');
+					background-repeat: no-repeat;
+					background-size: cover;
+					position: absolute;
+					top: 50%;
+					left: 0;
+					transform: translateY(-50%);
+					width: 30px;
+					height: 30px;
+				}
+			}
 		}
 	}
 	&__cause {
@@ -106,20 +127,23 @@
 		}
 		// display: flex;
 		// img {
-		// 	height: 136px;
-		// 	position: relative;
-		// 	top: -27px;
-		// 	left: -48px;
-		// }
-	}
-	p {
-		line-height: 160%;
-		@include media-breakpoint-up(md) {
-			font-size: rem(18);
+			// 	height: 136px;
+			// 	position: relative;
+			// 	top: -27px;
+			// 	left: -48px;
+			// }
 		}
-	}
-	&--sewers {
-		--sPB: #{rem(169)};
+		p {
+			line-height: 160%;
+			@include media-breakpoint-up(md) {
+				font-size: rem(18);
+			}
+			@include media-breakpoint-down(sm) {
+				max-width: 284px;
+			}
+		}
+		&--sewers {
+			--sPB: #{rem(169)};
 		// --sPT: 0;
 		background-position: 0 -491%;
 	}

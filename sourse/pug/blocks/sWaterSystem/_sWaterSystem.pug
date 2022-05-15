@@ -3,12 +3,12 @@ mixin sWaterSystemItem(img,title,descr)
 		+img(`img/water-${img}.png`)
 		+e.title!= title
 		+e.descr!= descr
-mixin sWaterSystem(main)
+mixin sWaterSystem(main,title)
 	// start sWaterSystem
 	+b.SECTION.sWaterSystem.section#sWaterSystem&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 #[strong В&nbsp;9&nbsp;из&nbsp;10&nbsp;случаев] проблемы с&nbsp;канализацией или водоснабжением вызваны некачественным обслуживанием
+				h2 #[strong В&nbsp;9&nbsp;из&nbsp;10&nbsp;случаев] проблемы с&nbsp;#{title} вызваны некачественным обслуживанием
 			.row
 				if main
 					+sWaterSystemItem('1','Затопление','Ошибки при монтаже и&nbsp;обслуживании приводят к&nbsp;попаданию воды в&nbsp;блок управления станции и&nbsp;поломке всего электро-оборудования.')

@@ -9,15 +9,15 @@
 		max-width: 880px;
 	}
 	&__row {
-		--bs-gutter-y: #{rem(40)};
+		--bs-gutter-y: #{rem(70)};
 		@include media-breakpoint-up(md) {
 			position: relative;
 			&::after {
 				content: '';
 				position: absolute;
 				display: inline-block;
-				right: -250px;
-				bottom: 0;
+				right: -210px;
+				bottom:-115px; 
 				width: 450px;
 				height: 416px;
 				background-image: url('../img/complex-bg.png');
@@ -28,6 +28,10 @@
 	&__complex-item {
 		position: relative;
 		counter-increment: steps;
+		@include media-breakpoint-down(sm) {
+			width: 300px;
+			margin: 0 auto;
+		}
 		&::after {
 			content: "0"counter(steps);
 			position: absolute;
@@ -56,9 +60,10 @@
 		}
 	}
 	&__title {
-		margin-bottom: rem(14);
+		// margin-bottom: rem(14);
 		font-size: rem(20);
 		color: #141414;
+		line-height: 120%;
 	}
 	&__span {
 		font-size: 15px;

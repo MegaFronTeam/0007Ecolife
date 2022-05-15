@@ -19,14 +19,18 @@
 			background-repeat: no-repeat;
 			z-index: -1;
 			@include media-breakpoint-down(md) {
-				left: -360px;
-    		top: -245px;
+				left: -60px;
+    		top: 0px;
+				background-size: 130px 170px; 
 			}
 		}
 	}
 	.section-title {
 		img {
 			margin-bottom: rem(20);
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 3.25rem;
+			}
 		}
 	}
 	.row {
@@ -37,6 +41,12 @@
 		@include media-breakpoint-up(md) {
 			font-size: rem(50);
 		}
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 3.25rem;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 290px;
+		}
 	}
 	&--sewers {
 		--sPB: #{rem(26)};
@@ -44,18 +54,23 @@
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sRepairCost
 .repair-item {
+	@include media-breakpoint-down(sm) {
+		margin-left: auto;
+		margin-right: auto;
+		width: 324px;
+	}
 	&__img-wrap {
 		@include block(270,152);
 		filter: drop-shadow(0px 4px 35px rgba(142, 139, 156, 0.1));
 		border-radius: 9px;
 		overflow: hidden;
 		margin-bottom: rem(30);
+
 		img {
 			position: absolute;
 			top: 0;

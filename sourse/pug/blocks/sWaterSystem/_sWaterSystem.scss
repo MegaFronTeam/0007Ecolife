@@ -3,14 +3,19 @@
 		--sPT: #{rem(90)};
 		// --sPB: ;
 		--sTPB:#{rem(50)};
+		@include media-breakpoint-down(sm) {
+			padding-top: 114px;
+		}
 	h2 {
-		font-size: rem(26);
+		font-size: rem(50);
 		background: linear-gradient(272.65deg, #141414 12.74%, #545454 90.01%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
-		@include media-breakpoint-up(sm) {
-			font-size: rem(50);
+		@include media-breakpoint-down(sm) {
+			font-size: rem(26);
+			max-width: 320px;
+			margin: 0 auto;
 		}
 	}
 	strong {
@@ -55,6 +60,11 @@
     left: 50px;
     position: absolute;
     top: 400px;
+	}
+	&__supply {
+		strong {
+			display: inline;
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

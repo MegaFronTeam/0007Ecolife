@@ -9,6 +9,8 @@
 		z-index: 2;
 		@include media-breakpoint-down(sm) {
 			padding-bottom: rem(30);
+			padding-left: rem(10);
+			margin-bottom: rem(10);
 		}
 		&__logo {
 			display: block;
@@ -38,7 +40,7 @@
 			}
 			@include media-breakpoint-down(sm) {
 				font-size: 14px;
-				max-width: 270px;
+				max-width: 300px;
 			}
 		}
 		&__phone {
@@ -57,6 +59,10 @@
 			line-height: 12px;
 			letter-spacing: 0.1em;
 			text-transform: uppercase;
+			&:hover {
+				background-color: #2079F5;
+				color: rgba($white, .9);
+			}
 		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
