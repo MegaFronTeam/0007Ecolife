@@ -22,17 +22,24 @@
 	}
 	&__row {
 		position: relative;
-		& > img {
-			position: absolute;
-			z-index: -1;
-			left: -169px;
-    	top: -180px;
-			width: auto;
-			@include media-breakpoint-down(lg) {
-				width: 232px;
-				left: -89px;
-    		top: 527px;
-			}
+		@include media-breakpoint-down(sm) {
+			max-width: 300px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	.img-bg {
+		position: absolute;
+		z-index: -1;
+		left: -145px;
+		top: -151px;
+		width: auto;
+		width: rem(364);
+		object-fit: contain;
+		@include media-breakpoint-down(lg) {
+			width: 232px;
+			left: -89px;
+			top: 559px;
 		}
 	}
 	&__col-order-first {
@@ -162,6 +169,10 @@
 		position: absolute;
 		right: -48px;
     top: -48px;
+		@include media-breakpoint-down(md) {
+			right: -34px;
+    	top: -43px;
+		}
 	}
 	.img-alert, .img-work, .img-calendar {
 		margin-left: rem(14);

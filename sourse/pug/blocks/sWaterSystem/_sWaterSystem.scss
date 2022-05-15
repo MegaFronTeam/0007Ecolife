@@ -37,6 +37,11 @@
 			}
 		}
 		@include media-breakpoint-down(sm) {
+			.sWaterSystem__row {
+				max-width: rem(340);
+				margin-left: auto;
+				margin-right: auto;
+			}
 			.water-system-item {
 				display: flex;
 				align-items: center;
@@ -55,11 +60,23 @@
 			}
 		}
 	}
+	&--3 {
+		@include media-breakpoint-down(sm) {
+			max-width: rem(340);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 	.img-socket {
 		z-index: -1;
     left: 50px;
     position: absolute;
     top: 400px;
+		@include media-breakpoint-down(sm) {
+			width: 82px;
+			left: 10px;
+			top: 280px;
+		}
 	}
 	&__supply {
 		strong {

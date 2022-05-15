@@ -1,12 +1,44 @@
-//- mixin menu-toggle()
-//- 	+b.toggle-menu-mobile--js.d-lg-none
-//- 		span
-//- mixin mob-mnu()
-//- 	+b.menu-mobile--js
-//- 		+b.toggle-menu-mobile--js
-//- 			span
-//- 		+e.inner
-//- 			+mnu()
+mixin menu-toggle()
+	+b.toggle-menu-mobile--js
+		//- span
+		block
+mixin mob-mnu()
+	+b.menu-mobile--js
+		+b.toggle-menu-mobile--js
+			//- 	span
+			//- +e.inner
+			//- 	+mnu()
+			+b.inside-menu
+				+e.logo(href="#")
+					+img('img/logo.png')
+				ul
+					li
+						a(href="#") О компании
+					li
+						a(href="#") Услуги
+					li
+						a(href="#") Акции
+					li
+						a(href="#") Блог
+					li
+						a(href="#") Лицензии и сертификаты
+					li
+						a(href="#") Отзывы
+					li
+						a(href="#") Цены
+					li
+						a(href="#") Гарантия
+					li
+						a(href="#") Наше оборудование и техника
+					li
+						a(href="#") Новости
+					li
+						a(href="#") Вакансии
+					li
+						a(href="#") Контакты
+				+e.wrap
+					a(href="tel:+78124381236").tel +7 812 438-12-36
+					a(href="#").main-btn заказать звонок
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
@@ -14,13 +46,15 @@ mixin top-nav()
 		.container
 			.row
 				.menu-btn 
-					span
-					| Меню
+					+menu-toggle
+						span
+						| Меню
 					//- ul.submenu
 					//- 	li: a(href="#") submenu-item
 					//- 	li: a(href="#") submenu-item
 					//- 	li: a(href="#") submenu-item
 					//- 	li: a(href="#") submenu-item
+					//- +menu-toggle
 				.swiper.top-nav-swiper--js
 					+mnu()
 	// end top-nav

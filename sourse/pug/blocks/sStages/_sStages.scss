@@ -12,6 +12,11 @@
 	&__row {
 		--bs-gutter-y: #{rem(20)};
 		position: relative;
+		@include media-breakpoint-down(sm) {
+			max-width: 304px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		&::before, &::after {
 			position: absolute;
 			display: block;
@@ -24,6 +29,9 @@
 				border-left: 1.5px dashed #BEC6D0;
 				width: 1.5px;
 				height: 100%;
+			}
+			@include media-breakpoint-between(sm, lg) {
+				content: unset;
 			}
 		}
 		&::before {

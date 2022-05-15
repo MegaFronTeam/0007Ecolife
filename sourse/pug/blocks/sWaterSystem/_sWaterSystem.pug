@@ -3,9 +3,12 @@ mixin sWaterSystemItem(img,title,descr)
 		+img(`img/water-${img}.png`)
 		+e.title!= title
 		+e.descr!= descr
-mixin sWaterSystem(main,title)
+
+mixin sWaterSystem(main, bg,title)
 	// start sWaterSystem
-	+b.SECTION.sWaterSystem.section#sWaterSystem&attributes(attributes)
+	+b.SECTION.sWaterSystem.section.bg-wrap#sWaterSystem&attributes(attributes)
+		if bg
+			+img('img/repair-bg.png', 'bg').picture-bg
 		.container
 			+b.section-title.text-center
 				h2 #[strong В&nbsp;9&nbsp;из&nbsp;10&nbsp;случаев] проблемы с&nbsp;#{title} вызваны некачественным обслуживанием

@@ -55,43 +55,43 @@ const JSCCommon = {
 		if (linkModal) addData();
 	},
 	// /modalCall
-	// toggleMenu() {
-	// 	document.addEventListener("click", function (event) {
-	// 		const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
-	// 		const menu = document.querySelector(".menu-mobile--js");
-	// 		const toggleEv = event.target.closest(".toggle-menu-mobile--js");
-	// 		if (!toggleEv) return;
-	// 		toggle.forEach(el => el.classList.toggle("on"));
-	// 		menu.classList.toggle("active");
-	// 		[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
-	// 	}, { passive: true });
-	// },
-	// closeMenu() {
-	// 	const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
-	// 	const menu = document.querySelector(".menu-mobile--js");
-	// 	if (!menu) return;
-	// 	if (menu.classList.contains("active")) {
-	// 		toggle.forEach(element => element.classList.remove("on"));
-	// 		menu.classList.remove("active");
-	// 		[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
-	// 	}
+	toggleMenu() {
+		document.addEventListener("click", function (event) {
+			const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
+			const menu = document.querySelector(".menu-mobile--js");
+			const toggleEv = event.target.closest(".toggle-menu-mobile--js");
+			if (!toggleEv) return;
+			toggle.forEach(el => el.classList.toggle("on"));
+			menu.classList.toggle("active");
+			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
+		}, { passive: true });
+	},
+	closeMenu() {
+		const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
+		const menu = document.querySelector(".menu-mobile--js");
+		if (!menu) return;
+		if (menu.classList.contains("active")) {
+			toggle.forEach(element => element.classList.remove("on"));
+			menu.classList.remove("active");
+			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
+		}
 
-	// },
-	// mobileMenu() { 
-	// 	const menu = document.querySelector(".menu-mobile--js");
-	// 	if (!menu) return;
-	// 	this.toggleMenu();
-	// 	document.addEventListener('mouseup', (event) => {
-	// 		let container = event.target.closest(".menu-mobile--js.active"); // (1)
-	// 		let link = event.target.closest(".menu-mobile .menu a"); // (1)
-	// 		let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
-	// 		if (!container && !toggle) this.closeMenu();
-	// 	}, { passive: true });
+	},
+	mobileMenu() { 
+		const menu = document.querySelector(".menu-mobile--js");
+		if (!menu) return;
+		this.toggleMenu();
+		document.addEventListener('mouseup', (event) => {
+			let container = event.target.closest(".menu-mobile--js.active"); // (1)
+			let link = event.target.closest(".menu-mobile .menu a"); // (1)
+			let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
+			if (!container && !toggle) this.closeMenu();
+		}, { passive: true });
 
-	// 	window.addEventListener('resize', () => {
-	// 		if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
-	// 	}, { passive: true });
-	// },
+		window.addEventListener('resize', () => {
+			if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
+		}, { passive: true });
+	},
 
 	// tabs  .
 	tabscostume(tab) {
@@ -288,7 +288,7 @@ function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('tabs');
-	// JSCCommon.mobileMenu();
+	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
@@ -457,11 +457,11 @@ function eventHandler() {
 	});
 	// modal window
 
-	$('.menu-btn').on('click', function() {
-		$('.inside-menu').toggleClass('active');
-		$('body').toggleClass('fixed');
-	});
-
+	// $('.toggle-menu-mobile--js').on('click', function() {
+	// 	$('.inside-menu').toggleClass('active');
+	// 	$('body').toggleClass('fixed');
+	// 	$('.toggle-menu-mobile--js').toggleClass('active');
+	// });
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

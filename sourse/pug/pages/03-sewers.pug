@@ -36,7 +36,7 @@ block title
 	- let  title= index.head.title
 	title= 'Ecolife обслуживание септиков'
 block pagecontent
-	//- +mob-mnu()
+	+mob-mnu()
 	
 	
 	//- +header()
@@ -46,7 +46,7 @@ block pagecontent
 	//- +sSepticService()
 	+sEmergency().sEmergency--sewers
 	+sWarehouse
-	+sWaterSystem()
+	+sWaterSystem('true', 'true','канализацией или водоснабжением')
 	+sRepairCost('true').sRepairCost--sewers
 	+sSummerProblem().sSummerProblem--sewers
 	//- +sWinterProblem()
