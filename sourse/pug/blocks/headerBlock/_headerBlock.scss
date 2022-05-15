@@ -189,7 +189,7 @@
 	position: fixed;
 	left: 0;
 	top: 50px;
-	height: 100vh;
+	height: calc(var(--vh) * 100);
 	background-color: #4486DE;
 	z-index: 1000;
 	width: 100%;
