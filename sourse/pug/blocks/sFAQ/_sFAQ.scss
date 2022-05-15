@@ -23,6 +23,11 @@
 		&__row {
 			justify-content: center;
 			--bs-gutter-y: #{rem(20)};
+			@include media-breakpoint-down(sm) {
+				max-width: rem(300);
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 		&__item {
 			@include mt;
@@ -30,15 +35,24 @@
 			border: 1px solid #E9E9F2;
 			border-radius: 15px;
 			background-color: $white;
+			// display: none;
 			@include media-breakpoint-up(lg) {
 				padding: rem(24) rem(24) rem(27) rem(36);
 			}
 			&.active {
 				border-color: #F4F4F9;
 				background-color: #F4F4F9;
+				// display: block;
 				.dd-group__head {
 					&::after {
 						background-color: #fff;
+					}
+				}
+				.dd-group__content {
+					// display: none;
+					display: none;
+					&.active {
+						display: block;
 					}
 				}
 			}
@@ -72,6 +86,10 @@
 		&__content {
 			// display: none;
 			margin-top: rem(31);
+			display: none;
+			&.active {
+				display: block;
+			}
 			p {
 				margin-bottom: 0;
 				line-height: 1.50em;

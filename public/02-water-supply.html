@@ -17,6 +17,31 @@
 	</head>
 	<body class="main-page" data-bg="main.jpg">
 		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js">
+					<div class="inside-menu">
+						<a class="inside-menu__logo" href="#"><img src="img/logo.png" alt="" loading="lazy"/>
+						</a>
+						<ul>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Акции</a></li>
+							<li><a href="#">Блог</a></li>
+							<li><a href="#">Лицензии и сертификаты</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Цены</a></li>
+							<li><a href="#">Гарантия</a></li>
+							<li><a href="#">Наше оборудование и техника</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Вакансии</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+						<div class="inside-menu__wrap"><a class="tel" href="tel:+78124381236">+7 812 438-12-36</a><a class="main-btn" href="#">заказать звонок</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--  мобильное меню-->
 			<!-- start header-->
 			<header class="header" id="header">
 			</header>
@@ -25,7 +50,10 @@
 			<div class="top-nav block-with-lazy">
 				<div class="container">
 					<div class="row">
-						<div class="menu-btn"> <span></span>Меню</div>
+						<div class="menu-btn"> 
+							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>Меню
+							</div>
+						</div>
 						<div class="swiper top-nav-swiper--js">
 							<ul class="swiper-wrapper menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 								<li class="menu-item swiper-slide active" itemprop="item"><a href="#" itemprop="url">Обслуживание септиков</a></li>
@@ -63,26 +91,6 @@
 						</a>
 					</div>
 				</div>
-				<div class="inside-menu">
-					<a class="inside-menu__logo" href="#"><img src="img/logo.png" alt="" loading="lazy"/>
-					</a>
-					<ul>
-						<li><a href="#">О компании</a></li>
-						<li><a href="#">Услуги</a></li>
-						<li><a href="#">Акции</a></li>
-						<li><a href="#">Блог</a></li>
-						<li><a href="#">Лицензии и сертификаты</a></li>
-						<li><a href="#">Отзывы</a></li>
-						<li><a href="#">Цены</a></li>
-						<li><a href="#">Гарантия</a></li>
-						<li><a href="#">Наше оборудование и техника</a></li>
-						<li><a href="#">Новости</a></li>
-						<li><a href="#">Вакансии</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
-					<div class="inside-menu__wrap"><a class="tel" href="tel:+78124381236">+7 812 438-12-36</a><a class="main-btn" href="#">заказать звонок</a>
-					</div>
-				</div>
 			</div>
 			<!-- end headerBlock -->
 			<!-- start sEmergency-->
@@ -100,7 +108,7 @@
 			</section>
 			<!-- end sEmergency-->
 			<!-- start sWaterSystem-->
-			<section class="sWaterSystem section" id="sWaterSystem">
+			<section class="sWaterSystem section bg-wrap" id="sWaterSystem">
 				<div class="container">
 					<div class="section-title text-center">
 						<h2><strong>В&nbsp;9&nbsp;из&nbsp;10&nbsp;случаев</strong> проблемы с&nbsp;канализацией или водоснабжением вызваны некачественным обслуживанием</h2>
@@ -272,7 +280,7 @@
 						<h2>Обслуживание у профессионалов <strong>должно быть выгодным</strong> с первого дня</h2>
 						<p class="h3">Поэтому мы разработали выгодные тарифы на любые случаи</p>
 					</div>
-					<div class="sRates__row row"><img src="img/sRates-img-4.png"/>
+					<div class="sRates__row row"><img class="img-bg" src="img/sRates-img-4.png"/>
 						<div class="sRates__col-order-last col-lg-8">
 							<div class="sRates__wrap">
 								<div class="sRates__item">
@@ -438,7 +446,7 @@
 						<div class="sVideos__row row swiper-wrapper">
 							<div class="sVideos__col col-md-6 swiper-slide">
 								<a class="sVideos__slide" href="https://www.youtube.com/watch?v=L_LUpnjgPso&amp;t=7s" data-fancybox="sCard-gallery-1">
-									<div class="sVideos__video-wrap">
+									<div class="sVideos__video-wrap"><img class="object-fit-js" src="img/repair-item-1.png" alt="" loading="lazy"/>
 									</div>
 									<div class="sVideos__icon-wrap">
 										<svg class="icon icon-play-fill ">
@@ -449,7 +457,7 @@
 							</div>
 							<div class="sVideos__col col-md-6 swiper-slide">
 								<a class="sVideos__slide" href="https://www.youtube.com/watch?v=L_LUpnjgPso&amp;t=7s" data-fancybox="sCard-gallery-2">
-									<div class="sVideos__video-wrap">
+									<div class="sVideos__video-wrap"><img class="object-fit-js" src="img/repair-item-2.png" alt="" loading="lazy"/>
 									</div>
 									<div class="sVideos__icon-wrap">
 										<svg class="icon icon-play-fill ">
@@ -460,7 +468,7 @@
 							</div>
 							<div class="sVideos__col col-md-6 swiper-slide">
 								<a class="sVideos__slide" href="https://www.youtube.com/watch?v=L_LUpnjgPso&amp;t=7s" data-fancybox="sCard-gallery-3">
-									<div class="sVideos__video-wrap">
+									<div class="sVideos__video-wrap"><img class="object-fit-js" src="img/repair-item-3.png" alt="" loading="lazy"/>
 									</div>
 									<div class="sVideos__icon-wrap">
 										<svg class="icon icon-play-fill ">
@@ -471,7 +479,7 @@
 							</div>
 							<div class="sVideos__col col-md-6 swiper-slide">
 								<a class="sVideos__slide" href="https://www.youtube.com/watch?v=L_LUpnjgPso&amp;t=7s" data-fancybox="sCard-gallery-4">
-									<div class="sVideos__video-wrap">
+									<div class="sVideos__video-wrap"><img class="object-fit-js" src="img/repair-item-4.png" alt="" loading="lazy"/>
 									</div>
 									<div class="sVideos__icon-wrap">
 										<svg class="icon icon-play-fill ">
@@ -573,28 +581,28 @@
 								</div>
 							</div>
 							<div class="col-lg-10"> 
-								<div class="dd-group__item active">
+								<div class="dd-group__item">
 									<div class="dd-group__head dd-head-js">2 по частоте вопрос
 									</div>
-									<div class="dd-group__content dd-content-js active">
+									<div class="dd-group__content dd-content-js">
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis felis turpis nam pellentesque fermentum sagittis a, magnis condimentum. Cursus tempus amet, rutrum adipiscing posuere velit pellentesque. Consequat, mauris diam vestibulum eget dolor posuere facilisi. Faucibus turpis vestibulum proin nunc. Arcu id fermentum massa, mi nunc. Viverra eget pharetra aliquet adipiscing quam rutrum in.</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-10"> 
-								<div class="dd-group__item active">
+								<div class="dd-group__item">
 									<div class="dd-group__head dd-head-js">3 по частоте вопрос
 									</div>
-									<div class="dd-group__content dd-content-js active">
+									<div class="dd-group__content dd-content-js">
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis felis turpis nam pellentesque fermentum sagittis a, magnis condimentum. Cursus tempus amet, rutrum adipiscing posuere velit pellentesque. Consequat, mauris diam vestibulum eget dolor posuere facilisi. Faucibus turpis vestibulum proin nunc. Arcu id fermentum massa, mi nunc. Viverra eget pharetra aliquet adipiscing quam rutrum in.</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-10"> 
-								<div class="dd-group__item active">
+								<div class="dd-group__item">
 									<div class="dd-group__head dd-head-js">4 по частоте вопрос
 									</div>
-									<div class="dd-group__content dd-content-js active">
+									<div class="dd-group__content dd-content-js">
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis felis turpis nam pellentesque fermentum sagittis a, magnis condimentum. Cursus tempus amet, rutrum adipiscing posuere velit pellentesque. Consequat, mauris diam vestibulum eget dolor posuere facilisi. Faucibus turpis vestibulum proin nunc. Arcu id fermentum massa, mi nunc. Viverra eget pharetra aliquet adipiscing quam rutrum in.</p>
 									</div>
 								</div>
@@ -625,7 +633,9 @@
 							<div class="sSingUp__text">Например откачать&nbsp;ил, почистить фильтры, аэролифты или сделать консервацию/расконсервацию канализации. Вы&nbsp;можете проверить в&nbsp;работе наших сервисных инженеров, заказав разовое обслуживание.
 							</div>
 						</div>
-						<div class="sSingUp__col-btn col-lg-5"><a class="main-btn" href="#">Заказать разовое обслуживание</a>
+						<div class="sSingUp__col-btn col-lg-5">
+							<a class="sSingUp__btn-order main-btn" href="#">Заказать разовое обслуживание
+							</a>
 						</div>
 					</div>
 				</div>
@@ -646,7 +656,7 @@
 							</a>
 						</div>
 						<div class="col-auto">
-							<a class="footer__btn btn" href="#">перезвоните мне
+							<a class="footer__btn btn btn-success" href="#">перезвоните мне
 							</a>
 						</div>
 					</div>
