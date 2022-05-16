@@ -5,5 +5,11 @@ mixin sEmergency(data)
 			+e.wrap
 				+e.inner
 					+e.text #[strong Вам нужен аварийный выезд] по&nbsp;одному из&nbsp;этих или других вопросов, связанных с&nbsp;инженерными сетями в&nbsp;вашем доме?
-					+btn('срочно вызвать мастера').main-btn
+					+btn('срочно вызвать мастера')(
+						data-src="leave-the-phone"
+						data-title='<strong> Оставьте телефон</strong> и&nbsp;мы&nbsp;быстро подберем <strong> для вас мастера на&nbsp;аварийный выезд</strong>'
+						data-text=" "
+						data-btn="Срочно вызвать мастера"
+						data-img="img/modal-img-2.png"
+					).main-btn.link-modal-js
 	// end sEmergency

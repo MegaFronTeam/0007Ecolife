@@ -5,5 +5,11 @@ mixin topLine()
 			+img('img/logo.png')
 		+e.about Сервисное обслуживание инженерных систем для загородных домов в&nbsp;Санкт-Петербурге и&nbsp;ЛО
 		+e.phone(href="tel:+78124381236").d-none.d-md-block +7 812 438-12-36
-		+btn('срочно вызвать мастера').d-none.d-md-block
+		+btn('срочно вызвать мастера')(
+			data-src="leave-the-phone"
+			data-title='Оставьте <strong>телефон</strong>'
+			data-text="и&nbsp;мы&nbsp;быстро подберем для вас мастера на&nbsp;аварийный выезд"
+			data-btn="Срочно вызвать мастера"
+			data-img="img/modal-img-2.png"
+		).d-none.d-md-block.link-modal-js
 	// end topLine

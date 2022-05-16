@@ -15,9 +15,21 @@ mixin sSingUp(data)
 						li Диагностика неисправностей бесплатно
 						li Сертифицированный специалист
 					+e.text--indent Предварительную причину поломки инженер определит по&nbsp;телефону и&nbsp;возьмет с&nbsp;собой необходимые запчасти и&nbsp;инструменты.
-					+e.btn.main-btn(href="#") срочно вызвать мастера
+					+e.btn.main-btn.link-modal-js(href="#"
+						data-src="leave-the-phone"
+						data-title='Оставьте <strong>телефон</strong>'
+						data-text="и&nbsp;мы&nbsp;быстро подберем для вас мастера на&nbsp;аварийный выезд"
+						data-btn="Срочно вызвать мастера"
+						data-img="img/modal-img-2.png"
+					) срочно вызвать мастера
 					+e.subtitle Необходимо провести<br>плановые работы?
 					+e.text Например откачать&nbsp;ил, почистить фильтры, аэролифты или сделать консервацию/расконсервацию канализации. Вы&nbsp;можете проверить в&nbsp;работе наших сервисных инженеров, заказав разовое обслуживание.
 				+e.col-btn.col-lg-5
-					+e.btn-order.main-btn(href="#") Заказать разовое обслуживание
+					+e.btn-order.main-btn.link-modal-js(href="#"
+						data-src="leave-the-phone"
+						data-title='<strong> Оставьте телефон</strong> и наш менеджер рассчитает <strong> стоимость разового обслуживания</strong>'
+						data-text=" "
+						data-btn="Заказать разовое обслуживание"
+						data-img="img/modal-img-3.png"
+					) Заказать разовое обслуживание
 	// end sSingUp

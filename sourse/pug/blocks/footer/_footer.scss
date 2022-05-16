@@ -50,8 +50,8 @@
 		margin-bottom: 0;
 	}
 	&__btn {
-		@include mt;
-		background-color: rgba($color: $yellow, $alpha: 0.9);
+		// @include mt;
+		// background-color: rgba($color: $yellow, $alpha: 0.9);
 		border-radius: 1000px;
 		font-size: rem(12);
 		font-weight: 700;
@@ -59,7 +59,7 @@
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		&:hover {
-			background-color: rgba($color: $yellow, $alpha: 1);
+			// background-color: rgba($color: $yellow, $alpha: 1);
 		}
 	}
 	p {

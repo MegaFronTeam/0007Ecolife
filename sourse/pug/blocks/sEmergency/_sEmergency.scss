@@ -79,6 +79,8 @@
 		}
 	}
 	.main-btn {
+		position: relative;
+		z-index: 20;
 		padding: rem(26) rem(25);
 		@include media-breakpoint-up(sm) {
 			padding:  rem(39) rem(29);

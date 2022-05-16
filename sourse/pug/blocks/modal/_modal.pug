@@ -12,53 +12,6 @@ mixin modal()
 				+e.BUTTON.btn.btn.main-btn(type="submit"  )
 				+e.SMALL.text.text-secondary Нажимая на кнопку, я соглашаюсь с условиями<br>#[a(href="#") политики конфиденциальности]
 			+img('#').modal-img-1
-	div(id="leave-the-phone-2"  style="display: none" )
-		+b.modal-win
-			+form-wrap
-				+e.text-wrap
-					+e.title #[strong Оставьте телефон] и наш менеджер подберет для вас оптимальные условия #[strong сервисного договора]
-				+input("+ 7 900 900 90 90 ", 'tel')
-				+e.BUTTON.btn.btn.main-btn(type="submit"  ) подобрать условия договора
-				+e.SMALL.text.text-secondary Нажимая на кнопку, я соглашаюсь с условиями<br>#[a(href="#") политики конфиденциальности]
-			+img('img/modal-img-1.png').modal-img-1
-	div(id="leave-the-phone-3"  style="display: none" )
-		+b.modal-win
-			+form-wrap
-				+e.text-wrap
-					+e.title Оставьте #[strong телефон]
-					p.after-headline и&nbsp;мы&nbsp;быстро подберем для вас мастера на&nbsp;аварийный выезд
-				+input("+ 7 900 900 90 90 ", 'tel')
-				+e.BUTTON.btn.btn.main-btn(type="submit"  ) Срочно вызвать мастера
-				+e.SMALL.text.text-secondary Нажимая на кнопку, я соглашаюсь с условиями<br>#[a(href="#") политики конфиденциальности]
-			+img('img/modal-img-2.png').modal-img-1
-	div(id="leave-the-phone-4"  style="display: none" )
-		+b.modal-win
-			+form-wrap
-				+e.text-wrap
-					+e.title #[strong Оставьте телефон] и&nbsp;мы&nbsp;быстро подберем #[strong для вас мастера на&nbsp;аварийный выезд]
-				+input("+ 7 900 900 90 90 ", 'tel')
-				+e.BUTTON.btn.btn.main-btn(type="submit"  ) Срочно вызвать мастера
-				+e.SMALL.text.text-secondary Нажимая на кнопку, я соглашаюсь с условиями<br>#[a(href="#") политики конфиденциальности]
-			+img('img/modal-img-2.png').modal-img-1
-	div(id="leave-the-phone-5"  style="display: none" )
-		+b.modal-win
-			+form-wrap
-				+e.text-wrap
-					+e.title Оставьте #[strong телефон]
-					p.after-headline и&nbsp;наш менеджер рассчитает стоимость разового обслуживания
-				+input("+ 7 900 900 90 90 ", 'tel')
-				+e.BUTTON.btn.btn.main-btn(type="submit"  ) Срочно вызвать мастера
-				+e.SMALL.text.text-secondary Нажимая на кнопку, я соглашаюсь с условиями<br>#[a(href="#") политики конфиденциальности]
-			+img('img/modal-img-3.png').modal-img-1
-	div(id="leave-the-phone-6"  style="display: none" )
-		+b.modal-win
-			+form-wrap
-				+e.text-wrap
-					+e.title #[strong Оставьте телефон] и наш менеджер рассчитает #[strong стоимость разового обслуживания]
-				+input("+ 7 900 900 90 90 ", 'tel')
-				+e.BUTTON.btn.btn.main-btn(type="submit"  ) Срочно вызвать мастера
-				+e.SMALL.text.text-secondary Нажимая на кнопку, я соглашаюсь с условиями<br>#[a(href="#") политики конфиденциальности]
-			+img('img/modal-img-3.png').modal-img-1
 	div(id="leave-the-phone-7"  style="display: none" )
 		+b.modal-win
 			+form-wrap
@@ -90,16 +43,16 @@ mixin modal()
 			+form-wrap
 				+e.text-wrap--soc
 					+e.title #[strong Оставьте телефон] и мы отправим вам прайс-лист #[strong через любой удобный мессенджер]
-					+soc()
-						+item-sos()
+					+e.radio-wrap
+						+in-c('radio')
 							+e.icon-item--whatsapp
 								+icon('whatsapp')
 							p WhatsApp
-						+item-sos()
+						+in-c('radio')
 							+e.icon-item--telegram
 								+icon('telegram')
 							p Telegram
-						+item-sos()
+						+in-c('radio')
 							+e.icon-item--viber
 								+icon('viber')
 							p Viber

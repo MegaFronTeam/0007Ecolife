@@ -37,7 +37,7 @@ mixin sRates(data)
 								+e.price 
 									p.num 5000
 									p.currency руб
-						+e.btn(href="#").btn.main-btn скачать полный прайс-лист
+						+e.btn(href="#" data-src="leave-the-phone-8").btn.main-btn.link-modal-js  скачать полный прайс-лист
 				+e.col-order-first.col-lg-4
 					+e.wrap
 						img(src='img/circle.png').discount
@@ -57,7 +57,13 @@ mixin sRates(data)
 									p от
 									p.num 7000
 									p.currency руб
-						+e.btn--2(href="#").btn.main-btn подобрать условия договора
+						+e.btn--2(href="#"
+							data-src="leave-the-phone"
+							data-title='<strong> Оставьте телефон</strong> и наш менеджер подберет для вас оптимальные условия <strong>сервисного договора</strong>'
+							data-text=" "
+							data-btn="подобрать условия договора"
+							data-img="img/modal-img-1.png"
+						).btn.main-btn.link-modal-js подобрать условия договора
 	// end sRates
 
 mixin sRates2(data)
@@ -99,7 +105,7 @@ mixin sRates2(data)
 								+e.price 
 									p.num 5000
 									p.currency руб
-						+e.btn(href="#").btn.main-btn скачать полный прайс-лист
+						+e.btn(href="#" data-src="leave-the-phone-7").btn.main-btn.link-modal-js скачать полный прайс-лист
 				+e.col-order-first.col-lg-4
 					+e.wrap
 						img(src='img/circle.png').discount
@@ -118,4 +124,10 @@ mixin sRates2(data)
 									p от
 									p.num 7000
 									p.currency руб
-						+e.btn--2(href="#").btn.main-btn подобрать условия договора
+						+e.btn--2(href="#"
+							data-src="leave-the-phone"
+							data-title='<strong> Оставьте телефон</strong> и наш менеджер подберет для вас оптимальные условия <strong>сервисного договора</strong>'
+							data-text=" "
+							data-btn="подобрать условия договора"
+							data-img="img/modal-img-1.png"
+						).btn.main-btn.link-modal-js подобрать условия договора

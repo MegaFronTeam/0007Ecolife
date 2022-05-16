@@ -9,7 +9,13 @@ mixin sContract(data)
 						+e.text
 							+img('img/header-descr-img.png')
 							p Защитите себя от&nbsp;непредвиденных ситуаций заблаговременно. #[strong Заключите договор на&nbsp;сервисное обслуживание.]
-						+btn('Подобрать условия договора').main-btn
+						+btn('Подобрать условия договора')(
+							data-src="leave-the-phone"
+							data-title='<strong> Оставьте телефон</strong> и наш менеджер подберет для вас оптимальные условия <strong>сервисного договора</strong>'
+							data-text=" "
+							data-btn="подобрать условия договора"
+							data-img="img/modal-img-1.png"
+						).main-btn.link-modal-js
 					+e.right.col-lg-4
 						img(src='img/contract-img.png')
 
@@ -24,7 +30,13 @@ mixin sContract2(data)
 						+e.text
 							+img('img/header-descr-img.png')
 							p Заключите договор на&nbsp;сервисное обслуживание.
-						+btn('Подобрать условия договора').main-btn
+						+btn('Подобрать условия договора')(
+							data-src="leave-the-phone"
+							data-title='<strong> Оставьте телефон</strong> и наш менеджер подберет для вас оптимальные условия <strong>сервисного договора</strong>'
+							data-text=" "
+							data-btn="подобрать условия договора"
+							data-img="img/modal-img-1.png"
+						).main-btn.link-modal-js
 					+e.right.col-lg-4
 						img(src='img/contract-img.png')
 	// end sContract
