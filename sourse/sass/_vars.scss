@@ -118,8 +118,7 @@ $theme-colors: (
 $theme-colors: map-remove($theme-colors, 
 "info", 
 "light", 
-"dark",  
-"success",
+"dark",   
 'warning', 
 );
 

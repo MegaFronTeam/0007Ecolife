@@ -92,6 +92,7 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+	counter-reset: num;
 } // end.sWaterSystem
 .water-system-item {
 	color: #141414;
@@ -117,7 +118,7 @@
 			font-size: 16px;
 		}
 	}
-	counter-reset: num;
+	
 	&__img-wrap {
 		position: relative;
 		background-image: radial-gradient(165% 165% at 75% 100%, #E64F41 20.93%, #FF8276 72.11%, #FE7366 100%);
