@@ -20,11 +20,6 @@
 		}
 	}
 	&__swiper {
-		@include media-breakpoint-down(sm) {
-			max-width: rem(300);
-			margin-right: auto;
-			margin-left: auto;
-		}
 	}
 	&__row {
 		--bs-gutter-x: #{rem(30)};
@@ -50,6 +45,11 @@
 		display: flex;
 		justify-content: space-between;
 		position: relative;
+		@include media-breakpoint-down(sm) {
+			max-width: rem(300);
+			margin-right: auto;
+			margin-left: auto;
+		}
 	}
 	&__icon-wrap {
 		position: absolute;
@@ -67,6 +67,7 @@
 		transform: translate(-50%, -100%);
 		z-index: 2;
 		color: $white;
+		// @include a-cent;
 		.icon {
 			font-size: 11px;
 			fill: none;
