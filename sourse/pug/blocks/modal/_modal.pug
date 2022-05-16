@@ -6,12 +6,12 @@ mixin modal()
 		+b.modal-win
 			+form-wrap
 				+e.text-wrap
-					+e.title Оставьте #[strong телефон]
-					p.after-headline и&nbsp;наш менеджер подберет для вас<br>оптимальные условия сервисного договора
+					+e.title
+					p.after-headline
 				+input("+ 7 900 900 90 90 ", 'tel')
-				+e.BUTTON.btn.btn.main-btn(type="submit"  ) подобрать условия договора
+				+e.BUTTON.btn.btn.main-btn(type="submit"  )
 				+e.SMALL.text.text-secondary Нажимая на кнопку, я соглашаюсь с условиями<br>#[a(href="#") политики конфиденциальности]
-			+img('img/modal-img-1.png').modal-img-1
+			+img('#').modal-img-1
 	div(id="leave-the-phone-2"  style="display: none" )
 		+b.modal-win
 			+form-wrap
@@ -81,7 +81,9 @@ mixin modal()
 							p Viber
 				+input("+ 7 900 900 90 90 ", 'tel')
 				+e.BUTTON.btn.btn.main-btn(type="submit"  ) Срочно вызвать мастера
-				+e.SMALL.text.text-secondary Нажимая на кнопку, я соглашаюсь с условиями<br>#[a(href="#") политики конфиденциальности]
+				+e.SMALL.text.text-secondary Нажимая на кнопку, я соглашаюсь с условиями
+					br
+					a(href="#") политики конфиденциальности
 			+img('img/modal-img-4.png').modal-img-1
 	div(id="leave-the-phone-8"  style="display: none" )
 		+b.modal-win

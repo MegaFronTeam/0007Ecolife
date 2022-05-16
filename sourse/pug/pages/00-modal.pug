@@ -20,8 +20,11 @@ block pagecontent
 		.row
 			mixin btn(id, name)
 				.col-auto.mb-2
-					a.btn.btn-primary(href=`#` data-src=id data-fancybox="modal")= name
-			+btn("leave-the-phone", "leave-the-phone")
+					a.btn.btn-primary(href=`#` data-src=id data-fancybox="modal")&attributes(attributes)= name
+			+btn("leave-the-phone", "leave-the-phone")(
+				data-title='Оставьте <strong>телефон</strong>'
+				data-text="и наш менеджер подберет для вас оптимальные условия сервисного договора" 
+				data-btn="подобрать условия договора	" data-img="img/modal-img-1.png")
 			+btn("leave-the-phone-2", "leave-the-phone-2")
 			+btn("leave-the-phone-3", "leave-the-phone-3")
 			+btn("leave-the-phone-4", "leave-the-phone-4")

@@ -33,22 +33,24 @@ const JSCCommon = {
 		function addData() {
 			linkModal.forEach(element => {
 				element.addEventListener('click', () => {
-					let modal = document.querySelector(element.getAttribute("href"));
+					let modal = document.querySelector(('#' + element.dataset.src) || element.getAttribute("href"));
 					const data = element.dataset;
 
 					function setValue(val, elem) {
 						if (elem && val) {
-							const el = modal.querySelector(elem)
+							const el = modal.querySelector(elem);
 							el.tagName == "INPUT"
-								? el.value = val
+								? el.value = val :
+							el.tagName == "IMG"
+								? el.src = val
 								: el.innerHTML = val;
 							// console.log(modal.querySelector(elem).tagName)
 						}
 					}
-					setValue(data.title, '.ttu');
+					setValue(data.title, '.form-wrap__title');
 					setValue(data.text, '.after-headline');
-					setValue(data.btn, '.btn');
-					setValue(data.order, '.order');
+					setValue(data.btn, '.form-wrap__btn');
+					setValue(data.img, '.modal-img-1');
 				})
 			})
 		}
