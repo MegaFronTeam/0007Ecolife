@@ -61,6 +61,8 @@
 		}
 	}
 	&--3 {
+		position: relative;
+    z-index: 35;
 		@include media-breakpoint-down(sm) {
 			max-width: rem(340);
 			margin-left: auto;
@@ -115,6 +117,7 @@
 			font-size: 16px;
 		}
 	}
+	counter-reset: num;
 	&__img-wrap {
 		position: relative;
 		background-image: radial-gradient(165% 165% at 75% 100%, #E64F41 20.93%, #FF8276 72.11%, #FE7366 100%);
@@ -124,7 +127,9 @@
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: rem(18);
-		p {
+		&::before {
+			content:"0" counter(num);
+			counter-increment: num;
 			@include a-cent;
 			position: absolute;
 			display: block;
@@ -136,40 +141,56 @@
 			color: $white;
 			opacity: 0.23;
 		}
-		img {
+		&:after {
+			content: '';
 			@include a-cent;
 			position: absolute;
 			z-index: 2;
+			background-image: url('../img/atention.png');
+			background-repeat: no-repeat;
+			background-position: center;
 		}
 	}
 	&:nth-child(1) {
-		img {
-			transform: rotate(19.7deg);
+		.water-system-item__img-wrap {
+			&:after {
+				transform: rotate(19.7deg);
+			}
 		}
 	}
 	&:nth-child(2) {
-		img {
-			transform: rotate(-7.18deg);
+		.water-system-item__img-wrap {
+			&:after {
+				transform: rotate(-7.18deg);
+			}
 		}
 	}
 	&:nth-child(3) {
-		img {
-			transform: rotate(19.7deg);
+		.water-system-item__img-wrap {
+			&:after {
+				transform: rotate(19.7deg);
+			}
 		}
 	}
 	&:nth-child(4) {
-		img {
-			transform: otate(-7.18deg);
+		.water-system-item__img-wrap {
+			&:after {
+				transform: rotate(-7.18deg);
+			}
 		}
 	}
 	&:nth-child(5) {
-		img {
-			transform: rotate(19.7deg);
+		.water-system-item__img-wrap {
+			&:after {
+				transform: rotate(19.7deg);
+			}
 		}
 	}
 	&:nth-child(6) {
-		img {
-			transform:rotate(-7.18deg);
+		.water-system-item__img-wrap {
+			&:after {
+				transform: rotate(-7.18deg);
+			}
 		}
 	}
 }

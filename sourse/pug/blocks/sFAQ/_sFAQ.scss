@@ -8,6 +8,11 @@
 		--sPB: #{rem(100)};
 	}
 	.section-title {
+		@include media-breakpoint-down(sm) {
+			max-width: rem(300);
+			margin-left: auto;
+			margin-right: auto;
+		}
 		h2 {
 			margin-bottom: 0;
 			background: linear-gradient(272.65deg, #141414 12.74%, #545454 90.01%);

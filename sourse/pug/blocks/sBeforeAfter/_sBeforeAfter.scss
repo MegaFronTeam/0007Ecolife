@@ -12,6 +12,11 @@
 		max-width: rem(706);
 		margin-left: auto;
 		margin-right: auto;
+		@include media-breakpoint-down(sm) {
+			max-width: rem(300);
+			margin-left: auto;
+			margin-right: auto;
+		}
 		strong {
 			background: linear-gradient(272.65deg, #141414 12.74%, #545454 90.01%);
 			-webkit-background-clip: text;
@@ -20,11 +25,6 @@
 		}
 	}
 	&__swiper {
-		@include media-breakpoint-down(sm) {
-			max-width: rem(300);
-			margin-right: auto;
-			margin-left: auto;
-		}
 	}
 	&__row {
 		--bs-gutter-x: #{rem(30)};
@@ -50,6 +50,11 @@
 		display: flex;
 		justify-content: space-between;
 		position: relative;
+		@include media-breakpoint-down(sm) {
+			max-width: rem(300);
+			margin-right: auto;
+			margin-left: auto;
+		}
 	}
 	&__icon-wrap {
 		position: absolute;
@@ -67,6 +72,7 @@
 		transform: translate(-50%, -100%);
 		z-index: 2;
 		color: $white;
+		// @include a-cent;
 		.icon {
 			font-size: 11px;
 			fill: none;

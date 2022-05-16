@@ -289,7 +289,7 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
-	// JSCCommon.inputMask();
+	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
@@ -405,7 +405,7 @@ function eventHandler() {
 	function mobileSlider3() {
 		if (window.innerWidth <= 768 && sBeforeAfterSlider.dataset.mobile == 'false') {
 			sBeforeAfterSwiper = new Swiper(sBeforeAfterSlider, {
-				slidesPerView: 'auto',
+				slidesPerView: 1,
 				spaceBetween: 10,
 				navigation: {
 					nextEl: '.sBeforeAfter .swiper-button-hand-next',
