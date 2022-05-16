@@ -441,7 +441,8 @@ function eventHandler() {
 		autoplay: {
 			delay: 5000,
 		},
-		freeMode: true,
+		// centeredSlides: true,
+		slidesOffsetAfter: 200,
 	});
 
 	const swiper4 = new Swiper('.sBanners__slider--js', {
