@@ -12,6 +12,11 @@
 		max-width: rem(706);
 		margin-left: auto;
 		margin-right: auto;
+		@include media-breakpoint-down(sm) {
+			max-width: rem(300);
+			margin-left: auto;
+			margin-right: auto;
+		}
 		strong {
 			background: linear-gradient(272.65deg, #141414 12.74%, #545454 90.01%);
 			-webkit-background-clip: text;
