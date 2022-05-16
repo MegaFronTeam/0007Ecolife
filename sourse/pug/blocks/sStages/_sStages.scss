@@ -66,6 +66,7 @@
 			}
 		}
 	}
+	counter-reset: num;
 	&__num {
 		color: #FDC86C;
 		font-size: rem(70);
@@ -83,30 +84,22 @@
 			width: 100%;
 			height: max-content;
 		}
-		&::before, &::after {
+		 &::after {
 			position: absolute;
 			display: block;
-			width: 40px;
+			width: 118%;
 			height: 100%;
 			background-color: #fff;
 			top: 0;
 			z-index: -1;
-		}
-		&::before {
-			content: '';
-			left: -14px;
-			@include media-breakpoint-down(md) {
-				width: 100%;
-				left: 0;
-				top: 0;
-			}
-		}
-		&::after {
-			left: 53px;
-			width: 40px;
+			left: -11px;
 			@include media-breakpoint-up(md) {
 				content: '';
 			}
+		}
+		&::before {
+			content:"0" counter(num) ".";
+			counter-increment: num;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

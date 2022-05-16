@@ -65,16 +65,17 @@ mixin modal()
 				+e.text-wrap--soc
 					+e.title Оставьте #[strong телефон]
 					p.after-headline и мы отправим вам прайс лист через любой удобный мессенджер
-					+soc()
-						+item-sos()
+					//- +soc()
+					+e.radio-wrap
+						+in-c('radio')
 							+e.icon-item--whatsapp
 								+icon('whatsapp')
 							p WhatsApp
-						+item-sos()
+						+in-c('radio')
 							+e.icon-item--telegram
 								+icon('telegram')
 							p Telegram
-						+item-sos()
+						+in-c('radio')
 							+e.icon-item--viber
 								+icon('viber')
 							p Viber
