@@ -440,9 +440,9 @@ function eventHandler() {
 	
 	const menuSlider = new Swiper(".top-nav-swiper--js", {
 		slidesPerView: 'auto',
-		autoplay: {
-			delay: 5000,
-		},
+		// autoplay: {
+		// 	delay: 5000,
+		// },
 		// centeredSlides: true,
 		slidesOffsetAfter: 200,
 	});
