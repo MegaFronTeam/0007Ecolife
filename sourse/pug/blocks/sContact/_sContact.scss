@@ -1,7 +1,40 @@
 
 	// start .sContact
 	.sContact {
-		 
+	.section-title {
+		h2 {
+			@include rfs(55px);
+		}
+	}
+	ul {
+		list-style-type: none;
+		max-width: rem(480);
+		@include media-breakpoint-up(lg) {
+			margin-left: rem(48);
+		}
+		li {
+			display: flex;
+			align-items: center;
+			&:not(:last-child) {
+				margin-bottom: rem(15);
+			}
+			&:before  {
+				content:'';
+				background-image: url('../img/logo-small.png');
+				background-size: cover;
+				display: block;
+				width: 32px;
+				height: 32px;
+				margin-right: rem(17);
+				flex: 0 0 auto;
+				align-self: flex-start;
+			}
+			p {
+				margin-bottom: 0;
+				line-height: 1.55em;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

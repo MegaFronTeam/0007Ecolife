@@ -1,9 +1,16 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
+	+b.SECTION.sContact.section#sContact&attributes(attributes).bg-wrap
+		+img('img/sContact-bg.png', 'bg').picture-bg
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
 			.row
+				.col-lg-6
+					+b.section-title
+						h2 #[strong В нашем офисе ] можно:
+					ul
+						li: p #[strong Посмотреть образцы ] оборудования
+						li: p #[strong Познакомиться с командой, ] лично переговорить с любым сотрудником, попить чаю
+						li: p #[strong Согласовать проект, ] подписать договор
+						li: p #[strong Провести оплату любым удобным способом,] включая безналичный перевод (в том числе с НДС) или картой через терминал
+						li: p #[strong Оформить беспроцентную ] рассрочку или кредит
 	// end sContact
