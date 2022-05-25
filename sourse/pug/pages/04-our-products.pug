@@ -6,6 +6,7 @@ include ../blocks/top-nav/_top-nav.pug
 include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
+include ../blocks/sReviews/_sReviews.pug
 //- include ../blocks/sServices/_sServices.pug
 //- include ../blocks/sSepticService/_sSepticService.pug
 //- include ../blocks/sEmergency/_sEmergency.pug
@@ -15,7 +16,7 @@ include ../blocks/sContent/_sContent.pug
 //- include ../blocks/sWinterProblem/_sWinterProblem.pug
 //- include ../blocks/sSingUp/_sSingUp.pug
 //- include ../blocks/sFAQ/_sFAQ.pug
-//- include ../blocks/sVideos/_sVideos.pug
+include ../blocks/sVideos/_sVideos.pug
 //- include ../blocks/sBeforeAfter/_sBeforeAfter.pug
 //- include ../blocks/sRates/_sRates.pug
 //- include ../blocks/sContract/_sContract.pug
@@ -43,6 +44,9 @@ block pagecontent
 	+top-nav()
 	+headerBlock2
 	+sContact()
+	+sReviews
+	+sVideos2
+	+sVideos3
 	//- +sServices2()
 	//- //- +sSepticService()
 	//- +sEmergency().sEmergency--sewers
@@ -62,7 +66,3 @@ block pagecontent
 	//- +sFAQ
 	//- +sSingUp
 	+footer()
-      
-
-
-

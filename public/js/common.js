@@ -289,7 +289,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -465,6 +465,20 @@ function eventHandler() {
 	// 	$('body').toggleClass('fixed');
 	// 	$('.toggle-menu-mobile--js').toggleClass('active');
 	// });
+
+	var $container = $(".grid"); 
+  function mass() {
+
+  // $container.imagesLoaded().progress( function() {
+    $container.masonry({
+      itemSelector: ".grid-item",
+      percentPosition: true,
+			gutter: 45
+    });
+
+  }  
+  mass();
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

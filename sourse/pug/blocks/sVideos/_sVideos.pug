@@ -20,3 +20,67 @@ mixin sVideos(data)
 				+b.arrow-wrap
 					+arrow()
 	// end sVideos
+
+mixin sVideos2(data)
+	+b.SECTION.sVideos.section#sVideos&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				+img('img/sVideos-icon.png')
+				h2 #[strong Посмотрите отзывы]<br>о компании ЭкоЛайф
+			+e.video-row.row
+				.col-lg-3.col-sm-6
+					+e.slide--2(href="https://www.youtube.com/watch?v=eqzWEqDLn1E&feature=youtu.be" data-fancybox=`sCard-gallery-1`)
+						+e.video-wrap
+							+img(`https://img.youtube.com/vi/eqzWEqDLn1E/mqdefault.jpg`, 'bg')
+						+e.icon-wrap
+							+icon('play-fill')
+					+e.desc Отзыв о компании ЭкоЛайф. Колодец, канализация, водоснабжение, дренаж
+					+e.num 272 просмотра
+				.col-lg-3.col-sm-6
+					+e.slide--2(href="https://www.youtube.com/watch?v=dAtp21e4CtI&feature=youtu.be" data-fancybox=`sCard-gallery-2`)
+						+e.video-wrap
+							+img(`https://img.youtube.com/vi/dAtp21e4CtI/mqdefault.jpg`, 'bg')
+						+e.icon-wrap
+							+icon('play-fill')
+					+e.desc Отзыв о компании ЭкоЛайф. Колодец и канализация Астра 5
+					+e.num 119 просмотров
+				.col-lg-3.col-sm-6
+					+e.slide--2(href="https://www.youtube.com/watch?v=Lmf7zajhEps&feature=youtu.be" data-fancybox=`sCard-gallery-3`)
+						+e.video-wrap
+							+img(`https://img.youtube.com/vi/Lmf7zajhEps/mqdefault.jpg`, 'bg')
+						+e.icon-wrap
+							+icon('play-fill')
+					+e.desc Отзыв о компании ЭкоЛайф. Колодец, автономная канализация, водоснабжение
+					+e.num 197 просмотров
+				.col-lg-3.col-sm-6
+					+e.slide--2(href="https://www.youtube.com/watch?v=7AYknmYoK0s&feature=youtu.be" data-fancybox=`sCard-gallery-4`)
+						+e.video-wrap
+							+img(`https://img.youtube.com/vi/7AYknmYoK0s/mqdefault.jpg`, 'bg')
+						+e.icon-wrap
+							+icon('play-fill')
+					+e.desc Отзыв о компании ЭкоЛайф. Водоснабжение, отопление, электромонтажные и дренажные работы, канализации
+					+e.num 149 просмотров
+
+mixin sVideos3(data)
+	+b.SECTION.sVideos.section#sVideos&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 #[strong Посмотрите, как функционирует система канализации] в загородном доме спустя 5 лет и более после установки
+			.tabs
+				.tabs__caption
+					.tabs__btn.active #водоснабжение
+					.tabs__btn #канализация
+					.tabs__btn #погреба
+					.tabs__btn #дренаж
+					.tabs__btn #колодцы
+				.tabs__content.active
+					+e.video-row.row
+						+e.col-wrap.col-lg-3.col-sm-6
+							+e.slide(href="https://youtu.be/Lmf7zajhEps" data-fancybox=`video-1`)
+								+e.video-wrap
+									+img(`https://img.youtube.com/vi/eqzWEqDLn1E/mqdefault.jpg`, 'bg')
+								+e.icon-wrap
+									+icon('play-fill')
+							+e.desc Установка колодца,канализации,водоснабжения
+							+e.num Снт. Невское
+							

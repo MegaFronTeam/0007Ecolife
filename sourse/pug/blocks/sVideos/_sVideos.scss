@@ -11,6 +11,7 @@
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: rem(57);
+		position: relative;
 		@include media-breakpoint-down(sm) {
 			max-width: rem(300);
 			margin-left: auto;
@@ -21,6 +22,13 @@
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			background-clip: text;
+		}
+		img {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			top: -69px;
+			z-index: -1;
 		}
 	}
 	&__row {
@@ -52,6 +60,49 @@
 			margin-right: auto;
 			margin-left: auto;
 		}
+		&--2 {
+			--ratio: 180/270;
+			margin-bottom: rem(15);
+			.sVideos__icon-wrap {
+				background-image: linear-gradient(180deg, #94d549 0%, #51b955 100%);
+				width: 72px;
+				height: 72px;
+			}
+			.sVideos__video-wrap {
+				@include mt;
+				// position: relative;
+				&::before {
+					@include mt;
+					content: '';
+					position: absolute;
+					display: block;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					background-color: transparent;
+					z-index: 2;
+				}
+				&:hover {
+					transform: scale(1.2);
+					&::before {
+						background-color: rgba(0,0,0,0.4);
+					}
+				}
+			}
+		}
+	}
+	&__desc {
+		font-size: rem(19);
+		line-height: 1.26em;
+		text-align: center;
+		font-weight: 500;
+		margin-bottom: rem(4);
+	}
+	&__num {
+		text-align: center;
+		color: #8c94a2;
+		font-size: rem(15);
 	}
 	&__video-wrap {
 		position: absolute;
@@ -74,6 +125,48 @@
 		.icon {
 			font-size: rem(36);
 			margin-left: 2px;
+		}
+	}
+	&__video-row {
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	.tabs {
+		&__caption {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: rem(12);
+			margin-bottom: rem(60);
+		}
+		&__btn {
+			box-shadow: 0 4px 32px rgb(163 169 183 / 21%);
+			border-radius: 6px;
+			background-color: #ffffff;
+			color: #828b9a;
+			font-size: 17px;
+			padding: 10px 19px;
+			cursor: pointer;
+			&.active {
+				color: #0077dc;
+				box-shadow: 0 0 0px 2px #0077dc;
+			}
+		}
+	}
+	&__col-wrap {
+		.sVideos__slide {
+			--ratio: 180/270;
+			margin-bottom: rem(15);
+		}
+		.sVideos__icon-wrap {
+			width: 95px;
+			height: 95px;
+		}
+		.sVideos__desc {
+			font-size: rem(17);
+		}
+		.sVideos__num {
+			font-size: rem(16);
 		}
 	}
 	@include media-breakpoint-up(xl) {}

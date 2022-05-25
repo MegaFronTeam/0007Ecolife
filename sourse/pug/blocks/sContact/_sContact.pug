@@ -2,7 +2,7 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes).bg-wrap
 		+img('img/sContact-bg.png', 'bg').picture-bg
-		.container
+		+e.container.container
 			.row
 				.col-lg-6
 					+b.section-title
@@ -13,4 +13,32 @@ mixin sContact()
 						li: p #[strong Согласовать проект, ] подписать договор
 						li: p #[strong Провести оплату любым удобным способом,] включая безналичный перевод (в том числе с НДС) или картой через терминал
 						li: p #[strong Оформить беспроцентную ] рассрочку или кредит
+					+img('img/cards-systems.png').cards
+				.col-lg-6
+					+e.name-wrap
+						+e.name 
+							p Андрей Краснов
+						+e.post
+							p Генеральный директор ЭкоЛайф
+			+e.map
+				+e.map-widget#map
+				+e.map-info
+					p СПБ, Кантемировская улица, дом 39, офис 211 09:00-21:00
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+	script.
+		var myMap;
+
+		// Дождёмся загрузки API и готовности DOM.
+		ymaps.ready(init);
+
+		function init () {
+			myMap = new ymaps.Map('map', {
+					center: [59.98098756412571,30.32504900000001],
+					zoom: 17
+			}),
+				myPlacemark = new ymaps.Placemark([59.98098756412571,30.32504900000001], {
+					// Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+				});
+			myMap.geoObjects.add(myPlacemark);
+		}
 	// end sContact

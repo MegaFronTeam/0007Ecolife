@@ -86,7 +86,7 @@
 			<!-- end headerBlock -->
 			<!-- start sContact-->
 			<section class="sContact section bg-wrap" id="sContact"><img class="object-fit-js picture-bg" src="img/sContact-bg.png" alt="" loading="lazy"/>
-				<div class="container">
+				<div class="sContact__container container">
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="section-title">
@@ -108,12 +108,273 @@
 								<li>
 									<p><strong>Оформить беспроцентную </strong> рассрочку или кредит</p>
 								</li>
-							</ul>
+							</ul><img class="cards" src="img/cards-systems.png" alt="" loading="lazy"/>
+						</div>
+						<div class="col-lg-6">
+							<div class="sContact__name-wrap">
+								<div class="sContact__name"> 
+									<p>Андрей Краснов</p>
+								</div>
+								<div class="sContact__post">
+									<p>Генеральный директор ЭкоЛайф</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sContact__map">
+						<div class="sContact__map-widget" id="map">
+						</div>
+						<div class="sContact__map-info">
+							<p>СПБ, Кантемировская улица, дом 39, офис 211 09:00-21:00</p>
+						</div>
+					</div>
+				</div>
+			</section><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+			<script>
+				var myMap;
+				
+				// Дождёмся загрузки API и готовности DOM.
+				ymaps.ready(init);
+				
+				function init () {
+					myMap = new ymaps.Map('map', {
+							center: [59.98098756412571,30.32504900000001],
+							zoom: 17
+					}),
+						myPlacemark = new ymaps.Placemark([59.98098756412571,30.32504900000001], {
+							// Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+						});
+					myMap.geoObjects.add(myPlacemark);
+				}
+			</script>
+			<!-- end sContact-->
+			<!-- start sReviews-->
+			<section class="sReviews section" id="sReviews">
+				<div class="container text-center">
+					<div class="section-title text-center">
+						<h2><strong>Отзывы</strong> о компании «ЭкоЛайф»</h2>
+					</div>
+					<div class="grid">
+						<div class="grid-item">
+							<div class="sReviews__rate-wrap">
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+							</div><a href="img/sReviews-img-1.jpg" data-fancybox="sReviews-img-1"><img src="img/sReviews-img-1.jpg"/></a>
+						</div>
+						<div class="grid-item">
+							<div class="sReviews__rate-wrap">
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+							</div><a href="img/sReviews-img-2.jpg" data-fancybox="sReviews-img-2"><img src="img/sReviews-img-2.jpg"/></a>
+						</div>
+						<div class="grid-item">
+							<div class="sReviews__rate-wrap">
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+							</div><a href="img/sReviews-img-3.jpg" data-fancybox="sReviews-img-3"><img src="img/sReviews-img-3.jpg"/></a>
+						</div>
+						<div class="grid-item">
+							<div class="sReviews__rate-wrap">
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+							</div><a href="img/sReviews-img-4.jpg" data-fancybox="sReviews-img-4"><img src="img/sReviews-img-4.jpg"/></a>
+						</div>
+						<div class="grid-item">
+							<div class="sReviews__rate-wrap">
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+							</div><a href="img/sReviews-img-5.jpg" data-fancybox="sReviews-img-5"><img src="img/sReviews-img-5.jpg"/></a>
+						</div>
+						<div class="grid-item">
+							<div class="sReviews__rate-wrap">
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+							</div><a href="img/sReviews-img-6.jpg" data-fancybox="sReviews-img-6"><img src="img/sReviews-img-6.jpg"/></a>
+						</div>
+						<div class="grid-item">
+							<div class="sReviews__rate-wrap">
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+							</div><a href="img/sReviews-img-7.jpg" data-fancybox="sReviews-img-7"><img src="img/sReviews-img-7.jpg"/></a>
+						</div>
+						<div class="grid-item">
+							<div class="sReviews__rate-wrap">
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+								<div class="sReviews__rate-item">
+								</div>
+							</div><a href="img/sReviews-img-8.jpg" data-fancybox="sReviews-img-8"><img src="img/sReviews-img-8.jpg"/></a>
+						</div>
+					</div><a class="main-btn" href="#">Смотреть все отзывы</a>
+				</div>
+			</section>
+			<!-- end sReviews-->
+			<section class="sVideos section" id="sVideos">
+				<div class="container">
+					<div class="section-title text-center"><img src="img/sVideos-icon.png" alt="" loading="lazy"/>
+						<h2><strong>Посмотрите отзывы</strong><br>о компании ЭкоЛайф</h2>
+					</div>
+					<div class="sVideos__video-row row">
+						<div class="col-lg-3 col-sm-6">
+							<a class="sVideos__slide sVideos__slide--2" href="https://www.youtube.com/watch?v=eqzWEqDLn1E&amp;feature=youtu.be" data-fancybox="sCard-gallery-1">
+								<div class="sVideos__video-wrap"><img class="object-fit-js" src="https://img.youtube.com/vi/eqzWEqDLn1E/mqdefault.jpg" alt="" loading="lazy"/>
+								</div>
+								<div class="sVideos__icon-wrap">
+									<svg class="icon icon-play-fill ">
+										<use xlink:href="img/svg/sprite.svg#play-fill"></use>
+									</svg>
+								</div>
+							</a>
+							<div class="sVideos__desc">Отзыв о компании ЭкоЛайф. Колодец, канализация, водоснабжение, дренаж
+							</div>
+							<div class="sVideos__num">272 просмотра
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6">
+							<a class="sVideos__slide sVideos__slide--2" href="https://www.youtube.com/watch?v=dAtp21e4CtI&amp;feature=youtu.be" data-fancybox="sCard-gallery-2">
+								<div class="sVideos__video-wrap"><img class="object-fit-js" src="https://img.youtube.com/vi/dAtp21e4CtI/mqdefault.jpg" alt="" loading="lazy"/>
+								</div>
+								<div class="sVideos__icon-wrap">
+									<svg class="icon icon-play-fill ">
+										<use xlink:href="img/svg/sprite.svg#play-fill"></use>
+									</svg>
+								</div>
+							</a>
+							<div class="sVideos__desc">Отзыв о компании ЭкоЛайф. Колодец и канализация Астра 5
+							</div>
+							<div class="sVideos__num">119 просмотров
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6">
+							<a class="sVideos__slide sVideos__slide--2" href="https://www.youtube.com/watch?v=Lmf7zajhEps&amp;feature=youtu.be" data-fancybox="sCard-gallery-3">
+								<div class="sVideos__video-wrap"><img class="object-fit-js" src="https://img.youtube.com/vi/Lmf7zajhEps/mqdefault.jpg" alt="" loading="lazy"/>
+								</div>
+								<div class="sVideos__icon-wrap">
+									<svg class="icon icon-play-fill ">
+										<use xlink:href="img/svg/sprite.svg#play-fill"></use>
+									</svg>
+								</div>
+							</a>
+							<div class="sVideos__desc">Отзыв о компании ЭкоЛайф. Колодец, автономная канализация, водоснабжение
+							</div>
+							<div class="sVideos__num">197 просмотров
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6">
+							<a class="sVideos__slide sVideos__slide--2" href="https://www.youtube.com/watch?v=7AYknmYoK0s&amp;feature=youtu.be" data-fancybox="sCard-gallery-4">
+								<div class="sVideos__video-wrap"><img class="object-fit-js" src="https://img.youtube.com/vi/7AYknmYoK0s/mqdefault.jpg" alt="" loading="lazy"/>
+								</div>
+								<div class="sVideos__icon-wrap">
+									<svg class="icon icon-play-fill ">
+										<use xlink:href="img/svg/sprite.svg#play-fill"></use>
+									</svg>
+								</div>
+							</a>
+							<div class="sVideos__desc">Отзыв о компании ЭкоЛайф. Водоснабжение, отопление, электромонтажные и дренажные работы, канализации
+							</div>
+							<div class="sVideos__num">149 просмотров
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- end sContact-->
+			<section class="sVideos section" id="sVideos">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2><strong>Посмотрите, как функционирует система канализации</strong> в загородном доме спустя 5 лет и более после установки</h2>
+					</div>
+					<div class="tabs">
+						<div class="tabs__caption">
+							<div class="tabs__btn active">#водоснабжение</div>
+							<div class="tabs__btn">#канализация</div>
+							<div class="tabs__btn">#погреба</div>
+							<div class="tabs__btn">#дренаж</div>
+							<div class="tabs__btn">#колодцы</div>
+						</div>
+						<div class="tabs__content active">
+							<div class="sVideos__video-row row">
+								<div class="sVideos__col-wrap col-lg-3 col-sm-6">
+									<a class="sVideos__slide" href="https://youtu.be/Lmf7zajhEps" data-fancybox="video-1">
+										<div class="sVideos__video-wrap"><img class="object-fit-js" src="https://img.youtube.com/vi/eqzWEqDLn1E/mqdefault.jpg" alt="" loading="lazy"/>
+										</div>
+										<div class="sVideos__icon-wrap">
+											<svg class="icon icon-play-fill ">
+												<use xlink:href="img/svg/sprite.svg#play-fill"></use>
+											</svg>
+										</div>
+									</a>
+									<div class="sVideos__desc">Установка колодца,канализации,водоснабжения
+									</div>
+									<div class="sVideos__num">Снт. Невское
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__row row">
@@ -245,6 +506,7 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/masonry-layout/masonry.pkgd.min.js"> </script>
 		<script src="js/common.js?v=0.0.1"></script>
 	</body>
 </html>
