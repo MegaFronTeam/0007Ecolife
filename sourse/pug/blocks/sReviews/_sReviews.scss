@@ -10,9 +10,12 @@
 			float: left;
 			width: calc((100% / 4) - 45px);
 			margin-bottom: rem(30);
-			&:nth-child(n + 9) {
-				display: none;
-			}
+			// &:nth-child(n + 9) {
+			// 	display: none;
+			// }
+			// &.active {
+			// 	display: block;
+			// }
 			@include media-breakpoint-down(md) {
 				width: calc((100% / 2) - 45px);
 			}
