@@ -3,29 +3,7 @@
 	--sPT: #{rem(42)};
 	--sPB: #{rem(90)};
 	// --sTPB: ;
-	.grid {
-		margin-right: -45px;
-		margin-bottom: rem(30);
-		&-item {
-			float: left;
-			width: calc((100% / 4) - 45px);
-			margin-bottom: rem(30);
-			// &:nth-child(n + 9) {
-			// 	display: none;
-			// }
-			// &.active {
-			// 	display: block;
-			// }
-			@include media-breakpoint-down(md) {
-				width: calc((100% / 2) - 45px);
-			}
-			img {
-				width: 100%;
-				border-radius: 15px;
-				box-shadow: 0 14px 59px rgb(163 169 183 / 15%);
-			}
-		}
-	}
+
 	&__rate-wrap {
 		display: flex;
 		align-items: center;
@@ -54,3 +32,35 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sReviews
+
+
+
+
+.grid {
+	margin-right: -45px;
+	margin-bottom: rem(30);
+	
+}
+.grid-item {
+	float: left;
+	width: calc((100% / 4) - 45px);
+	margin-bottom: rem(30);
+	// &:nth-child(n + 9) {
+	// 	display: none;
+	// }
+	// &.active {
+	// 	display: block;
+	// }
+	@include media-breakpoint-down(md) {
+		width: calc((100% / 2) - 45px);
+	}
+	img {
+		width: 100%;
+		border-radius: 15px;
+		box-shadow: 0 14px 59px rgb(163 169 183 / 15%);
+	}
+
+	&:nth-child(n + 9) {
+		display: none;
+	}
+}

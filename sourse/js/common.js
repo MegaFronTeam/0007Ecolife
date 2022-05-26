@@ -467,21 +467,17 @@ function eventHandler() {
 	// });
 
 	var $container = $(".grid"); 
-	var $grid = $(".grid-item"); 
+	// var $grid = $(".grid-item"); 
 	$container.masonry({
 		itemSelector: ".grid-item",
 		percentPosition: true,
 		gutter: 45,
 	});
-	// $('.sReviews__show-more').on('click', function() {
-	// 	$container.masonry();
-	// 	$('.grid-item.active').slideUp(function() {
-	// 		$(this).removeClass('active');
-	// 	});
-	// 	$('.grid-item:hidden').slideDown(function() {
-	// 		$(this).addClass('active');
-	// 	});
-	// });
+	$('.sReviews__show-more').on('click', function() {
+		$('.grid-item:hidden').fadeIn();
+		$container.masonry('layout');
+		$(this).hide();
+	});
 	
 
 };
