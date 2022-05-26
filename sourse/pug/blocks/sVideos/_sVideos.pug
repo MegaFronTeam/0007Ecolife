@@ -61,8 +61,20 @@ mixin sVideos2(data)
 					+e.desc Отзыв о компании ЭкоЛайф. Водоснабжение, отопление, электромонтажные и дренажные работы, канализации
 					+e.num 149 просмотров
 
+mixin video-item(link, vidNum, preview, i, desc, num, ...items)
+	+e.col-wrap.col-lg-3.col-sm-6
+		+e.slide(href=`${link}` data-fancybox=`video-${vidNum}-${i}`)
+			+e.video-wrap
+				+img(`img/vid-prev-${preview}.jpg`, 'bg')
+			+e.icon-wrap
+				+icon('play-fill')
+		+e.desc!= desc
+		+e.num!= num
+		+e.hashtag-wrap
+			each item in items 
+				+e.hashtag-item(href="#")!= item
 mixin sVideos3(data)
-	+b.SECTION.sVideos.section#sVideos&attributes(attributes)
+	+b.SECTION.sVideos--3.section#sVideos&attributes(attributes)
 		.container
 			+b.section-title.text-center
 				h2 #[strong Посмотрите, как функционирует система канализации] в загородном доме спустя 5 лет и более после установки
@@ -75,12 +87,14 @@ mixin sVideos3(data)
 					.tabs__btn #колодцы
 				.tabs__content.active
 					+e.video-row.row
-						+e.col-wrap.col-lg-3.col-sm-6
-							+e.slide(href="https://youtu.be/Lmf7zajhEps" data-fancybox=`video-1`)
-								+e.video-wrap
-									+img(`https://img.youtube.com/vi/eqzWEqDLn1E/mqdefault.jpg`, 'bg')
-								+e.icon-wrap
-									+icon('play-fill')
-							+e.desc Установка колодца,канализации,водоснабжения
-							+e.num Снт. Невское
-							
+						+video-item('https://youtu.be/Lmf7zajhEps', '1', '1', '1', 'Установка колодца, канализации, водоснабжения', 'Снт. Невское', '#Ecolife', '#Септик', '#АвтономнаяКанализация', '#Отзыв')
+						+video-item('https://youtu.be/QyKHFHRiBbc', '2', '2', '1', 'Монтаж узла водоснабжения с помощью насоса Dab Divertron 1200', 'П. Белоостров', '#Ecolife', '#Водоснабжение', '#НасосDab')
+						+video-item('https://youtu.be/qFksTaz6nlQ', '3', '3', '1', 'Установка станции Топас 5', 'п. Новинка', '#Ecolife', '#Септик', '#Топас', '#Отзыв')
+						+video-item('https://youtu.be/V637AVGfOGw', '4', '4', '1', 'Установка водоснабжения на даче', 'пос. Ексолово', '#Ecolife', '#Водоснабжение')
+				-for(i=2; i<=5; i++)
+					.tabs__content
+						+e.video-row.row
+							+video-item('https://youtu.be/Lmf7zajhEps', '1', '1', i, 'Установка колодца, канализации, водоснабжения', 'Снт. Невское', '#Ecolife', '#Септик', '#АвтономнаяКанализация', '#Отзыв')
+							+video-item('https://youtu.be/QyKHFHRiBbc', '2', '2', i, 'Монтаж узла водоснабжения с помощью насоса Dab Divertron 1200', 'П. Белоостров', '#Ecolife', '#Водоснабжение', '#НасосDab')
+							+video-item('https://youtu.be/qFksTaz6nlQ', '3', '3', i, 'Установка станции Топас 5', 'п. Новинка', '#Ecolife', '#Септик', '#Топас', '#Отзыв')
+							+video-item('https://youtu.be/V637AVGfOGw', '4', '4', i, 'Установка водоснабжения на даче', 'пос. Ексолово', '#Ecolife', '#Водоснабжение')

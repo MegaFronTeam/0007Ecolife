@@ -1,0 +1,30 @@
+mixin sBrandsList(data)
+	// start sBrandsList
+	+b.SECTION.sBrandsList.section#sBrandsList&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 #[strong В наличии 350 моделей] от 15 крупных производителей
+			+e.row.row
+				mixin sBrandsList-item(i, title, text)
+					+e.col.col-auto
+						+img(`img/sBrandsList-img-${i}.jpg`)
+						+e.price-wrap Цена 
+							strong!= title
+						p Монтаж под ключ 
+							strong!= text
+				+sBrandsList-item(1, 'от 107 900 ₽' , `26 500 ₽`)
+				+sBrandsList-item(2, 'от 83 600 ₽' , `26 500 ₽`)
+				+sBrandsList-item(3, 'от 107 950 ₽' , `19 900 ₽`)
+				+sBrandsList-item(4, 'от 102 000 ₽' , `19 900 ₽`)
+				+sBrandsList-item(5, 'от 83 900 ₽' , `19 900 ₽`)
+				+sBrandsList-item(6, 'от 111 000 ₽' , `22 000 ₽`)
+				+sBrandsList-item(7, 'от 135 000 ₽' , `19 900 ₽`)
+				+sBrandsList-item(8, 'от 111 420 ₽' , `19 900 ₽`)
+				+sBrandsList-item(9, 'от 175 900 ₽' , `19 900 ₽`)
+				+sBrandsList-item(10, 'от от 213 300 ₽' , `30 000 ₽`)
+				+sBrandsList-item(11, 'от 107 800 ₽' , `20 000 ₽`)
+				+sBrandsList-item(12, 'от 89 900 ₽' , `20 000 ₽`)
+				+sBrandsList-item(13, 'от 115 500 ₽' , `20 000 ₽`)
+				+sBrandsList-item(14, 'от 139 900 ₽' , `20 000 ₽`)
+				+sBrandsList-item(15, 'от 100 900 ₽' , `30 000 ₽`)
+	// end sBrandsList

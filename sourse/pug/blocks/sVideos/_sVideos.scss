@@ -3,6 +3,9 @@
 	--sPT: #{rem(25)};
 	--sPB: #{rem(10)};
 	// --sTPB: ;
+	&--3 {
+		--sPB: #{rem(50)};
+	}
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(50)};
 	}
@@ -155,18 +158,56 @@
 	}
 	&__col-wrap {
 		.sVideos__slide {
+			@include mt;
 			--ratio: 180/270;
 			margin-bottom: rem(15);
+			background-color: $black;
+		}
+		.sVideos__video-wrap {
+			@include mt;
+			&::before {
+				@include mt;
+				content: '';
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background-color: transparent;
+				z-index: 2;
+			}
+			&:hover {
+				transform: scale(1.2);
+				&::before {
+					background-color: rgba(0,0,0,0.4);
+				}
+			}
 		}
 		.sVideos__icon-wrap {
 			width: 95px;
 			height: 95px;
+			zoom: 0.7;
 		}
 		.sVideos__desc {
 			font-size: rem(17);
 		}
 		.sVideos__num {
 			font-size: rem(16);
+		}
+	}
+	&__hashtag-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: rem(1) rem(12);
+		flex-wrap: wrap;
+	}
+	&__hashtag-item {
+		color: #0077dc;
+    font-size: 14px;
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

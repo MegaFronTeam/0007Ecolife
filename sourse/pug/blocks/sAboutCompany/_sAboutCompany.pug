@@ -1,0 +1,44 @@
+mixin sAboutCompany(data)
+	// start sAboutCompany
+	+b.SECTION.sAboutCompany.section#sAboutCompany&attributes(attributes).bg-wrap
+		+img('img/sAboutCompany-bg.png', 'bg').picture-bg.image-bg
+		+e.container.container
+			+e.name-wrap
+				+e.name 
+					p Андрей Краснов
+				+e.post
+					p Генеральный директор ЭкоЛайф
+			+b.section-title
+				h2 
+					strong Эко 
+					+img('img/logo-small.png') 
+					strong Лайф - это компания <br>
+					| для людей
+				p Жизнь за городом приобретает смысл, если ты в комфорте и безопасности.
+			+e.row.row
+				.col-md-6
+					+e.wrap
+						+e.title С 2007 года
+						p Нас знают и рекомендуют<br>друзьям и близким
+				.col-md-6
+					+e.wrap
+						+e.title Выполнено более 6000 объектов
+						p Мы видели всё, нас трудно<br>удивить сложными задачами
+				.col-md-6
+					+e.wrap
+						+e.title Штат - 45 человек
+						p Оформлены по ТК РФ и регулярно повышают квалификацию
+				.col-md-6
+					+e.wrap
+						+e.title Более 30 сертификатов
+						p А также дипломов, наград<br>и благодарностей
+				.col-md-6
+					+e.wrap
+						+e.title Гарантия - 3 года
+						p Все риски берем на себя.<br>Любой ваш вопрос будет решен
+				.col-md-6
+					+e.wrap
+						+e.title Прямой поставщик оборудования
+						p Это гарантия самой низкой цены. И мы точно знаем, что вам подойдет
+
+	// end sAboutCompany

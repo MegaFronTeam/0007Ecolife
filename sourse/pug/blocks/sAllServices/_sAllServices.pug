@@ -1,0 +1,28 @@
+mixin sAllServices(data)
+	// start sAllServices
+	+b.SECTION.sAllServices.section#sAllServices&attributes(attributes).bg-wrap
+		+img('img/sAllServices-bg.jpg', 'bg').picture-bg
+		+e.container.container
+			+e.name-wrap
+				+e.name 
+					p Андрей Краснов
+				+e.post
+					p Генеральный директор ЭкоЛайф
+			+b.section-title.text-center
+				+img('img/logo-small.png')
+				h2 #[strong Все услуги] монтажной организации ЭкоЛайф
+			+e.row.row
+				mixin sAllServices-item(i, title, text)
+					+e.col.col-md-6
+						+e.item
+							+img(`img/sAllServices-img-${i}.jpg`)
+							+e.text
+								h5!= title
+								p!= text
+				+sAllServices-item(1, 'Отопление', 'в загородном доме')
+				+sAllServices-item(2, 'Устройство', 'пластиковых погребов')
+				+sAllServices-item(3, 'Водоснабжение', 'в загородном доме')
+				+sAllServices-item(4, 'Электрика', 'в загородном доме')
+				+sAllServices-item(5, 'Канализация', 'в загородном доме')
+				+sAllServices-item(6, 'Устройство', 'колодцев на участке')
+	// end sAllServices

@@ -7,6 +7,10 @@ include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sReviews/_sReviews.pug
+include ../blocks/sAllServices/_sAllServices.pug
+include ../blocks/sMostPopular/_sMostPopular.pug
+include ../blocks/sBrandsList/_sBrandsList.pug
+include ../blocks/sAboutCompany/_sAboutCompany.pug
 //- include ../blocks/sServices/_sServices.pug
 //- include ../blocks/sSepticService/_sSepticService.pug
 //- include ../blocks/sEmergency/_sEmergency.pug
@@ -46,7 +50,12 @@ block pagecontent
 	+sContact()
 	+sReviews
 	+sVideos2
+	+sAboutCompany
 	+sVideos3
+	+sAllServices
+	+sMostPopular
+	+sBrandsList
+	+sMostPopular2
 	//- +sServices2()
 	//- //- +sSepticService()
 	//- +sEmergency().sEmergency--sewers
