@@ -1,6 +1,6 @@
 mixin sContract(data)
 	// start sContract
-	+b.SECTION.sContract.section#sContract&attributes(attributes)
+	+b.sContract.section#sContract&attributes(attributes)
 		.container
 			+e.inner
 				.row
@@ -17,11 +17,11 @@ mixin sContract(data)
 							data-img="img/modal-img-1.png"
 						).main-btn.link-modal-js
 					+e.right.col-lg-4
-						img(src='img/contract-img.png')
+						img(src='img/contract-img.png' alt="contract-img")
 
 mixin sContract2(data)
 	// start sContract
-	+b.SECTION.sContract.sContract--water.section#sContract&attributes(attributes)
+	+b.sContract.sContract--water.section#sContract&attributes(attributes)
 		.container
 			+e.inner
 				.row
@@ -38,5 +38,5 @@ mixin sContract2(data)
 							data-img="img/modal-img-1.png"
 						).main-btn.link-modal-js
 					+e.right.col-lg-4
-						img(src='img/contract-img.png')
+						img(src='img/contract-img.png' alt="contract-img")
 	// end sContract

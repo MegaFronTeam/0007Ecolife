@@ -12,7 +12,7 @@ mixin sServices(data)
 	// start sServices
 	+b.SECTION.sServices.section#sServices&attributes(attributes)
 		.container
-			img(src="img/service-bg.png" class='bg-img')
+			img(src="img/service-bg.png" class='bg-img' alt="service-bg")
 			+e.logo-wrap
 				+img('img/logo-small.png')
 			+b.section-title.text-center
@@ -25,9 +25,9 @@ mixin sServices(data)
 	// end sServices
 
 mixin sServices2()
-	+b.SECTION.sServices.section#sServices&attributes(attributes)
+	+b.SECTION.sServices.section&attributes(attributes)
 		.container
-			img(src="img/service-bg.png" class='bg-img')
+			img(src="img/service-bg.png" class='bg-img' alt="service-bg")
 			+e.logo-wrap
 				+img('img/logo-small.png')
 			+b.section-title.text-center
@@ -37,9 +37,9 @@ mixin sServices2()
 				+service('3', 'Обслуживание станций биологической&nbsp;очистки','Плановое обслуживание','Диагностика неисправностей','Ремонт септиков','Консервация на&nbsp;зиму','Аварийный выезд','Пуско-наладка')
 
 mixin sServicesWater(data)
-	+b.SECTION.sServices.section#sServices&attributes(attributes)
+	+b.SECTION.sServices.section&attributes(attributes)
 		.container.water-container
-			img(src="img/service-bg.png" class='bg-img')
+			img(src="img/service-bg.png" class='bg-img' alt="service-bg")
 			+e.logo-wrap
 				+img('img/logo-small.png')
 			+b.section-title.text-center

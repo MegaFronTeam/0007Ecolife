@@ -22,7 +22,7 @@ mixin sVideos(data)
 	// end sVideos
 
 mixin sVideos2(data)
-	+b.SECTION.sVideos.section#sVideos&attributes(attributes)
+	+b.SECTION.sVideos.section&attributes(attributes)
 		.container
 			+b.section-title.text-center
 				+img('img/sVideos-icon.png')
@@ -74,7 +74,7 @@ mixin video-item(link, vidNum, preview, i, desc, num, ...items)
 			each item in items 
 				+e.hashtag-item(href="#")!= item
 mixin sVideos3(data)
-	+b.SECTION.sVideos--3.section#sVideos&attributes(attributes)
+	+b.SECTION.sVideos--3.section&attributes(attributes)
 		.container
 			+b.section-title.text-center
 				h2 #[strong Посмотрите, как функционирует система канализации] в загородном доме спустя 5 лет и более после установки
