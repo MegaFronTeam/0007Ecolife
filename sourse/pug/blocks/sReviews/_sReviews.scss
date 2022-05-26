@@ -37,22 +37,33 @@
 
 
 .grid {
+	@include media-breakpoint-up(sm) {
 	margin-right: -45px;
+	}
 	margin-bottom: rem(30);
 	
 }
 .grid-item {
 	float: left;
-	width: calc((100% / 4) - 45px);
 	margin-bottom: rem(30);
 	// &:nth-child(n + 9) {
-	// 	display: none;
-	// }
-	// &.active {
-	// 	display: block;
-	// }
-	@include media-breakpoint-down(md) {
-		width: calc((100% / 2) - 45px);
+		// 	display: none;
+		// }
+		// &.active {
+			// 	display: block;
+			// }
+			width: calc((100% / var(--s)) - var(--g,0)); 
+			
+			// --g: 45px;
+			@include media-breakpoint-up(sm) {
+				--g: 45px;
+				--s: 2; 
+	}
+	@include media-breakpoint-up(md) {
+		--s: 3; 
+	}
+	@include media-breakpoint-up(lg) {
+		--s: 4; 
 	}
 	img {
 		width: 100%;
