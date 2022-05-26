@@ -479,6 +479,15 @@ function eventHandler() {
   }  
   mass();
 
+	$('.sReviews__show-more').on('click', function() {
+		$('.grid-item.active').slideUp(function() {
+			$(this).removeClass('active');
+		});
+		$('.grid-item:hidden').slideDown(function() {
+			$(this).addClass('active');
+		});
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

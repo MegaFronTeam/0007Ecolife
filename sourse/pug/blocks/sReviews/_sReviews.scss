@@ -10,6 +10,9 @@
 			float: left;
 			width: calc((100% / 4) - 45px);
 			margin-bottom: rem(30);
+			&:nth-child(n + 9) {
+				display: none;
+			}
 			@include media-breakpoint-down(md) {
 				width: calc((100% / 2) - 45px);
 			}
@@ -33,6 +36,9 @@
 		background-image: url('../img/svg/star-fill.svg');
 		background-repeat: no-repeat;
 
+	}
+	&__show-more {
+		cursor: pointer;
 	}
 	.main-btn {
 		padding: rem(32) rem(58);

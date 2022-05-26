@@ -14,7 +14,7 @@ mixin sAllServices(data)
 			+e.row.row
 				mixin sAllServices-item(i, title, text)
 					+e.col.col-md-6
-						+e.item
+						+e.item(href="#")
 							+img(`img/sAllServices-img-${i}.jpg`)
 							+e.text
 								h5!= title

@@ -50,6 +50,9 @@
     background-color: #ffffff;
     padding: rem(13) rem(14);
 		z-index: 5;
+		&:hover {
+			box-shadow: 0 4px 59px rgb(163 169 183 / 45%);
+		}
 		@include media-breakpoint-down(sm) {
 			flex-direction: column;
 		}
@@ -66,8 +69,10 @@
 			font-weight: 700;
 			margin-bottom: 0;
 			line-height: 1.33em;
+			color: $body-color;
 		}
 		p {
+			color: $body-color;
 			margin-bottom: 0;
 			font-size: rem(18);
 			line-height: 1.33em;
