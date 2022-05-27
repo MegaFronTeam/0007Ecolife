@@ -102,13 +102,22 @@
 	ul {
 		padding: 0;
 		margin-left: 36px;
-		list-style-image: url('../img/svg/repair-list-marker.svg');
+		list-style-type: none;
 		@include media-breakpoint-up(md) {
-			margin-left: 46px;
+			margin-left: 30px;
 		}
 	}
 	li {
+		position: relative;
+		padding-left: 25px;
+		// margin-bottom: 8px;
 		color: #565E69;
+		&::before {
+			content: url('../img/svg/repair-list-marker.svg');
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 	}
 	strong {
 		display: block;
@@ -118,18 +127,23 @@
 	&--indent {
 		li {
 			&:not(:last-child) {
-				list-style-image: url('../img/svg/repair-list-marker-2.svg');
 				margin-bottom: rem(8);
 				color: #141414;
+				&::before {
+					content: url('../img/svg/repair-list-marker-2.svg');
+					top: 4px;
+				}
 			}
 		}
 	}
 	&--note {
 		li {
 			&:last-child {
-				list-style-image: url('../img/info.png');
 				margin-bottom: rem(8);
-				// color: #141414;
+				&::before {
+					content: url('../img/info.png');
+					top: 4px;
+				}
 			}
 		}
 	}
