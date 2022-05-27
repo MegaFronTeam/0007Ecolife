@@ -26,7 +26,7 @@ mixin headerBlock(location,img)
 
 mixin headerBlock2()
 	// start headerBlock
-	+b.headerBlock--2.section#headerBlock&attributes(attributes)
+	+b.headerBlock--2.--main.section#headerBlock&attributes(attributes)
 		.container
 			+topLine()
 			+e.text
@@ -37,6 +37,6 @@ mixin headerBlock2()
 					data-text=" "
 					data-btn="подобрать условия договора"
 					data-img="img/modal-img-1.png"
-				).main-btn.link-modal-js подобрать условия договора
+				).main-btn.link-modal-js срочно вызвать мастера
 			img(src='img/header-block-img.png' class="headerBlock__main-img" alt="header-block-img")
 	// end headerBlock 

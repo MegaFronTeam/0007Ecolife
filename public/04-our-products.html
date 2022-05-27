@@ -63,7 +63,7 @@
 			</div>
 			<!-- end top-nav-->
 			<!-- start headerBlock-->
-			<div class="headerBlock headerBlock--2 section" id="headerBlock">
+			<div class="headerBlock headerBlock--2 headerBlock--main section" id="headerBlock">
 				<div class="container">
 					<!-- start topLine-->
 					<div class="topLine section" id="topLine">
@@ -79,13 +79,13 @@
 					<!-- end topLine-->
 					<div class="headerBlock__text">
 						<div class="headerBlock__main-text"><strong>Срочный ремонт</strong> септиков и&nbsp;обслуживание станций очистки. <strong>Аварийный выезд</strong> инженера<br>в&nbsp;день обращения.
-						</div><a class="main-btn link-modal-js" href="#" data-src="leave-the-phone" data-title="&lt;strong&gt; Оставьте телефон&lt;/strong&gt; и наш менеджер подберет для вас оптимальные условия &lt;strong&gt;сервисного договора&lt;/strong&gt;" data-text=" " data-btn="подобрать условия договора" data-img="img/modal-img-1.png">подобрать условия договора</a>
+						</div><a class="main-btn link-modal-js" href="#" data-src="leave-the-phone" data-title="&lt;strong&gt; Оставьте телефон&lt;/strong&gt; и наш менеджер подберет для вас оптимальные условия &lt;strong&gt;сервисного договора&lt;/strong&gt;" data-text=" " data-btn="подобрать условия договора" data-img="img/modal-img-1.png">срочно вызвать мастера</a>
 					</div><img class="headerBlock__main-img" src="img/header-block-img.png" alt="header-block-img"/>
 				</div>
 			</div>
 			<!-- end headerBlock -->
 			<!-- start sContact-->
-			<section class="sContact section bg-wrap" id="sContact"><img class="object-fit-js picture-bg" src="img/sContact-bg.png" alt="" loading="lazy"/>
+			<section class="sContact section bg-wrap" id="sContact"><img class="object-fit-js picture-bg image-bg" src="img/sContact-bg.png" alt="" loading="lazy"/>
 				<div class="sContact__container container">
 					<div class="row">
 						<div class="col-lg-6">
@@ -144,6 +144,11 @@
 						myPlacemark = new ymaps.Placemark([59.98098756412571,30.32504900000001], {
 							// Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
 						});
+					myMap.behaviors.disable('scrollZoom');
+					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+						//- ... отключаем перетаскивание карты
+						myMap.behaviors.disable('drag');
+					}
 					myMap.geoObjects.add(myPlacemark);
 				}
 			</script>
@@ -466,7 +471,8 @@
 						</div>
 					</div>
 					<div class="section-title">
-						<h2> <strong>Эко </strong><img src="img/logo-small.png" alt="" loading="lazy"/><strong>Лайф - это компания <br></strong>для людей
+						<h2> <strong>Эко</strong><img src="img/logo-small.png" alt="" loading="lazy"/><strong>Лайф - это компания</strong> 
+							для людей
 						</h2>
 						<p>Жизнь за городом приобретает смысл, если ты в комфорте и безопасности.</p>
 					</div>
@@ -1445,7 +1451,7 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
-		<script src="libs/masonry-layout/masonry.pkgd.min.js"> </script>
+		<script src="libs/masonry-layout/masonry.pkgd.min.js"> </script><script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 		<script src="js/common.js?v=0.0.1"></script>
 	</body>
 </html>

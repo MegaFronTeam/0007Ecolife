@@ -164,7 +164,22 @@
 	}
 	&--2 {
 		.headerBlock__main-text {
-			margin-bottom: rem(35);
+			@include media-breakpoint-down(md) {
+				margin-bottom: rem(87.800);
+			}
+		}
+		.headerBlock__main-img {
+			@include media-breakpoint-down(sm) {
+				bottom: -114px;
+				left: -200px;
+
+			}
+		}
+		.headerBlock__main-img {
+			@include media-breakpoint-only(sm) {
+				left: -24%;
+				max-height: 46%;
+			}
 		}
 		.main-btn {
 			margin-bottom: rem(283.825);

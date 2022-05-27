@@ -132,6 +132,9 @@
 		border-radius: 15px;
 		overflow: hidden;
 		@include block(550,150);
+		@include media-breakpoint-down(sm) {
+			--ratio: 100/300;
+		}
 		img {
 			position: absolute;
 			top: 0;
