@@ -5,7 +5,29 @@
 	background-image: url('../img/header-block-bg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: bottom;
 	overflow: hidden;
+	&--main::after {
+		content: url('../img/header-bg-img.png');
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 496px;
+		height: 437px;
+		z-index: 10;
+		@include media-breakpoint-down(lg) {
+			width: 300px;
+			height: 300px;
+		}
+		@include media-breakpoint-down(md) {
+			width: 230px;
+			height: 230px;
+		}
+		@include media-breakpoint-down(sm) {
+			width: 195px;
+			height: 200px;
+		}
+	}
 	// margin-bottom: 1px;
 	&--water {
 		background-image: url('../img/water-headerblock-bg.jpg');

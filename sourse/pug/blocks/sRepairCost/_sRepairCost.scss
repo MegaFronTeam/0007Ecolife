@@ -25,6 +25,14 @@
 			}
 		}
 	}
+	&--water {
+		.container {
+			&::after {
+				top: -400px;
+				right: -160px;
+			}
+		}
+	}
 	.section-title {
 		img {
 			margin-bottom: rem(20);
