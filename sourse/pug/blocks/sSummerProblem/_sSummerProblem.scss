@@ -1,6 +1,7 @@
 // start .sSummerProblem
 .sSummerProblem {
-		--sPT: #{rem(144)};
+		--sPT: #{rem(230)};
+		margin-top: -86px;
 		--sPB: #{rem(59)};
 		// --sTPB: ;
 	position: relative;
@@ -28,6 +29,9 @@
 		background-repeat: no-repeat;
 		top: -140px;
 		left: -40px;
+		@include media-breakpoint-down(чд) {
+			left: -135px;
+		}
 		@include media-breakpoint-down(sm) {
 			content: none;
 		}

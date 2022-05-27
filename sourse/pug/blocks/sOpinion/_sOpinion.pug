@@ -4,7 +4,7 @@ mixin sOpinion(usual)
 		.container
 			.row
 				mixin opinionItem(question,...answers)
-					.col-lg-6.col-xl-auto
+					+e.col.col-lg-6.col-xl-auto
 						+e.item&attributes(attributes)
 							+e.question!= question
 							+e.answer
