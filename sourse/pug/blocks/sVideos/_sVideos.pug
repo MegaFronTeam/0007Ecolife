@@ -13,10 +13,15 @@ mixin sVideos(data)
 									+img(`img/repair-item-${i}.png`, 'bg')
 								+e.icon-wrap
 									+icon('play-fill')
+					+e.col.col-md-6.swiper-slide
+						+e.slide(href="https://www.youtube.com/watch?v=L_LUpnjgPso&t=7s" data-fancybox=`sCard-gallery-${i}`)
+							+e.video-wrap
+								+img(`img/video-bg-img.jpg`, 'bg')
+							+e.icon-wrap
+								+icon('play-fill')
 					+videoSlide(1)
 					+videoSlide(2)
 					+videoSlide(3)
-					+videoSlide(4)
 				+b.arrow-wrap
 					+arrow()
 	// end sVideos
