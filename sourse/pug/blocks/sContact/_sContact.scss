@@ -12,6 +12,11 @@
 	&__container {
 		position: relative;
 	}
+	.image-bg {
+		@include media-breakpoint-down(md) {
+			object-position: 57%;
+		}
+	}
 	.section-title {
 		h2 {
 			@include rfs(55px);

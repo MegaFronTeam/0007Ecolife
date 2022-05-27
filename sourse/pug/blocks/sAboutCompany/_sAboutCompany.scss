@@ -11,15 +11,15 @@
 		position: relative;
 	}
 	.image-bg {
-		@include media-breakpoint-up(sm) {
+		@include media-breakpoint-down(lg) {
 			object-position: right;
 		}
-		@include media-breakpoint-up(md) { 
+		@include media-breakpoint-only(md) { 
 			object-position: center;
 		}
 	}
 	.section-title {
-		max-width: max-content;
+		max-width: 609px;
 		margin-left: auto;
 		position: relative;
 		margin-bottom: rem(30);
@@ -31,6 +31,13 @@
 		}
 		@include media-breakpoint-up(xl) {
 			right: 100px;
+		}
+		img {
+			width: 55px;
+			@include media-breakpoint-down(sm) {
+				width: 34px;
+				vertical-align: text-top;
+			}
 		}
 		p {
 			color: #878c98;

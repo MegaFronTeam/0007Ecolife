@@ -9,6 +9,11 @@
 	&__col {
 		position: relative;
 	}
+	&__container {
+		@include media-breakpoint-down(sm) {
+			max-width: rem(300);
+		}
+	}
 	&__list-wrap {
 		display: flex;
 		@include media-breakpoint-down(xl) {
@@ -67,6 +72,11 @@
 		margin-bottom: rem(30);
 		@include media-breakpoint-up(sm) {
 			--ratio: 247/300;
+		}
+	}
+	.main-btn {
+		@include media-breakpoint-down(sm) {
+			padding: rem(27) rem(44);
 		}
 	}
 	.img-screw {

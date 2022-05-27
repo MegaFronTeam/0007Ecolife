@@ -179,6 +179,10 @@
 		@include media-breakpoint-down(md) {
 			max-width: rem(297);
 		}
+		@include media-breakpoint-down(sm) {
+			max-width: 14.4625rem;
+			padding: rem(24);
+		}
 	}
 	.discount {
 		position: absolute;

@@ -4,7 +4,7 @@ mixin headerBlock(location,img)
 		.container
 			+topLine()
 			+e.text
-				+e.main-text.H1 Поможем избежать&nbsp;98% проблем #{location} #[strong и&nbsp;сэкономить до&nbsp;40&nbsp;000&nbsp;р.&nbsp;в&nbsp;год] благодаря сервисному обслуживанию
+				h1 Поможем избежать&nbsp;98% проблем #{location} #[strong и&nbsp;сэкономить до&nbsp;40&nbsp;000&nbsp;р.&nbsp;в&nbsp;год] благодаря сервисному обслуживанию
 				+e.descr 
 					+img('img/header-descr-img.png')
 					p #[strong Мы&nbsp;подберем индивидуальные условия договора.] Защитите себя от&nbsp;поломок и&nbsp;платите только за&nbsp;то, что вам нужно
@@ -26,17 +26,17 @@ mixin headerBlock(location,img)
 
 mixin headerBlock2()
 	// start headerBlock
-	+b.headerBlock--2.section#headerBlock&attributes(attributes)
+	+b.headerBlock--2.--main.section#headerBlock&attributes(attributes)
 		.container
 			+topLine()
 			+e.text
-				+e.main-text #[strong Срочный ремонт] септиков и&nbsp;обслуживание станций очистки. #[strong Аварийный выезд] инженера<br>в&nbsp;день обращения.
+				h1 #[strong Срочный ремонт] септиков и&nbsp;обслуживание станций очистки. #[strong Аварийный выезд] инженера<br>в&nbsp;день обращения.
 				a(href="#"
 					data-src="leave-the-phone"
 					data-title='<strong> Оставьте телефон</strong> и наш менеджер подберет для вас оптимальные условия <strong>сервисного договора</strong>'
 					data-text=" "
 					data-btn="подобрать условия договора"
 					data-img="img/modal-img-1.png"
-				).main-btn.link-modal-js подобрать условия договора
+				).main-btn.link-modal-js срочно вызвать мастера
 			img(src='img/header-block-img.png' class="headerBlock__main-img" alt="header-block-img")
 	// end headerBlock 

@@ -79,10 +79,13 @@
     left: 50px;
     position: absolute;
     top: 400px;
+		@include media-breakpoint-down(md) {
+			top: 450px;
+		}
 		@include media-breakpoint-down(sm) {
 			width: 82px;
 			left: 10px;
-			top: 280px;
+			top: 330px;
 		}
 	}
 	&__supply {
@@ -119,6 +122,7 @@
 		max-width: 300px;
 		line-height: 150%;
 		font-size: 15px;
+		color: black;
 		@include media-breakpoint-up(sm) {
 			font-size: 16px;
 		}
