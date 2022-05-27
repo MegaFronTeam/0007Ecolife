@@ -22,7 +22,7 @@
 			font-size: 12px;
 			letter-spacing: 0.1em;
 			@include media-breakpoint-down(sm) {
-				padding: rem(18)  rem(26);
+				padding: rem(18)  rem(15);
 			}
 		}
 		&.active {

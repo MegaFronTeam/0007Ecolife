@@ -3,6 +3,10 @@
 	background-image: url('../img/repair-bg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: bottom;
+	@include media-breakpoint-down(md) {
+		background-position: right top;
+	}
 		--sPT: 0;
 		// --sPB: ;
 		// --sTPB: ;

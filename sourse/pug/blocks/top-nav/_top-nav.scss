@@ -30,9 +30,9 @@
 	}
 	.swiper-slide {
 		width: auto;
-		&:not(:last-child) {
-			margin-right: 9px;
-		}
+		// &:not(:last-child) {
+		// 	margin-right: 9px;
+		// }
 	}
 
 	background-color: #131313;
