@@ -2,8 +2,8 @@ mixin sRates(data)
 	// start sRates
 	+b.SECTION.sRates.section#sRates&attributes(attributes).bg-wrap
 		+img('img/sRates-bg.png').picture-bg
-		img(src='img/sRates-img-5.png' alt="sRates-img").level-img
-		.container
+		+e.container.container
+			img(src='img/sRates-img-5.png' alt="sRates-img").level-img
 			+b.section-title.text-center
 				h2 Мы разработали выгодные тарифы #[strong на&nbsp;любые случаи]
 			+e.row.row
