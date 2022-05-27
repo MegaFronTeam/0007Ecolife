@@ -7,6 +7,7 @@
 	background-size: cover;
 	background-position: bottom;
 	overflow: hidden;
+	height: 100vh;
 	&--main::after {
 		content: url('../img/header-bg-img.png');
 		position: absolute;
