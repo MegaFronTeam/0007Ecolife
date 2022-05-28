@@ -44,24 +44,29 @@
 			}
 		}
 		&__phone {
+			padding: rem(3) rem(7);
 			margin-right: rem(30);
 			font-weight: 700;
 			font-size: rem(20);
-			color: #111213
+			color: #111213;
+			background-color: rgba($white, 0.9);
+			border-radius: 1000px;
 		}
 		&__btn {
 			padding: rem(11) rem(20);
-			background-color: rgba($white, .9);
-			color: #2079F5;
-			border-radius: 1000px; 
+			background-image: linear-gradient(to right, #E54E40 0%, #FC7B51 100%);
+			box-shadow: 0px 4px 0px #AF493D, inset 0px 10px 24px #FFAB95;
+			border-radius: 1000px;
+			color: $white;
 			font-weight: 700;
 			font-size: 12px;
 			line-height: 12px;
 			letter-spacing: 0.1em;
 			text-transform: uppercase;
 			&:hover {
-				background-color: #2079F5;
-				color: rgba($white, .9);
+				background-position: 100% 0;
+				box-shadow: 0px 0px 0px #AF493D, inset 0px 10px 24px #FFAB95;
+				color: $white;
 			}
 		}
 	@include media-breakpoint-up(xl) {}

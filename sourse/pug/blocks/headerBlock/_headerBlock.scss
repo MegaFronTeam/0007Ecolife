@@ -7,6 +7,9 @@
 	background-size: cover;
 	background-position: bottom;
 	overflow: hidden;
+	@include media-breakpoint-up(xl) {
+		background-size: 100% 120%;
+	}
 	&--main::after {
 		content: url('../img/header-bg-img.png');
 		position: absolute;
