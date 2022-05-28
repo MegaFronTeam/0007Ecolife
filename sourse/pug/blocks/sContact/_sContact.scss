@@ -11,6 +11,9 @@
 	}
 	&__container {
 		position: relative;
+		@media (max-width: 400px) {
+			max-width: 300px;			
+		}
 	}
 	.image-bg {
 		@include media-breakpoint-down(md) {

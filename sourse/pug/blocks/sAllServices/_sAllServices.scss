@@ -13,6 +13,9 @@
 	}
 	&__container {
 		position: relative;
+		@media (max-width: 400px) {
+			max-width: 300px;
+		}
 	}
 	&__row {
 		--bs-gutter-y: #{rem(40)};

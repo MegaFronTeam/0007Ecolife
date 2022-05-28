@@ -3,6 +3,11 @@
 	--sPT: #{rem(42)};
 	--sPB: #{rem(90)};
 	// --sTPB: ;
+	&__container {
+		@media (max-width: 400px) {
+			max-width: 300px;
+		}
+	}
 
 	&__rate-wrap {
 		display: flex;

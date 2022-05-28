@@ -1,7 +1,7 @@
 mixin sVideos(data)
 	// start sVideos
 	+b.SECTION.sVideos.section#sVideos&attributes(attributes)
-		.container
+		+e.container.container
 			+b.section-title.text-center
 				h2 О качестве обслуживания #[strong лучше всего расскажут наши клиенты]
 			+e.swiper--js.swiper(data-mobile="false")
@@ -28,7 +28,7 @@ mixin sVideos(data)
 
 mixin sVideos2(data)
 	+b.SECTION.sVideos.section&attributes(attributes)
-		.container
+		+e.container.container
 			+b.section-title.text-center
 				+img('img/sVideos-icon.png')
 				h2 #[strong Посмотрите отзывы]<br>о компании ЭкоЛайф
@@ -80,7 +80,7 @@ mixin video-item(link, vidNum, preview, i, desc, num, ...items)
 				+e.hashtag-item(href="#")!= item
 mixin sVideos3(data)
 	+b.SECTION.sVideos--3.section&attributes(attributes)
-		.container
+		+e.container.container
 			+b.section-title.text-center
 				h2 #[strong Посмотрите, как функционирует система канализации] в загородном доме спустя 5 лет и более после установки
 			.tabs

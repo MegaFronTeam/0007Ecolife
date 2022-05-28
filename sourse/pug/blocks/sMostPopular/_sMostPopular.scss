@@ -3,6 +3,11 @@
 	--sPT: #{rem(82)};
 	--sPB: #{rem(80)};
 	// --sTPB: ;
+	&__container {
+		@media (max-width: 400px) {
+			max-width: 300px;
+		}
+	}
 	&__row {
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
