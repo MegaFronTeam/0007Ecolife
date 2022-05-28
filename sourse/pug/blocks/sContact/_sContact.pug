@@ -1,9 +1,9 @@
 mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes).bg-wrap
-		+img('img/sContact-bg.png', 'bg').picture-bg.image-bg
+		+img('img/sContact-bg.png').sContact__img
 		+e.container.container
-			.row
+			+e.row.row
 				.col-lg-6
 					+b.section-title
 						h2 #[strong В нашем офисе ] можно:
@@ -20,10 +20,10 @@ mixin sContact()
 							p Андрей Краснов
 						+e.post
 							p Генеральный директор ЭкоЛайф
-			+e.map
-				+e.map-widget#map
-				+e.map-info
-					p СПБ, Кантемировская улица, дом 39, офис 211 09:00-21:00
+		+e.map
+			+e.map-widget#map
+			+e.map-info
+				p СПБ, Кантемировская улица, дом 39, офис 211 09:00-21:00
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
 	script.
 		var myMap;

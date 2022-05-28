@@ -7,9 +7,6 @@
 	background-size: cover;
 	background-position: bottom;
 	overflow: hidden;
-	@include media-breakpoint-up(xl) {
-		background-size: 100% 120%;
-	}
 	&--main::after {
 		content: url('../img/header-bg-img.png');
 		position: absolute;
@@ -141,7 +138,8 @@
 			left: auto;
 		}
 		@include media-breakpoint-down(md) {
-			left: -50%;
+			left: -45%;
+			bottom: -60px;
 			max-height: 65%;
 		}
 		@include media-breakpoint-down(sm) {
@@ -176,7 +174,13 @@
 		margin-bottom: 1px;
 	}
 	&--2 {
+		.headerBlock__container {
+			@include media-breakpoint-up(md) {
+				min-height: 100vh;
+			}
+		}
 		h1 {
+			margin-bottom: 37px;
 			@include media-breakpoint-down(md) {
 				margin-bottom: rem(87.800);
 			}
@@ -188,6 +192,33 @@
 			@include media-breakpoint-down(sm) {
 				// bottom: -114px;
 				// left: -396px;
+			}
+		}
+		.headerBlock__main-img {
+			max-width: 1273px;
+			z-index: 1;
+			position: absolute;
+			bottom: -38px;
+			left: 9%;
+			@include media-breakpoint-down(lg) {
+				max-height: 80%;
+				right: -50%;
+				left: auto;
+			}
+			@include media-breakpoint-down(md) {
+				left: -58%;
+				bottom: -60px;
+				max-height: 65%;
+			}
+			@include media-breakpoint-down(sm) {
+				left: auto;
+				bottom: 0;
+				right: 0;
+				width: 100%;
+			}
+			@media (max-width: 400px) {
+				width: auto;
+				max-height: 48%;
 			}
 		}
 		// .headerBlock__main-img {

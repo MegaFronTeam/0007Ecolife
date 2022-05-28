@@ -44,7 +44,7 @@
 			}
 		}
 		&__phone {
-			padding: rem(3) rem(7);
+			padding: rem(6) rem(15);
 			margin-right: rem(30);
 			font-weight: 700;
 			font-size: rem(20);
@@ -53,9 +53,12 @@
 			border-radius: 1000px;
 		}
 		&__btn {
-			padding: rem(11) rem(20);
+			position: relative;
+			bottom: 4px;
+			padding: rem(20) rem(20);
 			background-image: linear-gradient(to right, #E54E40 0%, #FC7B51 100%);
 			box-shadow: 0px 4px 0px #AF493D, inset 0px 10px 24px #FFAB95;
+			background-size: 300% 100%;
 			border-radius: 1000px;
 			color: $white;
 			font-weight: 700;
