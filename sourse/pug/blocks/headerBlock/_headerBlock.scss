@@ -7,7 +7,6 @@
 	background-size: cover;
 	background-position: bottom;
 	overflow: hidden;
-	height: 100vh;
 	&--main::after {
 		content: url('../img/header-bg-img.png');
 		position: absolute;
@@ -27,6 +26,12 @@
 		@include media-breakpoint-down(sm) {
 			width: 195px;
 			height: 200px;
+			z-index: 1;
+		}
+	}
+	&__container {
+		@include media-breakpoint-up(sm) {
+			min-height: 100vh;
 		}
 	}
 	// margin-bottom: 1px;
@@ -53,6 +58,7 @@
 	&__text {
 		position: relative;
 		max-width: 770px;
+		padding-bottom: 30px;
 		z-index: 2;
 		@include media-breakpoint-down(lg) {
 			max-width: 70%;
@@ -62,6 +68,7 @@
 		}
 		@include media-breakpoint-down(sm) {
 			max-width:320px;
+			min-height: 680px;
 		}
 		@media (max-width: 400px) {
 			margin: 0 auto;
@@ -128,15 +135,17 @@
 		@include media-breakpoint-down(lg) {
 			max-height: 80%;
 			right: -50%;
+			left: auto;
 		}
 		@include media-breakpoint-down(md) {
-			left: -35%;
+			left: -50%;
 			max-height: 65%;
 		}
 		@include media-breakpoint-down(sm) {
-			left: -200px;
-			max-height: 48%;
-			bottom: -100px;
+			left: auto;
+			bottom: 0;
+			right: 0;
+			width: 100%;
 		}
 	}
 	.main-btn {
@@ -153,7 +162,7 @@
 			align-items: center;
 			align-content: center;
 			justify-content: center;
-			margin-bottom: rem(57);
+			margin-bottom: 0;
 		}
 	}
 	h1 {
@@ -169,21 +178,26 @@
 				margin-bottom: rem(87.800);
 			}
 		}
+		.headerBlock__text {
+			min-height: 0;
+		}
 		.headerBlock__main-img {
 			@include media-breakpoint-down(sm) {
-				bottom: -114px;
-				left: -396px;
-
+				// bottom: -114px;
+				// left: -396px;
 			}
 		}
-		.headerBlock__main-img {
-			@include media-breakpoint-only(sm) {
-				left: -24%;
-				max-height: 46%;
-			}
-		}
+		// .headerBlock__main-img {
+		// 	@include media-breakpoint-only(sm) {
+		// 		left: -24%;
+		// 		max-height: 46%;
+		// 	}
+		// }
 		.main-btn {
 			margin-bottom: rem(283.825);
+			@include media-breakpoint-down(sm) {
+				margin-top: 300px;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

@@ -68,7 +68,7 @@
 			<!-- end header-->
 			<!-- start headerBlock-->
 			<div class="headerBlock section headerBlock headerBlock--main" id="headerBlock">
-				<div class="container">
+				<div class="headerBlock__container container">
 					<!-- start topLine-->
 					<div class="topLine section" id="topLine">
 						<a class="topLine__logo" href="#"><img src="img/logo.png" alt="" loading="lazy"/>
@@ -86,7 +86,11 @@
 						<div class="headerBlock__descr"> <img src="img/header-descr-img.png" alt="" loading="lazy"/>
 							<p><strong>Мы&nbsp;подберем индивидуальные условия договора.</strong> Защитите себя от&nbsp;поломок и&nbsp;платите только за&nbsp;то, что вам нужно</p>
 						</div><a class="main-btn link-modal-js" href="#" data-src="leave-the-phone" data-title="Оставьте &lt;strong&gt;телефон&lt;/strong&gt;" data-text="и наш менеджер подберет для вас оптимальные условия сервисного договора" data-btn="подобрать условия договора	" data-img="img/modal-img-1.png">подобрать условия договора</a>
-					</div><img class="headerBlock__main-img" src="img/header-block-img.png" alt="header-block-img"/>
+					</div>
+					<picture>
+						<source srcset="img/header-block-sm-img.png" media="(max-width: 576px)"/>
+						<source srcset="img/header-block-img.png"/><img class="headerBlock__main-img" src="img/header-block-img.png"/>
+					</picture>
 				</div>
 			</div>
 			<!-- end headerBlock -->

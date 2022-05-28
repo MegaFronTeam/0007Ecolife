@@ -46,12 +46,14 @@
 				max-width: 330px;
 				@include media-breakpoint-down(sm) {
 					max-width: 280px;
+					text-align: left;
 				}
 			}
 			.sOpinion__answer {
 				max-width: 430px;
 				@include media-breakpoint-down(sm) {
 					max-width: 300px;
+					text-align: left;
 				}
 			}
 		}
@@ -61,12 +63,14 @@
 				max-width: 500px;
 				@include media-breakpoint-down(sm) {
 					max-width: 280px;
+					text-align: left;
 				}
 			}
 			.sOpinion__answer {
 				max-width: 500px;
 				@include media-breakpoint-down(sm) {
 					max-width: 300px;
+					text-align: left;
 				}
 			}
 		}
