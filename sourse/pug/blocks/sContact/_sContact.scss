@@ -9,6 +9,10 @@
 		--sPB: #{rem(100)};
 		margin-bottom: rem(277);
 	}
+	@include media-breakpoint-down(sm) {
+		--sPT: #{rem(30)};
+		--sPB: #{rem(50)};
+	}
 	&__img {
 		position: absolute;
 		top: 0;
@@ -16,23 +20,33 @@
 		transform: translateX(-50%);
 		height: 835px;
 		@include media-breakpoint-down(lg) {
-			height: 60%;
+			height: 62%;
 			left: 60%;
 		}
 		@include media-breakpoint-down(md) {
 			height: 70%;
 		}
 		@include media-breakpoint-down(sm) {
-			height: 75%;
-			left: 35%;
+			height: 57%;
+			left: 60%;
+		}
+		@media (max-width: 400px) {
+			height: 62%;
+			left: 60%;
 		}
 	}
 	&__container {
 		position: relative;
+		@media (max-width: 400px) {
+			max-width: 300px;
+		}
 	}
 	&__row {
 		@include media-breakpoint-down(md) {
 			max-width: 70%;
+		}
+		@media (max-width: 400px) {
+			max-width: 84%;
 		}
 	}
 	.section-title {
@@ -78,6 +92,9 @@
 			p {
 				margin-bottom: 0;
 				line-height: 1.55em;
+				@include media-breakpoint-down(sm) {
+					line-height:1;
+				}
 			}
 		}
 	}
@@ -124,9 +141,15 @@
 		margin-left: rem(19);
     margin-top: rem(-7);
     position: relative;
-    z-index: -1;
+    // z-index: -1;
 		p {
 			font-size: rem(16);
+		}
+	}
+	&__map-container {
+		@include media-breakpoint-down(sm) {
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 	&__map {
@@ -137,12 +160,12 @@
 			margin-bottom: rem(-359);
 		}
 		@include media-breakpoint-down(md) {
-			width: 85%;
 			margin: -20px auto 0;
 		}
 		@include media-breakpoint-down(sm) { 
 			--ratio: 833/1181;
 			width: 100%;
+			border-radius: 0;
 		}
 	}
 	&__map-widget {
