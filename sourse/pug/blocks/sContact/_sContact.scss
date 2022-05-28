@@ -31,8 +31,8 @@
 			left: 60%;
 		}
 		@media (max-width: 400px) {
-			height: 65%;
-			left: 63%;
+			height:70%;
+			left: 62%;
 		}
 	}
 	&__container {
@@ -94,6 +94,11 @@
 				margin-right: rem(17);
 				flex: 0 0 auto;
 				align-self: flex-start;
+				@media (max-width: 400px) {
+					width: 27px;
+					height: 27px;
+					margin-right: 10px;
+				}
 			}
 			p {
 				margin-bottom: 0;
@@ -175,6 +180,7 @@
 			--ratio: 833/1181;
 			width: 100%;
 			border-radius: 0;
+			margin-top: 0;
 		}
 	}
 	&__map-widget {
