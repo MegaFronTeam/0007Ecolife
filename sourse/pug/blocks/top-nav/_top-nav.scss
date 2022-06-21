@@ -80,19 +80,20 @@
 }
 .menu-btn {
 	display: inline-flex;
-	position: relative;
 	width: auto;
-	align-items: center;
-	background-color: $blue;
-	cursor: pointer;
-	padding-left: 16px;
-	padding-right: rem(19);
-	margin-left: 12px;
-	color: $white;
-	font-weight: 500;
-	font-size: 12px;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
+
+	// position: relative;
+	// align-items: center;
+	// background-color: $blue;
+	// cursor: pointer;
+	// padding-left: 16px;
+	// padding-right: rem(19);
+	// margin-left: 12px;
+	// color: $white;
+	// font-weight: 500;
+	// font-size: 12px;
+	// letter-spacing: 0.1em;
+	// text-transform: uppercase;
 	// &:hover {
 	// 	ul {
 	// 		visibility: visible;
@@ -133,6 +134,20 @@
 	display: flex;
 	align-items: center;
 	color: rgba($color: $white, $alpha: 0.45);
+
+	position: relative;
+	align-items: center;
+	background-color: $blue;
+	cursor: pointer;
+	padding-left: 16px;
+	padding-right: rem(19);
+	// margin-left: 12px;
+	color: $white;
+	font-weight: 500;
+	font-size: 12px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+
 	&.on {
 		.inside-menu {
 			transform: translateX(0);
