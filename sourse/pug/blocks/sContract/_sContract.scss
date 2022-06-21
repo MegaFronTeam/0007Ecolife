@@ -90,6 +90,9 @@
 				height:auto;
 				right: -165px;
 			}
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
 			@media (max-width:400px) {
 				right: -50%;
 			}

@@ -29,7 +29,7 @@
 		background-repeat: no-repeat;
 		top: -140px;
 		left: -40px;
-		@include media-breakpoint-down(чд) {
+		@include media-breakpoint-down(xl) {
 			left: -135px;
 		}
 		@include media-breakpoint-down(sm) {
@@ -73,8 +73,8 @@
 				height: 239px;
 				background-image: url('../img/container-green-2.png');
 				background-repeat: no-repeat;
-				top: -35%;
-				right: 0;
+				top: -28%;
+				right: -60px;
 				// z-index: -1;
 			}
 		}

@@ -4,7 +4,7 @@
 		// --sPB: ;
 		--sTPB:#{rem(50)};
 		@include media-breakpoint-down(sm) {
-			padding-top: 114px;
+			padding-top: 50px;
 		}
 	h2 {
 		font-size: rem(50);
@@ -19,7 +19,7 @@
 		}
 	}
 	strong {
-		display: block;
+		// display: block;
 	}
 	.row {
 		--bs-gutter-y: #{rem(30)};
@@ -63,6 +63,11 @@
 					max-width: none;
 				}
 			}
+		}
+	}
+	&--2 {
+		@include media-breakpoint-down(sm) {
+			padding-top: 50px;
 		}
 	}
 	&--3 {
