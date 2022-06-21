@@ -89,6 +89,7 @@
 	.img-man, .img-bush, .img-bush-2, .img-bush-3 {
 		position: absolute;
 		z-index: -1;
+		user-select: none;
 	}
 	.img-man {
 		bottom: 0;

@@ -147,9 +147,11 @@
 		}
 		&--sewers {
 			--sPB: #{rem(169)};
-		// --sPT: 0;
-		background-position: 0 -491%;
-	}
+			// --sPT: 0;
+			@include media-breakpoint-up(xxl) {
+				// background-position: 0 -491%;
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -356,6 +356,7 @@ function eventHandler() {
 	function mobileSlider() {
 		if (window.innerWidth <= 768 && septicSlider.dataset.mobile == 'false') {
 			septicSwiper = new Swiper(septicSlider, {
+				loop: true,
 				slidesPerView: 1,
 				spaceBetween: 10,
 				navigation: {

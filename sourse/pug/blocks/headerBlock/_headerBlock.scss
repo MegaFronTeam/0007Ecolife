@@ -132,6 +132,7 @@
 		position: absolute;
 		bottom: -38px;
 		left: 9%;
+		user-select: none;
 		@include media-breakpoint-down(lg) {
 			max-height: 80%;
 			right: -50%;

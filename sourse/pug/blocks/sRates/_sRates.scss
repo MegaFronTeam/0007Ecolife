@@ -44,6 +44,7 @@
 		width: auto;
 		width: rem(364);
 		object-fit: contain;
+		user-select: none;
 		@include media-breakpoint-down(lg) {
 			width: 232px;
 			left: -89px;
@@ -204,6 +205,7 @@
 		right: -300px;
     top: -371px;
     z-index: -1;
+		user-select: none;
 		@include media-breakpoint-down(lg) {
 			width: 233px;
 			right: -85px;

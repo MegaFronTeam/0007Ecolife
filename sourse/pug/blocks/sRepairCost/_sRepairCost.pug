@@ -1,6 +1,6 @@
 mixin repairItem(img, title,...list)
 	+b.repair-item.col-md-6.col-xl-3&attributes(attributes)
-		+e.img-wrap
+		+e.img-wrap(href=`img/repair-item-${img}-lg.png` data-fancybox=`${img}`)
 			+img(`img/repair-item-${img}.png`)
 		+e.title!= title
 		ul

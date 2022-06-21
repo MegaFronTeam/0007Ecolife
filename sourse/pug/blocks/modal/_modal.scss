@@ -37,6 +37,7 @@
 		margin-top: rem(16);
 		width: auto;
 		padding-left: 0;
+		text-align: center;
 		cursor: pointer;
 		@include media-breakpoint-down(sm) {
 			gap: rem(15);
@@ -62,6 +63,7 @@
 			}
 		}
 		&__icon-item {
+			@include mt;
 			width: 42px;
 			height: 42px;
 			border-radius: 50%;
@@ -84,6 +86,19 @@
 		p {
 			@include mt;
 			color: #878C98;
+		}
+		&:hover {
+			.custom-input__icon-item {
+				&--whatsapp {
+					background-color: #0d8b39;
+				}
+				&--telegram {
+					background-color: #2a89ce;
+				}
+				&--viber {
+					background-color: #6051b2;
+				}
+			}
 		}
 	}
 	&--done {
