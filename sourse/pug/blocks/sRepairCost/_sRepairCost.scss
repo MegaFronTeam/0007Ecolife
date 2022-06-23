@@ -71,6 +71,10 @@
 	@include media-breakpoint-down(xl) {}
 } // end.sRepairCost
 .repair-item {
+	@include mt;
+	&:hover {
+		box-shadow: -1px 8px 20px 0px #5e5b5b29;
+	}
 	@include media-breakpoint-down(sm) {
 		margin-left: auto;
 		margin-right: auto;

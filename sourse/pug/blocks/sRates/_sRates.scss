@@ -64,6 +64,7 @@
 		}
 	}
 	&__wrap {
+		@include mt;
 		// display: flex;
 		border: 1px solid #E9E9F2;
 		border-radius: 21px;
@@ -71,6 +72,9 @@
 		padding: rem(40) rem(40) rem(87) rem(40);
 		position: relative;
 		height: 100%;
+		&:hover {
+			box-shadow: -1px 8px 20px 11px rgb(94 91 91 / 16%);
+		}
 		@include media-breakpoint-down(lg) {
 			padding: rem(24) rem(25) rem(87) rem(25);
 		}
@@ -208,7 +212,7 @@
 		user-select: none;
 		@include media-breakpoint-down(lg) {
 			width: 233px;
-			right: -85px;
+			right: -145px;
 			top: 0;
 		}
 	}

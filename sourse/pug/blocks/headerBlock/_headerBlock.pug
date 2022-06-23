@@ -29,11 +29,14 @@ mixin headerBlock(location,img)
 
 mixin headerBlock2()
 	// start headerBlock
-	+b.headerBlock--2.--main.section#headerBlock&attributes(attributes)
+	+b.headerBlock.--main.section#headerBlock&attributes(attributes)
 		+e.container.container
 			+topLine()
 			+e.text
 				h1 #[strong Срочный ремонт] септиков и&nbsp;обслуживание станций очистки. #[strong Аварийный выезд] инженера<br>в&nbsp;день обращения.
+				+e.descr 
+					+img('img/header-descr-img.png')
+					p #[strong Мы&nbsp;подберем индивидуальные условия договора.] Защитите себя от&nbsp;поломок и&nbsp;платите только за&nbsp;то, что вам нужно
 				a(href="#"
 					data-src="leave-the-phone"
 					data-title='<strong> Оставьте телефон</strong> и наш менеджер подберет для вас оптимальные условия <strong>сервисного договора</strong>'
